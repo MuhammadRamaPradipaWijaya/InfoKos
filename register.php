@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="CodePel">
-    <title>Sign up</title>
+    <title>Registration Form</title>
     <!-- Style CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Demo CSS (No need to include it into your project) -->
@@ -122,11 +122,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                     <option value="2">Host</option>
                                 </select>
                             </div>
-                            <div class="form-group text-center">
-                                <input type="submit" value="Register" class="btn btn-primary btn-block" name="submit">
+                            <div class="pb-2">
+                                <button type="submit" class="btn btn-dark w-100 font-weight-bold mt-2" name="submit">Submit</button>
                             </div>
                         </form>
-                        <p><a href="login.php">Login</a></p>
+                        <div class="pt-4 text-center">
+                            Get Members Benefit. <a href="login.php">Sign In</a>
+                        </div>
                     </div>
                 </div>
             </div>

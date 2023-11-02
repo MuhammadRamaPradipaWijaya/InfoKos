@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="CodePel">
-    <title>Sign in</title>
+    <title>Simple login form with side demo image using bootstrap Example</title>
     <!-- Style CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Demo CSS (No need to include it into your project) -->
