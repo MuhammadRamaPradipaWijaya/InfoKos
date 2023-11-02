@@ -15,7 +15,7 @@
             <img src="/css/Ko.jpeg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
             KOSKita
           </a>
-          <button class="btn1-primary">Login</button>
+          <a href="login.php" class="btn btn-primary">Login</a>
         </div>
       </nav>
     <!-- Navbar -->
