@@ -79,13 +79,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                         <input required="required" type="email" name="email" id="email" class="form-control" placeholder="Email">
                                     </div>
                                     <div class="form-group">
-                                        <input required="required" type="number" name="no_hp" id="no_hp" class="form-control" placeholder="Phone Number">
+                                        <input required="required" type="number" name="no_hp" id="no_hp" class="form-control" placeholder="Nomer Telepon/HP">
                                     </div>
                                     <div class="form-group">
-                                        <label for="jenis_kelamin">Gender</label>
+                                        <label for="jenis_kelamin">Jenis Kelamin</label>
                                         <select name="jenis_kelamin" id="jenis_kelamin" class="custom-select">
-                                            <option value="male">Male</option>
-                                            <option value="female">Female</option>
+                                            <option value="laki-laki">Laki-laki</option>
+                                            <option value="perempuan">Perempuan</option>
                                         </select>
                                     </div>
                                 </div>
@@ -94,32 +94,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                         <input required="required" type="password" name="password" id="password" class="form-control" placeholder="Password">
                                     </div>
                                     <div class="form-group">
-                                        <input required="required" type="text" name="nama_lengkap" id="nama_lengkap" class="form-control" placeholder="Full Name">
+                                        <input required="required" type="text" name="nama_lengkap" id="nama_lengkap" class="form-control" placeholder="Nama Lengkap">
                                     </div>
                                     <div class="form-group">
-                                        <input required="required" type="text" name="pekerjaan" id="pekerjaan" class="form-control" placeholder="Occupation">
+                                        <input required="required" type="text" name="pekerjaan" id="pekerjaan" class="form-control" placeholder="Pekerjaan">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="foto_ktp" class="form-group">KTP Photo</label>
+                                        <label for="foto_ktp" class="form-group">Foto KTP</label>
                                         <input type="file" name="foto_ktp" id="foto_ktp" class="form-group">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="foto_profil" class="form-group">Profile Photo</label>
+                                        <label for="foto_profil" class="form-group">Foto Profil</label>
                                         <input type="file" name="foto_profil" id="foto_profil" class="form-group">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="roles">Register as</label>
+                                <label for="roles">Mendaftar sebagai ?</label>
                                 <select name="roles" id="roles" class="custom-select">
-                                    <option value="1">Boarder</option>
-                                    <option value="2">Host</option>
+                                    <option value="1">Penghuni kost</option>
+                                    <option value="2">Pemilik kost</option>
                                 </select>
                             </div>
                             <div class="pb-2">
