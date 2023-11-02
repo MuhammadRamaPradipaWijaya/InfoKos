@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="CodePel">
-    <title>Simple login form with side demo image using bootstrap Example</title>
+    <title>Login Form</title>
     <!-- Style CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Demo CSS (No need to include it into your project) -->
@@ -90,8 +90,8 @@ if (isset($_POST['submit'])) {
                                 <input type="password" placeholder="Password" class="form-control input-style" name="txt_pass">
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center"><input name="" type="checkbox" value="" /> <span class="pl-2 font-weight-bold">Remember Me</span></div>
-                                <div><a href="#">Forget Password?</a></div>
+                                <div class="d-flex align-items-center"><input name="" type="checkbox" value="" /> <span class="pl-2 font-weight-bold">Ingat Saya</span></div>
+                                <div><a href="#">Lupa Password?</a></div>
                             </div>
                             <div class="pb-2">
                                 <button type="submit" class="btn btn-dark w-100 font-weight-bold mt-2" name="submit">Submit</button>
