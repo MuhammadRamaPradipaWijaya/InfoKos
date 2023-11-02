@@ -17,8 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $sumber2 = $_FILES["foto_profil"]['tmp_name'] ?? "";
 
     if ($foto_ktp && $foto_profil) {
-        move_uploaded_file($sumber1, '../img/ktp/' . $foto_ktp);
-        move_uploaded_file($sumber2, '../img/profil/' . $foto_profil);
+        move_uploaded_file($sumber1, 'img/ktp/' . $foto_ktp);
+        move_uploaded_file($sumber2, 'img/profil/' . $foto_profil);
     }
 
     // Gunakan prepared statement untuk melakukan insert
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="CodePel">
-    <title>Registration Form</title>
+    <title>Register</title>
     <!-- Style CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Demo CSS (No need to include it into your project) -->
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                     <img src="https://images.unsplash.com/photo-1566888596782-c7f41cc184c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" class="img-fluid" style="min-height:100%;" />
                 </div>
                 <div class="col-md-6 bg-white p-5">
-                    <h3 class="pb-3">Registration Form</h3>
+                    <h3 class="pb-3">Register Form</h3>
                     <div class="form-style">
                         <form action="register.php" method="post" enctype="multipart/form-data">
                             <div class="row mb-3">
