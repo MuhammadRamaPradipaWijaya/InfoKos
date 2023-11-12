@@ -98,7 +98,7 @@ if (isset($_POST['submit'])) {
                             </div>
                         </form>
                         <div class="pt-4 text-center">
-                            Belum punya akun ? <a href="register.php">Sign Up</a>
+                            Belum punya akun ? <a href="daftar.php">Sign Up</a>
                         </div>
                     </div>
                 </div>
