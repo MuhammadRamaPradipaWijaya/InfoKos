@@ -1,7 +1,7 @@
 <?php
-include('includes/header.php');
+include('includes/header.php'); 
 
-include("koneksi.php");
+require('koneksi.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     // ... (Bagian validasi input, pemrosesan file, dan pilihan peran) ...
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         $execute = mysqli_stmt_execute($statement);
 
         if ($execute) {
-            header("location:home.php");
+            header("location:index.php");
             exit;
         } else {
             echo "Gagal melakukan pendaftaran.";
