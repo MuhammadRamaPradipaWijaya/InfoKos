@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2023 at 04:10 AM
+-- Generation Time: Nov 17, 2023 at 04:25 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -111,6 +111,15 @@ CREATE TABLE `roles_user` (
   `nama` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `roles_user`
+--
+
+INSERT INTO `roles_user` (`id_roles`, `nama`) VALUES
+(1, 'penghuni kost'),
+(2, 'pemilik kost'),
+(3, 'admin');
+
 -- --------------------------------------------------------
 
 --
@@ -146,6 +155,13 @@ CREATE TABLE `user` (
   `roles` int(11) NOT NULL,
   `id_kost_saya` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `nama_lengkap`, `email`, `username`, `password`, `no_hp`, `pekerjaan`, `jenis_kelamin`, `foto_ktp`, `foto_profil`, `roles`, `id_kost_saya`) VALUES
+(1, 'Admin1', 'admin1@mail.com', 'admin', 'admin', '082239435432', 'Administrator', 'Laki-laki', '-', '-', 3, 0);
 
 -- --------------------------------------------------------
 
@@ -252,7 +268,7 @@ ALTER TABLE `rating`
 -- AUTO_INCREMENT for table `roles_user`
 --
 ALTER TABLE `roles_user`
-  MODIFY `id_roles` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_roles` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tagihan`
@@ -264,7 +280,7 @@ ALTER TABLE `tagihan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
