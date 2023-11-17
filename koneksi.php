@@ -13,5 +13,5 @@ if (mysqli_connect_error()) {
 }
 
 //ini file koneksi
-//ghghgh
+
 ?>
