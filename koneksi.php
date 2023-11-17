@@ -2,7 +2,7 @@
 $server     = "localhost";
 $username   = "root"; 
 $password   = ""; 
-$db         = "infokost"; 
+$db         = "infokos"; 
 $koneksi = mysqli_connect($server, $username, $password, $db);
 
 // Pastikan urutan pemanggilan variabelnya sama
