@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Menyusun item secara horizontal */
+}
+
+nav li {
+    margin-right: 10px;
+    /* Jarak antar item */
+}
+
+nav a {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 20px;
+    /* Tombol lebih oval */
+}
+
+nav a:hover {
+    color: #ddd;
+    background-color: #555;
+}
+
+.login-btn {
+    margin-left: auto;
+    /* Mendorong tombol login ke kanan */
+}
+
+/* Optional: Style for the login button */
+.login-btn a {
+    background-color: #9c0176;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    /* Tombol lebih oval */
+    cursor: pointer;
+}
+
+.login-btn a:hover {
+    background-color: #a04589;
+}
