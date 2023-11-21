@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2023 at 04:25 AM
+-- Generation Time: Nov 21, 2023 at 03:20 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -87,6 +87,13 @@ CREATE TABLE `kost` (
   `fasilitas_kost` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `kost`
+--
+
+INSERT INTO `kost` (`id_kost`, `nama_kost`, `tipe_kost`, `jenis_kost`, `jumlah_kamar`, `tanggal_tagih`, `nama_pemilik`, `nama_bank`, `no_rekening`, `foto_bangunan_utama`, `foto_kamar`, `foto_kamar_mandi`, `foto_interior`, `provinsi`, `kota`, `kecamatan`, `kelurahan`, `alamat`, `harga_sewa`, `kontak`, `deskripsi`, `id_pemilik`, `fasilitas_kost`) VALUES
+(1, 'kost 1', 'bulan', 'putri', 10, '2023-11-21', 'Pak kos', 'Mandiri', 12345678, 'contoh.jpg', 'contoh.jpg', 'contoh.jpg', 'contoh.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Tegalgede', 'Jl. Mastrip', 350000, '082139425332', 'Kost Muslim', 2, 'WIFI');
+
 -- --------------------------------------------------------
 
 --
@@ -161,7 +168,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `nama_lengkap`, `email`, `username`, `password`, `no_hp`, `pekerjaan`, `jenis_kelamin`, `foto_ktp`, `foto_profil`, `roles`, `id_kost_saya`) VALUES
-(1, 'Admin1', 'admin1@mail.com', 'admin', 'admin', '082239435432', 'Administrator', 'Laki-laki', '-', '-', 3, 0);
+(1, 'Admin1', 'admin1@mail.com', 'admin', 'admin', '082239435432', 'Administrator', 'Laki-laki', '-', '-', 3, 0),
+(2, 'owner1', 'owner1@mail.com', 'owner1', 'owner1', '082139425332', 'Pemilik Kos', 'Laki-laki', '-', '-', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -256,7 +264,7 @@ ALTER TABLE `kamar`
 -- AUTO_INCREMENT for table `kost`
 --
 ALTER TABLE `kost`
-  MODIFY `id_kost` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `rating`
@@ -280,7 +288,7 @@ ALTER TABLE `tagihan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
@@ -309,27 +317,19 @@ ALTER TABLE `kamar`
 -- Constraints for table `kost`
 --
 ALTER TABLE `kost`
-  ADD CONSTRAINT `kost_ibfk_1` FOREIGN KEY (`id_pemilik`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `kost_ibfk_2` FOREIGN KEY (`id_kost`) REFERENCES `wishlist` (`id_kost`);
+  ADD CONSTRAINT `kost_ibfk_1` FOREIGN KEY (`id_pemilik`) REFERENCES `user` (`id`);
 
 --
 -- Constraints for table `rating`
 --
 ALTER TABLE `rating`
-  ADD CONSTRAINT `rating_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `rating_ibfk_2` FOREIGN KEY (`id_kost`) REFERENCES `kost` (`id_kost`);
+  ADD CONSTRAINT `rating_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`);
 
 --
 -- Constraints for table `user`
 --
 ALTER TABLE `user`
   ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`roles`) REFERENCES `roles_user` (`id_roles`);
-
---
--- Constraints for table `wishlist`
---
-ALTER TABLE `wishlist`
-  ADD CONSTRAINT `wishlist_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
