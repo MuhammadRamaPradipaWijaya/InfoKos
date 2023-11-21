@@ -109,9 +109,9 @@ function minfas($idkost, $tipe_kost)
     <div class="container my-5">
       <div class="mb-5">
         <div class="owl-single dots-absolute owl-carousel">
-          <img src="images/slider-1.jpg" alt="Free HTML Template by Untree.co" class="img-fluid">
-          <img src="images/slider-2.jpg" alt="Free HTML Template by Untree.co" class="img-fluid">
-          <img src="images/slider-4.jpg" alt="Free HTML Template by Untree.co" class="img-fluid">
+          <img src="img/contoh.jpg" alt="Free HTML Template by Untree.co" class="img-fluid">
+          <img src="img/contoh.jpg" alt="Free HTML Template by Untree.co" class="img-fluid">
+          <img src="img/contoh.jpg" alt="Free HTML Template by Untree.co" class="img-fluid">
         </div>
       </div>
 
