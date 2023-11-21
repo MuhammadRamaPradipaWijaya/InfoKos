@@ -72,13 +72,13 @@ function minfas($idkost, $tipe_kost)
   <nav class="site-nav">
     <div class="container">
       <div class="site-navigation">
-        <a href="index.html" class="logo m-0">Tour <span class="text-primary">.</span></a>
+        <a href="index2.php" class="logo m-0">Info Kost<span class="text-primary">.</span></a>
 
         <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="daftarkos.html">Daftar Kost</a></li>
-          <li><a href="contact.html">contact</a></li>
-          <li><a href="login.html">login</a></li>
+          <li class="active"><a href="index2.php">Home</a></li>
+          <li><a href="daftarkos.php">Daftar Kost</a></li>
+          <li><a href="contact.php">contact</a></li>
+          <li><a href="login.php">login</a></li>
         </ul>
 
         <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
@@ -95,8 +95,8 @@ function minfas($idkost, $tipe_kost)
       <div class="row align-items-center">
         <div class="col-lg-6 mx-auto text-center">
           <div class="intro-wrap">
-            <h1 class="mb-0">Elements</h1>
-            <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+            <h1 class="mb-0">Info kost.</h1>
+            <p class="text-white">Selamat datang di infoKost.id, platform informasi kost terdepan yang didedikasikan untuk memudahkan pencarian tempat tinggal yang nyaman dan terjangkau. InfoKost.id menyajikan layanan yang lengkap dan informatif bagi para pencari kost, mahasiswa, dan pekerja yang sedang mencari tempat tinggal sementara.</p>
           </div>
         </div>
       </div>
@@ -109,9 +109,9 @@ function minfas($idkost, $tipe_kost)
     <div class="container my-5">
       <div class="mb-5">
         <div class="owl-single dots-absolute owl-carousel">
-          <img src="img/contoh.jpg" alt="Free HTML Template by Untree.co" class="img-fluid">
-          <img src="img/contoh.jpg" alt="Free HTML Template by Untree.co" class="img-fluid">
-          <img src="img/contoh.jpg" alt="Free HTML Template by Untree.co" class="img-fluid">
+          <img src="img/kos1.jpg" alt="Free HTML Template by Untree.co" class="img-fluid">
+          <img src="img/kos2.jpg" alt="Free HTML Template by Untree.co" class="img-fluid">
+          <img src="img/kos2.jpg" alt="Free HTML Template by Untree.co" class="img-fluid">
         </div>
       </div>
 
@@ -317,6 +317,18 @@ function minfas($idkost, $tipe_kost)
     </div>
   </div>
 
+  <div class="py-5 cta-section">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h2 class="mb-2 text-white">Ayo cari tempat tinggal anda</h2>
+          <p class="mb-4 lead text-white text-white-opacity">selengkapnya</p>
+          <p class="mb-0"><a href="daftarkos.php" class="btn btn-outline-white text-white btn-md font-weight-bold">Daftar kos --></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
       <div class="row justify-content-center mt-5 section">
 
         <div class="col-lg-10">
@@ -330,7 +342,7 @@ function minfas($idkost, $tipe_kost)
               <div class="team">
                 <img src="images/person_1.jpg" alt="Image" class="img-fluid mb-4">
                 <div class="px-3">
-                  <h3 class="mb-0">James Watson</h3>
+                  <h3 class="mb-0">Ridho Aditya</h3>
                   <p>Co-Founder &amp; CEO</p>
                 </div>
               </div>
@@ -339,7 +351,7 @@ function minfas($idkost, $tipe_kost)
               <div class="team">
                 <img src="images/person_2.jpg" alt="Image" class="img-fluid mb-4">
                 <div class="px-3">
-                  <h3 class="mb-0">Carl Anderson</h3>
+                  <h3 class="mb-0">iqbal Amin</h3>
                   <p>Co-Founder &amp; CEO</p>
                 </div>
               </div>
@@ -349,16 +361,17 @@ function minfas($idkost, $tipe_kost)
               <div class="team">
                 <img src="images/person_4.jpg" alt="Image" class="img-fluid mb-4">
                 <div class="px-3">
-                  <h3 class="mb-0">Michelle Allison</h3>
+                  <h3 class="mb-0">M. Rama Pradipa W.</h3>
                   <p>Co-Founder &amp; CEO</p>
                 </div>
               </div>
             </div>
+
             <div class="col-lg-3 mb-4">
               <div class="team">
                 <img src="images/person_3.jpg" alt="Image" class="img-fluid mb-4">
                 <div class="px-3">
-                  <h3 class="mb-0">Drew Wood</h3>
+                  <h3 class="mb-0">reynand </h3>
                   <p>Co-Founder &amp; CEO</p>
                 </div>
               </div>
@@ -371,17 +384,7 @@ function minfas($idkost, $tipe_kost)
     </div>
   </div>
 
-  <div class="py-5 cta-section">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-md-12">
-          <h2 class="mb-2 text-white">Lets you Explore the Best. Contact Us Now</h2>
-          <p class="mb-4 lead text-white text-white-opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, fugit?</p>
-          <p class="mb-0"><a href="booking.html" class="btn btn-outline-white text-white btn-md font-weight-bold">Get in touch</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
   <div class="site-footer">
     <div class="inner first">
