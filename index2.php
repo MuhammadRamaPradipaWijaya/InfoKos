@@ -1,9 +1,32 @@
-<!-- /*
-* Template Name: Tour
-* Template Author: Untree.co
-* Tempalte URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
+<?php
+require('koneksi.php');
+
+$jumlah_data_perhalaman = 8;
+$jumlah_halaman = ceil($jumlah_data = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM kost JOIN user ON kost.id_pemilik = user.id")) / $jumlah_data_perhalaman);
+if (isset($_GET['halaman'])) {
+  $halaman_aktif = $_GET['halaman'];
+} else {
+  $halaman_aktif = 1;
+}
+
+$awalData = ($jumlah_data_perhalaman * $halaman_aktif) - $jumlah_data_perhalaman;
+
+$query = "SELECT * FROM kost  INNER JOIN user ON kost.id_pemilik = user.id LIMIT $awalData,$jumlah_data_perhalaman";
+
+$data = mysqli_query($koneksi, $query);
+
+function minfas($idkost, $tipe_kost)
+{
+  global $koneksi;
+  $cost = mysqli_query($koneksi, "SELECT min(biaya_fasilitas) FROM kamar WHERE id_kost=$idkost");
+  $p = mysqli_fetch_array($cost);
+  if ($tipe_kost == "Bulan") {
+    return $p['min(biaya_fasilitas)'];
+  } else if ($tipe_kost == "Tahun") {
+    return $p['min(biaya_fasilitas)'] * 12;
+  }
+}
+?>
 
 
 <!doctype html>
@@ -92,184 +115,74 @@
         </div>
       </div>
 
-      <div class="row justify-content-center">
+    
+      <div class="row">
+      <div class="row kartu">
+        <?php while ($d = mysqli_fetch_array($data)) {
 
-        <div class="col-lg-4">
-          <div class="custom-block" data-aos="fade-up">
-            <h2 class="section-title">Accordion</h2>
-            <div class="custom-accordion" id="accordion_1">
-              <div class="accordion-item">
-                <h2 class="mb-0">
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">How to download and register?</button>
-                </h2>
 
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion_1">
-                  <div class="accordion-body">
-                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+        ?>
+
+          <div class="card" style="width: 18rem;">
+            <a href="kost/tampilan-kost.php?id_kost=<?php echo $d['id_kost'] ?>">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="row">
+                      <img src="img/profil/<?php echo $d['foto_profil'] ?>" class="thumbnail img-responsive rounded-circle mr-3" height="50px" width="50px" alt="avatar">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card-text">
+                      <h6 class="card-title font-weight-bold mb-1"><?php echo $d['nama_kost'] ?></h6>
+
+                      <p class="card-text"><?php echo $d['kota'] . ',' . $d['provinsi'] ?></p>
+
+                    </div>
                   </div>
                 </div>
-              </div> <!-- .accordion-item -->
-
-              <div class="accordion-item">
-                <h2 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">How to create your paypal account?</button>
-                </h2>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion_1">
-                  <div class="accordion-body">
-                    A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-                  </div>
+              </div>
+              <div class="card-body">
+                <img height="" class="card-img-top" src="img/foto_kost/kamar/<?php echo $d['foto_kamar'] ?>" alt="Card image cap">
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-md-7" style="font-size:12px;font-weight:bold"><?php echo number_format($d['harga_sewa'] + minfas($d['id_kost'], $d['tipe_kost']), 0, ',', '.') . '/' . $d['tipe_kost'] ?></div>
+                  <?php
+                  if ($d['jenis_kost'] == "Putri") {
+                  ?>
+                    <div class="col" style="background-color:pink;font-size:12px;font-weight:bold;color:white"><?php echo $d['jenis_kost'] ?></div>
+                  <?php
+                  } else if ($d['jenis_kost'] == "Putra") {
+                  ?>
+                    <div class="col" style="background-color:black;font-size:12px;font-weight:bold;color:white"><?php echo $d['jenis_kost'] ?></div>
+                  <?php
+                  } else if ($d['jenis_kost'] == "Campuran") {
+                  ?>
+                    <div class="col" style="background-color:purple;font-size:12px;font-weight:bold;color:white"><?php echo $d['jenis_kost'] ?></div>
+                  <?php } ?>
                 </div>
-              </div> <!-- .accordion-item -->
-              <div class="accordion-item">
-                <h2 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How to link your paypal and bank account?</button>
-                </h2>
-
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion_1">
-                  <div class="accordion-body">
-                    When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.
-                  </div>
-                </div>
-
-              </div> <!-- .accordion-item -->
-
-            </div>
-          </div> <!-- END .custom-block -->
-          <div class="custom-block" data-aos="fade-up">
-            <h2 class="section-title">Gallery</h2>
-            <div class="row gutter-v2 gallery">
-              <div class="col-4">
-                <a href="images/gal_1.jpg" class="gal-item" data-fancybox="gal"><img src="images/gal_1.jpg" alt="Image" class="img-fluid"></a>
               </div>
-              <div class="col-4">
-                <a href="images/gal_2.jpg" class="gal-item" data-fancybox="gal"><img src="images/gal_2.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4">
-                <a href="images/gal_3.jpg" class="gal-item" data-fancybox="gal"><img src="images/gal_3.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4">
-                <a href="images/gal_4.jpg" class="gal-item" data-fancybox="gal"><img src="images/gal_4.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4">
-                <a href="images/gal_5.jpg" class="gal-item" data-fancybox="gal"><img src="images/gal_5.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4">
-                <a href="images/gal_6.jpg" class="gal-item" data-fancybox="gal"><img src="images/gal_6.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-            </div>
-          </div> <!-- END .custom-block -->
-
-          <div class="custom-block" data-aos="fade-up">
-            <h2 class="section-title">Video</h2>
-
-            <a href="https://vimeo.com/342333493" data-fancybox class="video-wrap">
-              <span class="play-wrap"><span class="icon-play"></span></span>
-              <img src="images/bg_1.jpg" alt="Image" class="img-fluid rounded">
             </a>
-          </div> <!-- END .custom-block -->
-        </div>
-        <div class="col-lg-4">
-          <div class="custom-block" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="section-title">Form</h2>
-            <form class="contact-form bg-white">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="text-black" for="fname">First name</label>
-                    <input type="text" class="form-control" id="fname">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="text-black" for="lname">Last name</label>
-                    <input type="text" class="form-control" id="lname">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="text-black" for="email">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-              </div>
-              <div class="form-group">
-                <label class="text-black" for="password">Password</label>
-                <input type="password" class="form-control" id="password">
-              </div>
-              <div class="form-group">
-                <label class="text-black" for="message">Message</label>
-                <textarea name="" class="form-control" id="message" cols="30" rows="5"></textarea>
-              </div>
-              <div class="form-group">
-                <label class="text-black" for="select">Select</label>
-
-                <select name="" id="select" class="custom-select">
-                  <option value="">Untree.co</option>
-                  <option value="">Offers high quality free template</option>
-                </select>
-
-              </div>
-              <div class="form-group">
-                <label class="control control--checkbox">
-                  <span class="caption">Custom checkbox</span>
-                  <input type="checkbox" checked="checked" />
-                  <div class="control__indicator"></div>
-                </label>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
           </div>
 
-          <div class="custom-block" data-aos="fade-up">
-            <h2 class="section-title">Social Icons</h2>
-            <ul class="list-unstyled social-icons light">
-              <li><a href="#"><span class="icon-facebook"></span></a></li>
-              <li><a href="#"><span class="icon-twitter"></span></a></li>
-              <li><a href="#"><span class="icon-linkedin"></span></a></li>
-              <li><a href="#"><span class="icon-google"></span></a></li>
-              <li><a href="#"><span class="icon-play"></span></a></li>
-            </ul>
-          </div> <!-- END .custom-block -->
-
-          <div class="custom-block" data-aos="fade-up" data-aos-delay="100">
-            <div class="text-center">
-              <h2 class="section-title text-center">Slider</h2>
-            </div>
-            <div class="owl-single owl-carousel no-nav">
-              <div class="testimonial mx-auto">
-                <figure class="img-wrap">
-                  <img src="images/person_2.jpg" alt="Image" class="img-fluid">
-                </figure>
-                <h3 class="name">Adam Aderson</h3>
-                <blockquote>
-                  <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                </blockquote>
-              </div>
-
-              <div class="testimonial mx-auto">
-                <figure class="img-wrap">
-                  <img src="images/person_3.jpg" alt="Image" class="img-fluid">
-                </figure>
-                <h3 class="name">Lukas Devlin</h3>
-                <blockquote>
-                  <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                </blockquote>
-              </div>
-
-              <div class="testimonial mx-auto">
-                <figure class="img-wrap">
-                  <img src="images/person_4.jpg" alt="Image" class="img-fluid">
-                </figure>
-                <h3 class="name">Kayla Bryant</h3>
-                <blockquote>
-                  <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                </blockquote>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
+        <?php  
+      } ?>
       </div>
+    </div>
+
+    <br>
+    <hr>
+    <div class="row">
+      <?php for ($i = 1; $i <= $jumlah_halaman; $i++) : ?>
+        <?php if ($i == $halaman_aktif) : ?>
+          <a style="font-weight: bold;background-color:black;padding:10px;color:white;" href="?halaman=<?php echo $i ?>"><?php echo $i ?></a>
+        <?php else : ?>
+          <a style="font-weight: bold;background-color:red;padding:10px;color:white" href="?halaman=<?php echo $i ?>"><?php echo $i ?></a>
+        <?php endif; ?>
+      <?php endfor; ?>
+    </div>
+  </div>
 
       <div class="row justify-content-center mt-5 section">
 
