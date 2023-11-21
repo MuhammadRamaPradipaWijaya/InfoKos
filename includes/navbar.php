@@ -19,6 +19,11 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="kost/daftar-kost.php">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Daftar Kost</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
