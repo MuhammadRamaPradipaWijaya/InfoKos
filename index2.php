@@ -59,7 +59,6 @@ function minfas($idkost, $tipe_kost)
 
 <body>
 
-
   <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header">
       <div class="site-mobile-menu-close">
@@ -103,7 +102,6 @@ function minfas($idkost, $tipe_kost)
     </div>
   </div>
 
-  
   
   <div class="untree_co-section">
     <div class="container my-5">

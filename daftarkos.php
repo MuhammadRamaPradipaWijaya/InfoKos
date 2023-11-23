@@ -55,6 +55,19 @@ function minfas($idkost, $tipe_kost)
   <link rel="stylesheet" href="css/style.css">
 
   <title>InfoKost.</title>
+  <style>
+    
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .row a {
+      margin: 5px;
+    }
+  </style>
 </head>
 
 <body>
@@ -72,7 +85,7 @@ function minfas($idkost, $tipe_kost)
   <nav class="site-nav">
     <div class="container">
       <div class="site-navigation">
-        <a href="index.html" class="logo m-0">Tour <span class="text-primary">.</span></a>
+        <a href="index.html" class="logo m-0"> InfoKost <span class="text-primary">.</span></a>
 
         <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
           <li><a href="index2.php">Home</a></li>
@@ -97,6 +110,10 @@ function minfas($idkost, $tipe_kost)
           <div class="intro-wrap">
             <h1 class="mb-0">Elements</h1>
             <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+            <form class="form-inline mt-3">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
           </div>
         </div>
       </div>
@@ -300,6 +317,7 @@ function minfas($idkost, $tipe_kost)
     </div>
   </div>
 
+  
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
