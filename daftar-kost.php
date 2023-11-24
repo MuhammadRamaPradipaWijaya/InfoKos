@@ -1,5 +1,6 @@
 <?php
 require('koneksi.php');
+
 include('includes/header.php'); 
 include('includes/navbar.php');
 
@@ -44,17 +45,17 @@ function minfas($idkost, $tipe_kost)
 
 <body>
   <div class="container">
-        <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Daftar Kost</h1>
     </div>
     
+
     <div class="row">
       <div class="row kartu">
         <?php while ($d = mysqli_fetch_array($data)) {
         ?>
           <div class="card" style="width: 18rem;">
-            <a href="kost/tampilan-kost.php?id_kost=<?php echo $d['id_kost'] ?>">
+            <a href="tampilan-kost.php?id_kost=<?php echo $d['id_kost'] ?>">
               <div class="card-header">
                 <div class="row">
                   <div class="col-md-3">

@@ -1,4 +1,6 @@
+<?php
 
+?>
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -20,7 +22,7 @@
                     <span>Dashboard</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="daftar-kost.php">
+                <a class="nav-link" href="kost/daftar-kost.php">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Daftar Kost</span></a>
             </li>
