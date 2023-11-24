@@ -1,8 +1,7 @@
 <?php
-require('koneksi.php');
+require('../koneksi.php');
 
 include('includes/header.php');
-include('includes/navbar.php');
 
 $data = mysqli_query($koneksi, "SELECT * FROM kost INNER JOIN user WHERE kost.id_pemilik=user.id");
 
@@ -48,6 +47,5 @@ $data = mysqli_query($koneksi, "SELECT * FROM kost INNER JOIN user WHERE kost.id
 
 
 <?php
-include('includes/scripts.php');
 include('includes/footer.php');
 ?>

@@ -1,8 +1,7 @@
 <?php 
-require('koneksi.php');
+require('../koneksi.php');
 
 include('includes/header.php'); 
-include('includes/navbar.php');
 
 $koneksi = mysqli_connect("localhost","root","","infokost");
 
@@ -187,6 +186,5 @@ $o = explode(', ', $d['fasilitas_kost']);
 
 
 <?php
-include('includes/scripts.php');
-include('includes/footer.php');
+include('../includes/footer.php');
 ?>

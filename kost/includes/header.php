@@ -123,7 +123,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Daftar Menu:</h6>
                         <a class="collapse-item" href="user.php">User</a>
-                        <a class="collapse-item" href="kost_management.php">Kost</a>
+                        <a class="collapse-item" href="kost_manage.php">Kost</a>
                         <a class="collapse-item" href="semua_transaksi.php">Management Transaksi</a>
                     </div>
                 </div>
