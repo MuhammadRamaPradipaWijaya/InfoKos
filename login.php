@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
                 $_SESSION['username'] = $dbUsername;
                 $_SESSION['nama_lengkap'] = $fullName;
                 $_SESSION['roles'] = $level;
-                header('Location: home.php');
+                header('Location: kost/dashboard.php');
             } else {
                 $error = 'Username atau password salah!';
             }
@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="CodePel">
-    <title>Login Form</title>
+    <title>Info Kost</title>
     <!-- Style CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Demo CSS (No need to include it into your project) -->
