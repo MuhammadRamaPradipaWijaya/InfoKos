@@ -1,46 +1,10 @@
 <?php
-require('koneksi.php');
-
-
-if (isset($_POST['submit'])) {
-    $username = $_POST['txt_username'];
-    $password = $_POST['txt_pass'];
-
-    if (!empty(trim($username)) && !empty(trim($password))) {
-        // Melakukan query ke database dengan username sebagai parameter
-        $query = "SELECT * FROM user WHERE username = '$username'";
-        $result = mysqli_query($koneksi, $query);
-        $num = mysqli_num_rows($result);
-
-        while ($row = mysqli_fetch_array($result)) {
-            $id = $row['id'];
-            $dbUsername = $row['username'];
-            $dbPassword = $row['password'];
-            $fullName = $row['nama_lengkap'];
-            $level = $row['roles'];
-        }
-
-        if ($num != 0) {
-            if($dbUsername==$username && $dbPassword==$password){
-                $_SESSION['id'] = $id;
-                $_SESSION['username'] = $dbUsername;
-                $_SESSION['nama_lengkap'] = $fullName;
-                $_SESSION['roles'] = $level;
-                header('Location: kost/dashboard.php');
-            } else {
-                $error = 'Username atau password salah!';
-            }
-        } else {
-            $error = 'Username tidak ditemukan!';
-        }
-    } else {
-        $error = 'Data tidak boleh kosong!';
-    }
-}
+include("includes/header.php")
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -81,13 +45,13 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="col-md-6 bg-white p-5">
                     <h3 class="pb-3">Login Form</h3>
-                    <div class="form-style">
-                        <form method="POST" action="login.php">
+                    <div class="login-style">
+                        <form method="POST" action="php/login_proses.php" method="post">
                             <div class="form-group pb-3">
-                                <input type="text" placeholder="Username" class="form-control input-style" name="txt_username">
+                                <input type="text" placeholder="Masukan username" class="form-control input-style" name="username" id="username">
                             </div>
                             <div class="form-group pb-3">
-                                <input type="password" placeholder="Password" class="form-control input-style" name="txt_pass">
+                                <input type="password" placeholder="Masukan password" class="form-control input-style" name="password" id="password">
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center"><input name="" type="checkbox" value="" /> <span class="pl-2 font-weight-bold">Ingat Saya</span></div>
@@ -107,6 +71,6 @@ if (isset($_POST['submit'])) {
     </main>
 
     <!-- Script JS -->
-    <script src="./js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
