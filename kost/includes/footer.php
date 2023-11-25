@@ -2,7 +2,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Sistem Informasi Kost 2020 | Otak Studio</span>
+            <span>Copyright &copy; Sistem Informasi Kost 2023 | KINT2</span>
         </div>
     </div>
 </footer>
