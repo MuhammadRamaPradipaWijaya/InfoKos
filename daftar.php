@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         $execute = mysqli_stmt_execute($statement);
 
         if ($execute) {
-            header("location:index.php");
+            header("location:login.php");
             exit;
         } else {
             echo "Gagal melakukan pendaftaran.";
@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                 <div class="col-md-6 bg-white p-5">
                     <h3 class="pb-3">Register Form</h3>
                     <div class="form-style">
-                        <form action="register.php" method="post" enctype="multipart/form-data">
+                        <form action="daftar.php" method="post" enctype="multipart/form-data">
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
