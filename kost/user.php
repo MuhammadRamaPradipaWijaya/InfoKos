@@ -122,7 +122,6 @@ include('includes/header.php');
                 <th> Username </th>
                 <th> Password </th>
                 <th> Roles </th>
-                <th> Edit </th>
                 <th> Delete </th>
             </tr>
         </thead>
@@ -140,12 +139,6 @@ include('includes/header.php');
                 <td><?php echo $row['username']; ?></td>
                 <td><?php echo $row['password']; ?></td>
                 <td><?php echo $row['roles']; ?></td>
-                <td>
-                    <form action="register_edit.php" method="post">
-                        <input type="hidden" name="edit_id" value="<?php echo $row['id']; ?>">
-                        <button type="submit" name="edit_id" class="btn btn-success"> Edit</button>
-                    </form>
-                </td>
                 <td>
                     <button type="submit" class="btn btn-danger"> Delete</button>
                 </td>
