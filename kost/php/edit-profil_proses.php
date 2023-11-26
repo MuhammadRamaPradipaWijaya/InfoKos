@@ -1,6 +1,7 @@
 <?php
-include "../../php/koneksi.php";
+include "../../koneksi.php";
 session_start();
+
 $username4 = $_SESSION['username'];
 $data2 = mysqli_query($koneksi, "SELECT * FROM user WHERE username='$username4'");
 $d = mysqli_fetch_array($data2);
@@ -28,8 +29,6 @@ if (isset($_POST['submit'])) {
     } else {
         $foto_profil = $foto_lama;
     }
-    // move_uploaded_file($sumber1, '../../img/ktp/' . $foto_ktp);
-    // move_uploaded_file($sumber2, '../../img/profil/' . $foto_profil);
 
     $query = "UPDATE user SET foto_profil='$foto_profil',nama_lengkap='$nama_lengkap',email='$email',pekerjaan='$pekerjaan',no_hp='$no_hp',jenis_kelamin='$jenis_kelamin' WHERE username='$username' ";
     $masuk = mysqli_query($koneksi, $query);
@@ -40,3 +39,4 @@ if (isset($_POST['submit'])) {
         header("location:../profil.php");
     }
 }
+?>

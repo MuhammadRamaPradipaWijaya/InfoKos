@@ -1,6 +1,8 @@
 <?php
-include "../../php/koneksi.php";
+include "../../koneksi.php";
 session_start();
+
+
 if (isset($_POST['tambah'])) {
 
     $nama_kost = $_POST['nama_kost'];

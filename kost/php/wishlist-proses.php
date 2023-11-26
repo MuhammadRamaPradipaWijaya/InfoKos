@@ -1,7 +1,7 @@
 <?php
-include "../../php/koneksi.php";
-
+include "../../koneksi.php";
 session_start();
+
 $username = $_SESSION['username'];
 $id_kost = $_GET['id_kost'];
 echo $id_kost . " " . $username;
@@ -18,3 +18,4 @@ if ($tambah) {
     header("location:../tambah_kos.php");
     echo "<script>alert('gagal')</script>";
 }
+?>

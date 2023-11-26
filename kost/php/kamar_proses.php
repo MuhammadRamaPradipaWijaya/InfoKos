@@ -1,6 +1,6 @@
 <?php
+include "../../koneksi.php";
 
-include "../../php/koneksi.php";
 
 function ubahKamar()
 {
@@ -25,6 +25,7 @@ function ubahKamar()
     }
 }
 
+
 function tambahKamar()
 {
     $id_kost = $_GET['id_kost'];
@@ -45,7 +46,6 @@ function tambahKamar()
         echo "<script>alert('gagal')</script>";
     }
 }
-
 
 
 function idkost($id_kamar)
@@ -84,3 +84,4 @@ if (isset($_POST['submit'])) {
 } else {
     echo "failed";
 }
+?>

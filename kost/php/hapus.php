@@ -1,5 +1,5 @@
 <?php
-include "../../php/koneksi.php";
+include "../../koneksi.php";
 
 $id_kost = $_GET['id_kost'];
 echo $id_kost;
@@ -12,5 +12,5 @@ if ($data) {
 } else {
     header("location:../index.php");
 }
+
 ?>
-<!-- hapus  -->

@@ -1,7 +1,7 @@
 <?php
-
-include "../../php/koneksi.php";
+include "../../koneksi.php";
 session_start();
+
 $username = $_SESSION['username'];
 echo $username;
 $id_kost = $_GET['id_kost'];
@@ -22,5 +22,4 @@ $id_user = $f['id'];
 $id_kost = $d['id_kost'];
 $tanggal_masuk = $_POST['tanggal_masuk'];
 echo $tanggal_masuk;
-
-// $kirim = mysqli_query($koneksi, "INSERT INTO booking VALUES ('','$id_user','$id_kost','$tanggal_masuk','$hitungan_sewa','$durasi_sewa','$tanggal_keluar','$jumlah_kamar')");
+?>

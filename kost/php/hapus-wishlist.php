@@ -1,5 +1,7 @@
 <?php
-include "../../php/koneksi.php";
+include "../../koneksi.php";
+
+
 $id_kost = $_GET['id_kost'];
 
 $query = "DELETE FROM wishlist WHERE id_kost='$id_kost'";
@@ -9,3 +11,4 @@ if ($data) {
 } else {
     header("location:../index.php");
 }
+?>

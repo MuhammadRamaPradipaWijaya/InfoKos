@@ -1,5 +1,7 @@
 <?php
-include "../../php/koneksi.php";
+include "../../koneksi.php";
+
+
 $id = $_GET['id'];
 echo $id;
 
@@ -12,3 +14,4 @@ if ($data) {
 } else {
     header("location:../index.php");
 }
+?>

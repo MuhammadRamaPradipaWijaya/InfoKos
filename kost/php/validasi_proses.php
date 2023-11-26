@@ -1,6 +1,5 @@
 <?php
-
-include "../../php/koneksi.php";
+include "../../koneksi.php";
 
 $id_tagihan = $_POST['id_tagihan'];
 
