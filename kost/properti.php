@@ -33,21 +33,23 @@ $data_2 = mysqli_query($koneksi, $query);
 </style>
 
 <!-- properti -->
-<div class="container">
-  <h3 class="text-center">Daftar Kost Saya</h3>
-  <hr>
-  <div class="container">
-
-    <table class="table">
-      <thead class="thead-dark">
-        <tr>
-          <th>No</th>
-          <th>Nama Kost</th>
-          <th>Kapasitas</th>
-          <th>Foto Kost</th>
-          <th>Perintah</th>
-        </tr>
-      </thead>
+<div class="container-fluid">
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Daftar Kost</h6>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama Kost</th>
+            <th>Kapasitas</th>
+            <th>Foto Kost</th>
+            <th>Perintah</th>
+          </tr>
+        </thead>
       <tbody>
         <div class="row ">
           <div class="col-md-10"></div>
