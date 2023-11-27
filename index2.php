@@ -328,57 +328,7 @@ function minfas($idkost, $tipe_kost)
     </div>
   </div>
 
-      <div class="row justify-content-center mt-5 section">
-
-        <div class="col-lg-10">
-          <div class="row mb-5">
-            <div class="col text-center">
-              <h2 class="section-title text-center">Our tam</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-3 mb-4">
-              <div class="team">
-                <img src="images/person_1.jpg" alt="Image" class="img-fluid mb-4">
-                <div class="px-3">
-                  <h3 class="mb-0">Ridho Aditya</h3>
-                  <p>Co-Founder &amp; CEO</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 mb-4">
-              <div class="team">
-                <img src="images/person_2.jpg" alt="Image" class="img-fluid mb-4">
-                <div class="px-3">
-                  <h3 class="mb-0">iqbal Amin</h3>
-                  <p>Co-Founder &amp; CEO</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 mb-4">
-              <div class="team">
-                <img src="images/person_4.jpg" alt="Image" class="img-fluid mb-4">
-                <div class="px-3">
-                  <h3 class="mb-0">M. Rama Pradipa W.</h3>
-                  <p>Co-Founder &amp; CEO</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 mb-4">
-              <div class="team">
-                <img src="images/person_3.jpg" alt="Image" class="img-fluid mb-4">
-                <div class="px-3">
-                  <h3 class="mb-0">reynand </h3>
-                  <p>Co-Founder &amp; CEO</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
+     
 
     </div>
   </div>
