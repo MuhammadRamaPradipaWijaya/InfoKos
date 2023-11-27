@@ -1,12 +1,5 @@
 <head>
-    <style>
-        .bg-gradient-danger {
-            background-color: #1A374D;
-            background-image: linear-gradient(180deg, #1A374D 10%, #1A374D 100%);
-            background-size: cover;
-        }
-    </style>
-
+    
     <?php
     include '../koneksi.php';
 
@@ -35,6 +28,15 @@
     <link rel="stylesheet" type="text/css" href="css/sb-admin-2.min.css">
     <script type="text/javascript" src="js/sb-admin-2.js"></script>
     <script type="text/javascript" src="js/sb-admin-2.min.js"></script>
+
+    <style>
+        .bg-gradient-danger {
+            background-color: #1A374D;
+            background-image: linear-gradient(180deg, #1A374D 10%, #1A374D 100%);
+            background-size: cover;
+        }
+    </style>
+
 </head>
 
 
