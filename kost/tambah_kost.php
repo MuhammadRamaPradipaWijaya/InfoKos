@@ -43,8 +43,8 @@ include('includes/header.php');
           </div>
           <br>
           <div class="row">
-            <div class="col"><label for="deskripsi">Deskripsi Kost(opsional)</label></div>
-            <div class="col"><textarea class="form-control" name="deskripsi" id="deskripsi" cols="30" rows="10" placeholder="Masukan alamat kost anda"></textarea></div>
+            <div class="col"><label for="deskripsi">Deskripsi Kost (opsional)</label></div>
+            <div class="col"><textarea class="form-control" name="deskripsi" id="deskripsi" cols="30" rows="10" placeholder="Masukan deskripsi tambahan tentang kost"></textarea></div>
           </div>
           <br>
           <div class="row">
