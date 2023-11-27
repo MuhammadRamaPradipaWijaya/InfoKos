@@ -34,7 +34,7 @@ $data = mysqli_query($koneksi, "SELECT * FROM kost INNER JOIN user WHERE kost.id
                     <td><?php echo $d['provinsi'] . "," . $d['kota'] ?></td>
                     <td>
                         <a href="php/hapus.php?id_kost=<?php echo $d['id_kost'] ?>"><button class="btn-danger">Hapus</button></a>
-                        <a href="properti-edit.php?id_kost=<?php echo $d['id_kost'] ?>"><button class="btn-dark"> Ubah</button></a></td>
+                        <a href="properti_edit.php?id_kost=<?php echo $d['id_kost'] ?>"><button class="btn-dark"> Ubah</button></a></td>
                 </tr>
 
             <?php } ?>
