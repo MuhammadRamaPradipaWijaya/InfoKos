@@ -38,7 +38,14 @@ $data = mysqli_query($koneksi, "SELECT * FROM user JOIN roles_user on user.roles
                     <td><?php echo $d['password'] ?></td>
                     <td><?php echo $d['nama'] ?></td>
                     <td>
-                        <a href="php/hapus-user.php?id=<?php echo $d['id']; ?>"><button class="btn-danger">Banned</button></a>
+                      <div class="">
+                        <a href="php/hapus-user.php?id=<?php echo $d['id']; ?>" class="btn btn-danger btn-icon-split">
+                          <span class="icon text-white-50">
+                            <i class="fas fa-ban"></i>
+                          </span>
+                          <span class="text">Banned</span>
+                        </a>
+                      </div>
                     </td>
                 </tr>
             <?php } ?>

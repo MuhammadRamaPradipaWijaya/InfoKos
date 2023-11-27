@@ -174,11 +174,18 @@ $o = explode(', ', $d['fasilitas_kost']);
 
             </div>
           </div>
-          <br>
-          <div class="col">
-            <button type="submit" class="btn-primary" name="ubah">Ubah</button>
           </div>
+          <br>
+
+          <div class="col">
+          <button type="submit" class="btn btn-primary btn-icon-split" name="ubah">
+            <span class="icon text-white-50">
+              <i class="fas fa-edit"></i>
+            </span>
+            <span class="text">Ubah</span>
+          </button>
         </div>
+
       </form>
     </div>
   </div>

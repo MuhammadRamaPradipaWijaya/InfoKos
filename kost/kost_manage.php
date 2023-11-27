@@ -39,10 +39,33 @@ $data = mysqli_query($koneksi, "SELECT * FROM kost INNER JOIN user WHERE kost.id
                     <td><?php echo $d['jumlah_kamar'] ?></td>
                     <td><?php echo $d['provinsi'] . ", " . $d['kota'] ?></td>
                     <td>
-                        <a href="php/hapus.php?id_kost=<?php echo $d['id_kost'] ?>"><button class="btn-danger">Hapus</button></a>
-                        <a href="properti_edit.php?id_kost=<?php echo $d['id_kost'] ?>"><button class="btn-dark"> Ubah</button></a></td>
-                </tr>
+                    <div class="my-1">
+                        <a href="properti_edit.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-primary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-edit"></i>
+                        </span>
+                        <span class="text">Ubah</span>
+                        </a>
+                    </div>
+                    <div class="my-1">
+                        <a href="php/hapus.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-danger btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-trash"></i>
+                        </span>
+                        <span class="text">Hapus</span>
+                        </a>
+                    </div>
+                    <div class="my-1">
+                        <a href="lihat_properti.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-success btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                        <span class="text">Lihat</span>
+                        </a>
+                    </div>
+                    </td>
 
+                </tr>
             <?php } ?>
         </tbody>
     </table>
