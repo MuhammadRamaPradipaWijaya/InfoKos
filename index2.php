@@ -117,7 +117,7 @@ function minfas($idkost, $tipe_kost)
       <div class="row align-items-center">
         <div class="col-lg-6 mx-auto text-center">
           <div class="intro-wrap">
-            <h1 class="mb-0">Info kost.</h1>
+            <h1 class="mb-0">Info Kost.</h1>
             <p class="text-white">Selamat datang di infoKost.id, platform informasi kost terdepan yang didedikasikan untuk memudahkan pencarian tempat tinggal yang nyaman dan terjangkau. InfoKost.id menyajikan layanan yang lengkap dan informatif bagi para pencari kost, mahasiswa, dan pekerja yang sedang mencari tempat tinggal sementara.</p>
           </div>
         </div>
