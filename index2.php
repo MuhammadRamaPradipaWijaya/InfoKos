@@ -55,6 +55,25 @@ function minfas($idkost, $tipe_kost)
   <link rel="stylesheet" href="css/style.css">
 
   <title>InfoKost.</title>
+  <STYLE>
+    .hero {
+  padding: 7rem 0 10rem 0;
+  background: #1A374D;
+  margin-bottom: 100px;
+}
+.hero.hero-inner {
+  padding: 9rem 0 7rem 0;
+  margin-bottom: auto;
+  background: #1A374D;
+}
+.hero h1 {
+  color: #ffffff;
+  font-size: 60px;
+}
+.cta-section {
+  background: #1A374D;
+}
+  </STYLE>
 
 </head>
 

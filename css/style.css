@@ -28,7 +28,7 @@ body.offcanvas-menu:before {
 }
 
 .bg-primary {
-  background-color: #AE7878 !important;
+  background-color: #1A374D !important;
 }
 
 .card .text-black {
@@ -36,14 +36,14 @@ body.offcanvas-menu:before {
 }
 
 a {
-  color: #AE7878;
+  color: #1A374D;
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
 }
 
 a:hover {
-  color: #AE7878;
+  color: #1A374D;
   text-decoration: none;
 }
 
@@ -277,8 +277,8 @@ h4,
 
 .site-nav .site-navigation .site-menu>li.cta-button a:hover {
   color: #000000;
-  background: #AE7878;
-  border-color: #AE7878;
+  background: #1A374D;
+  border-color: #1A374D;
 }
 
 .site-nav .site-navigation .site-menu>li.active>a {
@@ -797,14 +797,14 @@ h4,
 
 .hero {
   padding: 7rem 0 10rem 0;
-  background: #AE7878;
+  background: #1A374D;
   margin-bottom: 100px;
 }
 
 .hero.hero-inner {
   padding: 9rem 0 7rem 0;
   margin-bottom: auto;
-  background: #AE7878;
+  background: #1A374D;
 }
 
 .hero h1 {
