@@ -118,15 +118,15 @@ function fas($fas, $tipe_kost)
 
 <div class="container">
   <div class="container-fluid">
-    <div class="card">
+    <div class="card shadow mb-4">
       <div class="card-header">
         <div class="row">
           <div class="col">
             <img style="object-fit: cover;" src="../img/profil/<?php echo $d['foto_profil'] ?>" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
             <?php echo $d['nama_lengkap'] ?>
           </div>
-
         </div>
+        <br>
         <div class="row ">
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner tampilan-foto">
@@ -159,10 +159,10 @@ function fas($fas, $tipe_kost)
         <div class="row">
           <div class="card-text">
             <div class="col">
-              <button class="btn-primary"><?php echo $d['jenis_kost'] ?></button>
+              <button class="btn btn-primary" style="border-radius: 10px; padding: 10px 20px; font-size: 16px;"><?php echo $d['jenis_kost'] ?></button>
             </div>
-
           </div>
+
         </div>
         <br>
 
@@ -194,13 +194,14 @@ function fas($fas, $tipe_kost)
           </div>
         </div>
       </div>
+
       <div class="card-body">
         <div class="row">
           <!-- sisi kiri  -->
           <div class="col-md-8">
             <div class="container-fluid">
               <div class="row">
-                <div class="col"><i class="fas fa-map-marker-alt"></i> <?php echo $d['provinsi'] ?>,<?php echo $d['kota'] ?>,<?php echo $d['kecamatan'] ?>,<?php echo $d['kelurahan'] ?></div>
+                <div class="col"><i class="fas fa-map-marker-alt"></i> <?php echo $d['provinsi'] ?>, <?php echo $d['kota'] ?>, <?php echo $d['kecamatan'] ?>, <?php echo $d['kelurahan'] ?></div>
               </div>
               <br>
               <div class="row">
@@ -237,11 +238,12 @@ function fas($fas, $tipe_kost)
                   if ($cek > 0) {
                   ?>
 
+                  <hr>
                     <div class="row">
                       <label>Info Kamar</label>
                     </div>
                     <div class="row">
-                      <table class="table">
+                      <table class="table table-bordered">
                         <thead class=" thead-dark">
                           <tr>
                             <!-- <th>Tipe</th> -->
@@ -296,25 +298,20 @@ function fas($fas, $tipe_kost)
                 <h6>Rp. <?php echo number_format($d['harga_sewa'] + minfas($d['id_kost'], $d['tipe_kost']), 0, ',', '.'); ?> / <?php echo $d['tipe_kost'] ?></h6>
               </div>
               <hr>
-              <div class="row">
-                Pemillik Kost : <?php echo $d['nama_pemilik'] ?>
+              
+              <div class="row" style="font-weight: bold; margin-bottom: 10px;">
+                Pemilik Kost: <?php echo $d['nama_pemilik'] ?>
               </div>
-              <div class="row">
-                <?php
-                if ($d['jumlah_kamar'] != 0) {
-                  echo "Sisa Kamar : <b style='color:green'>" . $d['jumlah_kamar'] . "</b>";
-                } else {
-                  echo " <b style='color:red'>Kamar Tidak Tersedia</b>";
-                }
-                ?>
+
+              <div class="row" style="font-weight: bold; margin-bottom: 10px;">
+                Kontak: <?php echo $d['kontak'] ?>
               </div>
-              <div class="row">
-                Kontak : <?php echo $d['kontak'] ?>
-              </div>
+
               <div class="row">
                 <div style="position:fixed;right:20px;bottom:20px;">
-                  <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $d['kontak'] ?>&text=Assalamualaikum, apakah ini bapak/ibu yang mengiklan kost <?php echo $d['nama_kost'] ?> di website simkos ">
-                    <button style="background:#9DC08B; vertical-align: middle; height: 36px; border-radius:10px 10px">
+
+                  <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $d['kontak'] ?>&text=Halo, apakah ini bapak/ibu yang mengiklan kost <?php echo $d['nama_kost'] ?> di website simkos ">
+                    <button style="background:#00BFFF;vertical-align:center;height:40px;border-radius:5px">
 
                       <img src="../img/favicon_wa.png"> Whatsapp Pemilik Kost</button></a>
                 </div>
