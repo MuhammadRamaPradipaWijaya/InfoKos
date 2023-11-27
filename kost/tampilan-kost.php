@@ -270,7 +270,7 @@ function fas($fas, $tipe_kost)
                 <div style="position:fixed;right:20px;bottom:20px;">
                   <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $d['kontak'] ?>&text=Assalamualaikum, apakah ini bapak/ibu yang mengiklan kost <?php echo $d['nama_kost'] ?> di website simkos ">
                     <button style="background:#f50251;vertical-align:center;height:36px;border-radius:5px">
-                      <img src="https://web.whatsapp.com/img/favicon/1x/favicon.png"> Whatsapp Pemilik Kost</button></a>
+                      <img src="../img/favicon_wa.png"> Whatsapp Pemilik Kost</button></a>
                 </div>
               </div>
             </div>
