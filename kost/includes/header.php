@@ -1,6 +1,10 @@
 <head>
     <style>
-
+        .bg-gradient-danger {
+            background-color: #1A374D;
+            background-image: linear-gradient(180deg, #1A374D 10%, #1A374D 100%);
+            background-size: cover;
+        }
     </style>
 
     <?php

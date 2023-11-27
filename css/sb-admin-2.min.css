@@ -11129,8 +11129,8 @@ a:focus {
 }
 
 .bg-gradient-danger {
-    background-color: 1F4172;
-    background-image: linear-gradient(180deg, #AE7878 10%, #AE7878 100%);
+    background-color: #1A374D;
+    background-image: linear-gradient(180deg, #1A374D 10%, #1A374D 100%);
     background-size: cover
 }
 
