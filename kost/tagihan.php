@@ -11,22 +11,24 @@ $data = mysqli_query($koneksi, $query);
 </style>
 
 
-<div class="container" style="background-color: azure">
-    <h4 class="text-center">Tagihan</h4>
-    <hr>
-    <div class="container">
-        <table class="table">
-            <title>Daftar tagihan</title>
-            <thead class="thead-dark">
+<div class="container-fluid" style="background-color: azure">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Tagihan</h6>
+        </div>
+        <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
                 <tr>
-                    <th>No</th>
-                    <th>No Tagihan</th>
-                    <th>Nama Kost</th>
-                    <th>Tanggal Tagihan</th>
-                    <th>Total Tagihan</th>
-                    <th>Batas waktu</th>
-                    <th>Status</th>
-                    <th>Action</th>
+                <th>No</th>
+                <th>No Tagihan</th>
+                <th>Nama Kost</th>
+                <th>Tanggal Tagihan</th>
+                <th>Total Tagihan</th>
+                <th>Batas waktu</th>
+                <th>Status</th>
+                <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -67,10 +69,11 @@ $data = mysqli_query($koneksi, $query);
 
         <p><b>Status</b></p>
         <p>
-            Belum Bayar = Segera Lunasi Pembayaran Anda <br>
-            Pending = Pembayaran anda sedang diproses<br>
-            Lunas = Transaksi Selesai dan telah terverifikasi
+            <span style="background-color: red; color: white; padding: 0.1px;">Belum Bayar</span> = Segera Lunasi Pembayaran Anda <br>
+            <span style="background-color: yellow; color: black; padding: 0.1px;">Pending</span> = Pembayaran anda sedang diproses <br>
+            <span style="background-color: green; color: white; padding: 0.1px;">Lunas</span> = Transaksi Selesai dan telah terverifikasi
         </p>
+
     </div>
 </div>
 

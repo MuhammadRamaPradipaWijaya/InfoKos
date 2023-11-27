@@ -9,27 +9,30 @@ $data2 = mysqli_query($koneksi, $query2);
 if ($d['roles'] == 3) {
 ?>
 
-    <div class="container">
-        <h3>Daftar Semua Transaksi</h3>
-        <hr>
-        <div class="row">
-            Cari ID Transaksi<div class="col-md-3"><input class="form-control" type="text" name="cari" id="cari" class="cari"></div>
-        </div>
-        <br>
-
-        <div class="row">
-            <div class="col">
-                <table class="table">
-                    <thead class=" thead-dark">
-                        <th>No</th>
-                        <th>ID Tagihan</th>
-                        <th>ID Booking</th>
-                        <th>Nama Penyewa</th>
-                        <th>Nama Kost</th>
-                        <th>Nama Pemilik Kost</th>
-                        <th>Total Bayar</th>
-                        <th>Status</th>
-                    </thead>
+    <div class="container-fluid">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Daftar Semua Transaksi</h6>
+            </div>
+            <br>
+            <!--<div class="row">
+                Cari ID<div class="col-md-3"><input class="form-control" type="text" name="cari" id="cari" class="cari"></div>
+            </div>-->
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>ID Tagihan</th>
+                      <th>ID Booking</th>
+                      <th>Nama Penyewa</th>
+                      <th>Nama Kost</th>
+                      <th>Nama Pemilik Kost</th>
+                      <th>Total Bayar</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
 
                     <tbody>
                         <?php

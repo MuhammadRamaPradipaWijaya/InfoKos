@@ -6,20 +6,26 @@ include('includes/header.php');
 $data = mysqli_query($koneksi, "SELECT * FROM kost INNER JOIN user WHERE kost.id_pemilik=user.id");
 
 ?>
-<div class="container">
 
-    <table class="table" border="1px solid black">
-        <label for="table">Daftar Seluruh Kost</label>
-        <thead class="thead-dark">
+<div class="container-fluid">
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Daftar Seluruh Kost</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
             <tr>
-                <th scope="col">No</th>
-                <th scope="col">Nama Kos</th>
-                <th scope="col">Pemilik</th>
-                <th scope="col">Jumlah Kamar</th>
-                <th scope="col">Kota</th>
-                <th scope="col">Aksi</th>
+                <th>No</th>
+                <th>Nama Kos</th>
+                <th>Pemilik</th>
+                <th>Jumlah Kamar</th>
+                <th>Kota</th>
+                <th>Aksi</th>
             </tr>
-        </thead>
+            </thead>
         <tbody>
             <?php
             $n = 0;
@@ -31,7 +37,7 @@ $data = mysqli_query($koneksi, "SELECT * FROM kost INNER JOIN user WHERE kost.id
                     <td><?php echo $d['nama_kost'] ?></td>
                     <td><?php echo $d['nama_lengkap'] ?></td>
                     <td><?php echo $d['jumlah_kamar'] ?></td>
-                    <td><?php echo $d['provinsi'] . "," . $d['kota'] ?></td>
+                    <td><?php echo $d['provinsi'] . ", " . $d['kota'] ?></td>
                     <td>
                         <a href="php/hapus.php?id_kost=<?php echo $d['id_kost'] ?>"><button class="btn-danger">Hapus</button></a>
                         <a href="properti_edit.php?id_kost=<?php echo $d['id_kost'] ?>"><button class="btn-dark"> Ubah</button></a></td>

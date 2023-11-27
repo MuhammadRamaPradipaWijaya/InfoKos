@@ -8,19 +8,25 @@ $query = "SELECT * FROM booking JOIN user ON user.id=booking.id_user JOIN tagiha
 $data = mysqli_query($koneksi, $query);
 ?>
 
-<div class="container">
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th>No</th>
-                <th>Nama Penyewa</th>
-                <th>Tanggal Masuk</th>
-                <th>Tanggal Keluar</th>
-                <th>Status</th>
-            </tr>
+<div class="container-fluid">
+<div class="card shadow mb-4">
+<div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Data Penyewa</h6>
+</div>
+<div class="card-body">
+    <div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+        <tr>
+            <th>No</th>
+            <th>Nama Penyewa</th>
+            <th>Tanggal Masuk</th>
+            <th>Tanggal Keluar</th>
+            <th>Status</th>
+        </tr>
         </thead>
-
         <tbody>
+
             <?php
             $i = 0;
             while ($d = mysqli_fetch_array($data)) {

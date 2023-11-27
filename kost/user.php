@@ -4,19 +4,23 @@ include "includes/header.php";
 $data = mysqli_query($koneksi, "SELECT * FROM user JOIN roles_user on user.roles=roles_user.id_roles");
 ?>
 
-<div class="container">
-    <label for="">Daftar seluruh pengguna</label>
-    <table class="table ">
-        <thead class="thead-dark">
-            <tr class="">
-                <th>No</th>
-                <th>Nama Lengkap</th>
-                <th>Username</th>
-                <th>Password</th>
-                <th>Roles</th>
-                <th>Aksi</th>
-
-            </tr>
+<div class="container-fluid">
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Pengguna</h6>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama Lengkap</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Roles</th>
+            <th>Aksi</th>
+          </tr>
         </thead>
         <tbody>
 
@@ -35,9 +39,6 @@ $data = mysqli_query($koneksi, "SELECT * FROM user JOIN roles_user on user.roles
                     <td><?php echo $d['nama'] ?></td>
                     <td>
                         <a href="php/hapus-user.php?id=<?php echo $d['id']; ?>"><button class="btn-danger">Banned</button></a>
-                        <!-- <a href="<?php
-                                        // echo "edit-profil.php?id=" . $d['id']
-                                        ?>"><button class="btn-dark">Ubah</button></a> -->
                     </td>
                 </tr>
             <?php } ?>

@@ -92,6 +92,7 @@ function fas($fas, $tipe_kost)
             <div class="col">
                 Tanggal Mulai : <input required type="date" name="tanggal_masuk" id="tanggal_masuk" class="form-control">
             </div>
+            <br>
             <div class="col">
                 Hitungan Sewa : <select required class="form-control" id="hitungan_sewa" name="hitungan_sewa" onchange="tampilkan()">
                     <!-- <option value="1">Harian</option>
@@ -102,7 +103,7 @@ function fas($fas, $tipe_kost)
                 </select>
             </div>
         </div>
-
+        <br>
         <div class="row">
             <div class="col">
                 <label>Durasi sewa: </label> <select required class="form-control" id="durasi_sewa" name="durasi_sewa">
@@ -110,13 +111,16 @@ function fas($fas, $tipe_kost)
             </div>
         </div>
         <br>
+        <br>
+        <br>
         <h3>Masukan Data Dirimu</h3>
         <hr>
         <p style="font-size: 12px">Pastikan data dirimu sesuai untuk mempermudah proses pembookingan kost agar tidak ada masalah</p>
         <div class="row">
             <div class="col"><label for="nama_lengkap">Nama Lengkap</label>
                 <input value="<?php echo $d['nama_lengkap'] ?>" type="text" name="nama_lengkap" class="form-control"></div>
-        </div><br>
+        </div>
+        <br>
         <div class="row">
             <div class="col">
                 <label for="jenis_kelamin">Jenis Kelamin</label>
@@ -127,12 +131,14 @@ function fas($fas, $tipe_kost)
                 </select>
             </div>
         </div>
+        <br>
         <div class="row">
             <div class="col">
                 <label for="no_hp">Nomer Handphone</label>
                 <input value="<?php echo $d['no_hp'] ?>" type="number" name="no_hp" id="" class="form-control">
             </div>
         </div>
+        <br>
         <div class="row">
             <div class="col">
                 <label for="pekerjaan">Pekerjaan</label>
@@ -149,95 +155,86 @@ function fas($fas, $tipe_kost)
             </div>
         </div>
         <br>
-        <div class="row">
-            <h3>Kamar</h3>
-            <hr>
-        </div>
+        <br>
+        <br>
+        <h3>Kamar</h3>
         <div class="row">
             <div class="col">
-                <!-- kamar  -->
+        <?php
+        if ($cek > 0) {
+        ?>
 
-                <?php
+            <div class="row">
+                <div class="col">
+                    <br>
 
-                if ($cek > 0) {
-
-
-                    # code...
-
-                ?>
-                    <div class="row">
-                        <div class="col">
-                            <br>
-
-                            <table class="table">
-                                <thead class=" thead-dark">
+                    <table class="table">
+                        <thead class=" thead-dark">
+                            <tr>
+                                <th>Tipe</th>
+                                <th>Kuota</th>
+                                <th>Tipe Kamar</th>
+                                <th>Luas Kamar</th>
+                                <th>Fasilitas Kamar</th>
+                                <!-- <th>Biaya Fasilitas</th> -->
+                                <th>Total Harga</th>
+                            </tr>
+                        </thead>
+                        <?php
+                        // $fasilitas=implode(', ',$l['fasilitas_kamar']);
+                        $i = 0;
+                        while ($l = mysqli_fetch_array($kamar)) {
+                            $i++;
+                            if ($l['jumlah_kamar'] > 0) {
+                        ?>
+                                <tbody>
                                     <tr>
-                                        <th>Tipe</th>
-                                        <th>Kuota</th>
-                                        <th>Tipe Kamar</th>
-                                        <th>Luas Kamar</th>
-                                        <th>Fasilitas Kamar</th>
-                                        <!-- <th>Biaya Fasilitas</th> -->
-                                        <th>Total Harga</th>
-                                    </tr>
-                                </thead>
-                                <?php
-                                // $fasilitas=implode(', ',$l['fasilitas_kamar']);
-                                $i = 0;
-                                while ($l = mysqli_fetch_array($kamar)) {
-                                    $i++;
-                                    if ($l['jumlah_kamar'] > 0) {
+                                        <td><?php echo "A" . $i; ?></td>
+                                        <td><?php if ($l['jumlah_kamar'] > 0) {
+                                                echo $l['jumlah_kamar'];
+                                            } else {
+                                                echo "Penuh";
+                                            }
 
-                                ?>
-                                        <tbody>
-                                            <tr>
-                                                <td><?php echo "A" . $i; ?></td>
-                                                <td><?php if ($l['jumlah_kamar'] > 0) {
-                                                        echo $l['jumlah_kamar'];
-                                                    } else {
-                                                        echo "Penuh";
-                                                    }
-
-                                                    ?></td>
-                                                <td><?php echo $l['tipe_kamar'] ?></td>
-                                                <td><?php echo $l['panjang_kamar'] . "x" . $l['lebar_kamar'] . "m" ?></td>
-                                                <td><?php echo $l['fasilitas_kamar'] ?></td>
-                                                <!-- <td> -->
+                                            ?></td>
+                                        <td><?php echo $l['tipe_kamar'] ?></td>
+                                        <td><?php echo $l['panjang_kamar'] . "x" . $l['lebar_kamar'] . "m" ?></td>
+                                        <td><?php echo $l['fasilitas_kamar'] ?></td>
+                                        <!-- <td> -->
+                                        <?php
+                                        // echo number_format($l['biaya_fasilitas'], 0, ',', '.') . "/" . "Bulan" 
+                                        ?>
+                                        <!-- </td> -->
+                                        <td>
+                                            <div class="row">
                                                 <?php
-                                                // echo number_format($l['biaya_fasilitas'], 0, ',', '.') . "/" . "Bulan" 
+                                                echo "Rp.";
+                                                if ($f['tipe_kost'] == "Tahun") {
+                                                    echo number_format($f['harga_sewa'] + fas($l['biaya_fasilitas'], $f['tipe_kost']), 0, ',', '.') . "/" . "Tahun";
+                                                } else if ($f['tipe_kost'] == "Bulan") {
+                                                    echo number_format(($f['harga_sewa'] + fas($l['biaya_fasilitas'], $f['tipe_kost'])) * 12, 0, ',', '.') . "/" . "Tahun";
+                                                }
                                                 ?>
-                                                <!-- </td> -->
-                                                <td>
-                                                    <div class="row">
-                                                        <?php
-                                                        echo "Rp.";
-                                                        if ($f['tipe_kost'] == "Tahun") {
-                                                            echo number_format($f['harga_sewa'] + fas($l['biaya_fasilitas'], $f['tipe_kost']), 0, ',', '.') . "/" . "Tahun";
-                                                        } else if ($f['tipe_kost'] == "Bulan") {
-                                                            echo number_format(($f['harga_sewa'] + fas($l['biaya_fasilitas'], $f['tipe_kost'])) * 12, 0, ',', '.') . "/" . "Tahun";
-                                                        }
-                                                        ?>
-                                                    </div>
+                                            </div>
 
-                                                    <div class="row">
-                                                        <?php
-                                                        echo "Rp.";
-                                                        if ($f['tipe_kost'] == "Bulan") {
-                                                            echo number_format($f['harga_sewa'] + fas($l['biaya_fasilitas'], $f['tipe_kost']), 0, ',', '.') . "/" . "Bulan";
-                                                        } else if ($f['tipe_kost'] == "Tahun") {
-                                                            echo number_format(($f['harga_sewa'] + fas($l['biaya_fasilitas'], $f['tipe_kost'])) / 12, 0, ',', '.') . "/" . "Bulan";
-                                                        }
+                                            <div class="row">
+                                                <?php
+                                                echo "Rp.";
+                                                if ($f['tipe_kost'] == "Bulan") {
+                                                    echo number_format($f['harga_sewa'] + fas($l['biaya_fasilitas'], $f['tipe_kost']), 0, ',', '.') . "/" . "Bulan";
+                                                } else if ($f['tipe_kost'] == "Tahun") {
+                                                    echo number_format(($f['harga_sewa'] + fas($l['biaya_fasilitas'], $f['tipe_kost'])) / 12, 0, ',', '.') . "/" . "Bulan";
+                                                }
 
-                                                        ?>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                <?php }
-                                }
-                                $kamar2 = mysqli_query($koneksi, $dquery);
-
-                                ?>
+                                                ?>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                        <?php }
+                        }
+                        $kamar2 = mysqli_query($koneksi, $dquery);
+                        ?>
                             </table>
                             <label for="">Pilih Tipe Kamar</label>
                             <select name="idkamar" id="" class=" form-control">
@@ -261,17 +258,18 @@ function fas($fas, $tipe_kost)
             </div>
         </div>
         <br>
+        <br>
         <div class="row">
             <div class="col">
                 <h4 for="foto_ktp">Upload Foto KTP</h4><input type="file" name="foto_ktp" id="foto_ktp" class="form-control ">
             </div>
         </div>
-        <div class="row">
+        <div class="">
             <p style="color:red;font-size:12px">Note: Dokumen ktp dibutuhkan untuk validasi idenitas penghuni kost</p>
         </div>
         <div class="row">
             <div class="col">
-                <img width="50px" src="../img/ktp/<?php echo $d['foto_ktp'] ?>" alt="">
+                <img width="150px" src="../img/ktp/<?php echo $d['foto_ktp'] ?>" alt="">
             </div>
         </div>
         <hr>
@@ -299,11 +297,7 @@ function fas($fas, $tipe_kost)
         </div>
         <br>
         <br>
-
         <!-- end bagian validasi  -->
-
-
-
 
         <div class="row">
             <div class="col text-center">

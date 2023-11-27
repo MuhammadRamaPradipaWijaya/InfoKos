@@ -6,16 +6,22 @@ $data = mysqli_query($koneksi, $query);
 ?>
 
 
-<div class="container  bg-gray">
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th>kost</th>
-                <th>tanggal masuk</th>
-                <th>tanggal keluar</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
+<div class="container-fluid  bg-gray">
+<div class="card shadow mb-4">
+<div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Kost-Ku</h6>
+</div>
+<div class="card-body">
+    <div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+        <tr>
+            <th>kost</th>
+            <th>tanggal masuk</th>
+            <th>tanggal keluar</th>
+            <th>Status</th>
+            <th>Aksi</th>
+        </tr>
         </thead>
         <?php
         while ($d = mysqli_fetch_array($data)) {

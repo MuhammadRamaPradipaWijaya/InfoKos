@@ -63,7 +63,8 @@ $o = explode(', ', $d['fasilitas_kost']);
 
 
           <hr>
-          <h6>Fasilitas Kost</h6>
+          <br>
+          <h5>Fasilitas Kost</h5>
           <br>
           <div class="row">
             <!-- <div class="col"><input type="checkbox" name="fasilitas" id="fasilitas">Kamar Mandi Dalam</div> -->
@@ -85,7 +86,8 @@ $o = explode(', ', $d['fasilitas_kost']);
 
           <!-- info kamar kost  -->
           <hr>
-          <h6>Info Pembayaran</h6>
+          <br>
+          <h5>Info Pembayaran</h5>
           <br>
           <div class="row">
             <div class="col"><label for="tanggal">Ditagih setiap tanggal</label></div>
@@ -111,7 +113,8 @@ $o = explode(', ', $d['fasilitas_kost']);
           <br>
 
           <hr>
-          <h6>Foto Bangunan</h6>
+          <br>
+          <h5>Foto Bangunan</h5>
           <br>
           <div class="row">
             <div class="col">Foto bangunan Utama</div>
@@ -133,8 +136,10 @@ $o = explode(', ', $d['fasilitas_kost']);
             <div class="col"><input value="<?php echo $d['foto_interior'] ?>" type="file" name="foto_interior" id="foto_interior"></div>
           </div>
           <br>
+
           <hr>
-          <h6>Detail Kost</h6>
+          <br>
+          <h5>Detail Kost</h5>
           <br>
           <div class="row">
             <div class="col"><label for="jenis">Jenis Kost</label></div>

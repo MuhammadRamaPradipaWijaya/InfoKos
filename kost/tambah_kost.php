@@ -3,14 +3,14 @@ include('includes/header.php');
 ?>
 
 <!--Main Content -->
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-md-10">
       <form class="text-center border border-light p-5" action="php/tambah-kos_proses.php" method="post" enctype="multipart/form-data">
         <h3>Tambah Kost</h3>
         <div class="form-group">
           <hr>
-          <h6>Info Kost</h6>
+          <br>
           <div class="row">
             <div class="col"><label for="namakost">Nama Kost </label></div>
             <div class="col"> <input type="text" name="nama_kost" id="nama_kost" class="form-control"></div>
@@ -54,7 +54,8 @@ include('includes/header.php');
 
 
           <hr>
-          <h6>Fasilitas Kost</h6>
+          <br>
+          <h5>Fasilitas Kost</h5>
           <br>
           <div class="row">
             <!-- <div class="col"><input type="checkbox" name="fasilitas" id="fasilitas">Kamar Mandi Dalam</div> -->
@@ -74,7 +75,8 @@ include('includes/header.php');
           </div>
 
           <hr>
-          <h6>Info Pembayaran</h6>
+          <br>
+          <h5>Info Pembayaran</h5>
           <br>
           <div class="row">
             <div class="col"><label for="tanggal">Ditagih setiap tanggal</label></div>
@@ -101,7 +103,8 @@ include('includes/header.php');
 
 
           <hr>
-          <h6>Foto Bangunan</h6>
+          <br>
+          <h5>Foto Bangunan</h5>
           <br>
           <div class="row">
             <div class="col">Foto bangunan Utama</div>
@@ -123,10 +126,10 @@ include('includes/header.php');
             <div class="col"><input type="file" name="foto_interior" id="foto_interior"></div>
           </div>
           <br>
+
           <hr>
-
-
-          <h6>Detail Kost</h6>
+          <br>
+          <h5>Detail Kost</h5>
           <br>
           <div class="row">
             <div class="col"><label for="jenis">Jenis Kost</label></div>

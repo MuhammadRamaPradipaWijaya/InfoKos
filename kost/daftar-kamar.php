@@ -7,30 +7,27 @@ $id_kost = $_GET['id_kost'];
 $query = mysqli_query($koneksi, "SELECT * from kamar WHERE id_kost=$id_kost");
 ?>
 
-<div class="container">
-    <div class="row">
-        <div class="col"></div>
+<div class="container-fluid">
+        <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Daftar Kamar</h6>
+        </div>
+        <br>
         <div class="col-md-2">
             <a href="kamar.php?id_kost=<?php echo $id_kost ?>"><button class="btn-primary">Tambah Kamar</button></a>
         </div>
-
-    </div>
-    <br>
-    <div class="row">
-
-        <div class="col">
-
-            <table class=" text-center table">
-
-                <thead class="thead-dark">
-                    <tr>
-                        <th>No</th>
-                        <th>Tipe Kamar</th>
-                        <th>Jumlah Kamar</th>
-                        <th>Fasilitas</th>
-                        <th>Biaya Fasilitas</th>
-                        <th>Aksi</th>
-                    </tr>
+        <div class="card-body">
+            <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Tipe Kamar</th>
+                    <th>Jumlah Kamar</th>
+                    <th>Fasilitas</th>
+                    <th>Biaya Fasilitas</th>
+                    <th>Aksi</th>
+                </tr>
                 </thead>
                 <tbody>
                     <?php
