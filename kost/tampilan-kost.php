@@ -32,6 +32,51 @@ include('includes/header.php');
     font-weight: bold;
   }
 
+  .btn-primary{
+    background-color: #164863;
+    border: none;
+    border-radius: 10px 10px;
+    color: #ffffff; /* Warna teks */
+    padding: 10px 20px; /* Sesuaikan nilai sesuai keinginan Anda */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Efek bayangan tipis warna hitam */
+    cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
+  }
+  .btn-group{
+    background-color: #164863;
+    border: none;
+    border-radius: 10px 10px;
+    color: #ffffff; /* Warna teks */
+    padding: 10px 20px; /* Sesuaikan nilai sesuai keinginan Anda */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Efek bayangan tipis warna hitam */
+    cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+  }
+
+  .table th, .table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+  }
+
+  .thead-dark {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+
+  .table th {
+    background-color: #f2f2f2;
+  }
+
+  .table tr:hover {
+    background-color: #f5f5f5;
+  }
+
 </style>
 
 <?php
@@ -269,7 +314,8 @@ function fas($fas, $tipe_kost)
               <div class="row">
                 <div style="position:fixed;right:20px;bottom:20px;">
                   <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $d['kontak'] ?>&text=Assalamualaikum, apakah ini bapak/ibu yang mengiklan kost <?php echo $d['nama_kost'] ?> di website simkos ">
-                    <button style="background:#f50251;vertical-align:center;height:36px;border-radius:5px">
+                    <button style="background:#9DC08B; vertical-align: middle; height: 36px; border-radius:10px 10px">
+
                       <img src="../img/favicon_wa.png"> Whatsapp Pemilik Kost</button></a>
                 </div>
               </div>

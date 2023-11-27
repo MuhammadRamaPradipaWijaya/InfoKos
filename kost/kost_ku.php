@@ -4,6 +4,16 @@ include "includes/header.php";
 $query = "SELECT * FROM booking join kamar on kamar.id_kamar=booking.id_kamar JOIN user on user.id=booking.id_user JOIN kost on kost.id_kost=kamar.id_kost JOIN tagihan on tagihan.no_booking=booking.id_booking WHERE user.username='$username'";
 $data = mysqli_query($koneksi, $query);
 ?>
+<style>
+    .btn-primary{
+    background-color: #164863;
+    border: none;
+    border-radius: 5px 5px;
+    color: #ffffff; /* Warna teks */
+    padding: 10px ; /* Sesuaikan nilai sesuai keinginan Anda */
+   
+    }
+</style>
 
 
 <div class="container-fluid  bg-gray">

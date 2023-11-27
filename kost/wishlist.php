@@ -15,6 +15,21 @@ $data = mysqli_query($koneksi, $query);
     text-decoration: none;
     color: black;
   }
+  
+  .col a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c; /* Warna latar belakang */
+    color: #ffffff; /* Warna teks */
+    text-decoration: none; /* Menghapus garis bawah default pada tautan */
+    border-radius: 5px; /* Membuat sudut tombol agak bulat */
+    transition: background-color 0.3s ease; /* Efek transisi pada perubahan warna latar belakang */
+  }
+
+  .col a:hover {
+    background-color: #c0392b; /* Warna latar belakang saat dihover */
+  }
+
 </style>
 
 

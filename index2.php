@@ -327,12 +327,6 @@ function minfas($idkost, $tipe_kost)
       </div>
     </div>
   </div>
-
-     
-
-    </div>
-  </div>
-
   
 
   <div class="site-footer">
