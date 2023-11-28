@@ -9,6 +9,16 @@ $data = mysqli_query($koneksi, $query);
 ?>
 
 <div class="container-fluid">
+    
+<div class="my-2">
+    <a href="properti.php" class="btn btn-light btn-icon-split" style="border: 1px solid #ccc;">
+    <span class="icon text-gray-700">
+        <i class="fas fa-arrow-left"></i>
+    </span>
+    <span class="text">Kembali</span>
+    </a>
+</div>
+
 <div class="card shadow mb-4">
 <div class="card-header py-3">
     <h6 class="m-0 font-weight-bold text-primary">Data Penyewa</h6>

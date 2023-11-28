@@ -51,10 +51,19 @@ $data_2 = mysqli_query($koneksi, $query);
           </tr>
         </thead>
       <tbody>
-        <div class="row ">
-          <div class="col-md-10"></div>
-          <div class="col-md-2"><a href="tambah_kost.php"><button class="btn-primary">Tambah kost</button></a></div>
-        </div>
+
+      <div class="row">
+      <div class="col-md-10"></div>
+      <div class="col-md-2 d-flex align-items-center">
+        <a href="tambah_kost.php" class="btn btn-primary btn-icon-split">
+          <span class="icon text-white-50">
+            <i class="fas fa-plus"></i>
+          </span>
+          <span class="text">Tambah</span>
+        </a>
+      </div>
+    </div>
+
         <br>
         <?php
         $i = 0;

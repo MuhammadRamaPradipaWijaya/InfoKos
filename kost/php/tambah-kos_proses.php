@@ -61,7 +61,7 @@ if (isset($_POST['tambah'])) {
     $g = mysqli_fetch_array($query_ambil);
     $id_kost = $g['id_kost'];
     if ($tambah) {
-        header("location:../kamar.php?id_kost=$id_kost");
+        header("location:../properti.php?id_kost=$id_kost");
     } else {
         header("location:../tambah_kos.php");
         echo "<script>alert('gagal')</script>";
