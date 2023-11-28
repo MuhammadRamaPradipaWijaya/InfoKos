@@ -5,6 +5,7 @@ require('koneksi.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     // ... (Bagian validasi input, pemrosesan file, dan pilihan peran) ...
+    $nama_lengkap = $_POST["nama_lengkap"] ?? "";
     $email = $_POST["email"] ?? "";
     $username = $_POST["username"] ?? "";
     $password = $_POST["password"] ?? "";
@@ -18,11 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     }
 
     // Gunakan prepared statement untuk melakukan insert
-    $query = "INSERT INTO user (email, username, password, no_hp, foto_ktp, roles) VALUES (?, ?, ?, ?, ?, ?)";
+    $query = "INSERT INTO user (nama_lengkap, email, username, password, no_hp, foto_ktp, roles) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $statement = mysqli_prepare($koneksi, $query);
 
     if ($statement) {
-        mysqli_stmt_bind_param($statement, "sssssi", $email, $username, $password, $no_hp, $foto_ktp, $roles);
+        mysqli_stmt_bind_param($statement, "ssssssi", $nama_lengkap, $email, $username, $password, $no_hp, $foto_ktp, $roles);
 
         // Eksekusi prepared statement
         $execute = mysqli_stmt_execute($statement);
@@ -70,6 +71,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input required="required" class="form-control" type="text" name="username" id="username" placeholder="Username">
+                                    </div>
+                                    <div class="form-group">
+                                        <input required="required" type="text" name="nama_lengkap" id="nama_lengkap" class="form-control" placeholder="Nama Lengkap">
                                     </div>
                                     <div class="form-group">
                                         <input required="required" type="email" name="email" id="email" class="form-control" placeholder="Email">
