@@ -150,12 +150,12 @@
             </div>
             <div class="col-lg-3 mb-4">
               <div class="team">
-                <img src="images/person_2.jpg" alt="Image" class="img-fluid mb-4">
-                <div class="px-3">
-                  <h3 class="mb-0">iqbal Amin</h3>
-                 
-                </div>
+                  <img src="img/profil/IQBAL AMIN.jpeg" alt="Image" class="img-fluid mb-4" style="width: 113.37px; height: 151.16px;">
+                  <div class="px-3">
+                      <h3 class="mb-0">iqbal Amin</h3>
+                  </div>
               </div>
+
             </div>
 
             <div class="col-lg-3 mb-4">

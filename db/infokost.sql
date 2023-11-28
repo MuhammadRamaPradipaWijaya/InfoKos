@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2023 at 03:48 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Nov 28, 2023 at 04:05 AM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,7 +36,7 @@ CREATE TABLE `booking` (
   `durasi_sewa` int(11) NOT NULL,
   `tanggal_keluar` date NOT NULL,
   `jumlah_kamar` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Triggers `booking`
@@ -64,7 +64,7 @@ CREATE TABLE `kamar` (
   `tipe_kamar` varchar(255) NOT NULL,
   `biaya_fasilitas` int(11) NOT NULL,
   `fasilitas_kamar` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `kamar`
@@ -128,7 +128,7 @@ CREATE TABLE `kost` (
   `deskripsi` text NOT NULL,
   `id_pemilik` int(11) NOT NULL,
   `fasilitas_kost` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `kost`
@@ -150,7 +150,7 @@ CREATE TABLE `rating` (
   `Id_kost` int(11) NOT NULL,
   `Id_user` int(11) NOT NULL,
   `score` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -161,7 +161,7 @@ CREATE TABLE `rating` (
 CREATE TABLE `roles_user` (
   `id_roles` int(11) NOT NULL,
   `nama` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `roles_user`
@@ -185,7 +185,7 @@ CREATE TABLE `tagihan` (
   `stats` int(11) NOT NULL,
   `tanggal_tagihan` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `bukti_bayar` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -206,7 +206,7 @@ CREATE TABLE `user` (
   `foto_profil` text NOT NULL,
   `roles` int(11) NOT NULL,
   `id_kost_saya` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
@@ -215,7 +215,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `nama_lengkap`, `email`, `username`, `password`, `no_hp`, `pekerjaan`, `jenis_kelamin`, `foto_ktp`, `foto_profil`, `roles`, `id_kost_saya`) VALUES
 (46, 'IQBAL AMIN', 'iqbal@gmail.com', 'Iqbal', 'Iqbal', '82338636603', 'Ow', ' laki-laki', '', 'IQBAL AMIN.jpeg', 2, 0),
 (47, 'Aisyah.S', 'aisyah@gmail.com', 'Aisyah', 'Aisyah', '85267322720', 'owner Kos', ' perempuan', '', 'WhatsApp Image 2023-11-28 at 09.30.11_d2e82ac8.jpg', 2, 0),
-(48, 'Arya Advicenna', 'sena@gmail.com', 'Sena', 'Sena', '81935166922', 'owner Kos', ' laki-laki', '', 'WhatsApp Image 2023-11-28 at 09.34.39_480510a3.jpg', 2, 0);
+(48, 'Arya Advicenna', 'sena@gmail.com', 'Sena', 'Sena', '81935166922', 'owner Kos', ' laki-laki', '', 'WhatsApp Image 2023-11-28 at 09.34.39_480510a3.jpg', 2, 0),
+(49, 'user', 'user@gmail.com', 'user', 'user', '98765432', 'mahasiswa', 'laki-laki', 'bg1.jpg', 'bg1.jpg', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -227,7 +228,7 @@ CREATE TABLE `wishlist` (
   `id_wishlist` int(11) NOT NULL,
   `id_kost` int(11) NOT NULL,
   `id_user` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -336,7 +337,7 @@ ALTER TABLE `tagihan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
