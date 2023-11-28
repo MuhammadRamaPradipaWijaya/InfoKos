@@ -77,9 +77,10 @@ function minfas($idkost, $tipe_kost)
 
 <body>
   <?php
-  $search_query = isset($_GET['query']) ? mysqli_real_escape_string($koneksi, $_GET['query']) : '';
-  $query_products = mysqli_query($koneksi, "SELECT * FROM kost WHERE nama_kost AND alamat LIKE '%$search_query%'");
-  $products = mysqli_fetch_all($query_products, MYSQLI_ASSOC);
+ $search_query = isset($_GET['query']) ? mysqli_real_escape_string($koneksi, $_GET['query']) : '';
+ $query_products = mysqli_query($koneksi, "SELECT * FROM kost WHERE nama_kost LIKE '%$search_query%' OR alamat LIKE '%$search_query%'");
+ $products = mysqli_fetch_all($query_products, MYSQLI_ASSOC);
+ 
   
   ?>
 
@@ -123,7 +124,7 @@ function minfas($idkost, $tipe_kost)
                     <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
                     <form class="form-inline mt-3" action="daftarkos.php" method="GET">
                       <div class="input-group">
-                          <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width: 300px;" name="query">
+                          <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width: 420px;" name="query">
                           <div class="input-group-append">
                               <button class="btn btn-outline-light" type="submit">Search</button>
                           </div>
