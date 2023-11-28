@@ -49,7 +49,7 @@ $o = explode(', ', $d['fasilitas_kamar']);
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col">Biaya Fasilitas Kamar</div>
+                    <div class="col">Biaya Kost</div>
 
                     <div class="col text-md-left">
 
@@ -62,23 +62,18 @@ $o = explode(', ', $d['fasilitas_kamar']);
                         <p style="font-size: 12px">Note: Akan ditambahkan ke harga sewa sebagai biaya tambahan</p>
                     </div>
                 </div>
-
-
                 <!-- tutup info kamar  -->
+                
                 <!-- fasilitas kamar  -->
+                <hr>
                 <br>
-                <hr>
-                <h6>Fasilitas Kamar</h6>
+                <h5>Fasilitas Kamar</h5>
+                <br>
                 <div class="row">
-                    <!-- <div class="col"><input type="checkbox" name="fasilitas_kamar" id="fasilitas_kamar" class="form-check-input">Kamar Mandi Dalam</div> -->
-                    <div class="col"><input type="checkbox" name="fasilitas_kamar[]" class="form-check-input" value="AC" <?php in_array('AC', $o) ? print 'checked' : '' ?>>AC</div>
-                    <div class="col"><input type="checkbox" name="fasilitas_kamar[]" class="form-check-input" value="Tempat Tidur" <?php in_array('Tempat Tidur', $o) ? print 'checked' : '' ?>>Tempat Tidur</div>
-                    <div class="col"><input type="checkbox" name="fasilitas_kamar[]" class="form-check-input" value="Lemari" <?php in_array('Lemari', $o) ? print 'checked' : '' ?>>Lemari</div>
-                    <div class="col"><input type="checkbox" name="fasilitas_kamar[]" class="form-check-input" value="TV" <?php in_array('TV', $o) ? print 'checked' : '' ?>>TV</div>
-                    <div class="col"><input type="checkbox" name="fasilitas_kamar[]" class="form-check-input" value="Kulkas" <?php in_array('Kulkas', $o) ? print 'checked' : '' ?>>Kulkas</div>
-                    <div class="col"><input type="checkbox" name="fasilitas_kamar[]" class="form-check-input" value="Kipas Angin" <?php in_array('Kipas Angin', $o) ? print 'checked' : '' ?>>Kipas Angin</div>
+                    <div class="col">
+                        <textarea class="form-control" name="fasilitas_kamar[]" id="fasilitas_kamar" rows="4" placeholder="Masukkan fasilitas kamar"><?php echo implode(', ', $o); ?></textarea>
+                    </div>
                 </div>
-                <hr>
                 <br>
 
                 <!-- tutup fasilitas kamar  -->

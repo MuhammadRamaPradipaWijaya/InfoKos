@@ -69,26 +69,15 @@ $o = explode(', ', $d['fasilitas_kost']);
             <div class="col"><input type="text" name="kontak" id="kontak" class="form-control" value="<?php echo $d['kontak'] ?>"></div>
           </div>
 
-
+          <!-- fasilitas kost  -->
           <hr>
           <br>
           <h5>Fasilitas Kost</h5>
           <br>
           <div class="row">
-            <!-- <div class="col"><input type="checkbox" name="fasilitas" id="fasilitas">Kamar Mandi Dalam</div> -->
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="Parkir Mobil" <?php in_array('Parkir Mobil', $o) ? print 'checked' : '' ?>>Parkir Mobil</div>
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="WIFI/Internet" <?php in_array('WIFI/Internet', $o) ? print 'checked' : '' ?>>WIFI/Internet</div>
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="Security" <?php in_array('Security', $o) ? print 'checked' : '' ?>>Security</div>
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="Ruang Tamu" <?php in_array('Ruang Tamu', $o) ? print 'checked' : '' ?>>Ruang Tamu</div>
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="Ruang Fitness" <?php in_array('Ruang Fitness', $o) ? print 'checked' : '' ?>>Ruang Fitness</div>
-
-          </div>
-          <div class="row">
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="Ruang Makan" <?php in_array('Ruang Makan', $o) ? print 'checked' : '' ?>>Ruang Makan</div>
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="Dapur" <?php in_array('Dapur', $o) ? print 'checked' : '' ?>>Dapur</div>
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="Laundry" <?php in_array('Laundry', $o) ? print 'checked' : '' ?>>Laundry</div>
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="Musholla" <?php in_array('Musholla', $o) ? print 'checked' : '' ?>>Musholla</div>
-            <div class="col"></div>
+            <div class="col">
+              <textarea class="form-control" name="fasilitas" id="fasilitas" rows="4" placeholder="Masukkan fasilitas kost"><?php echo implode(', ', $o); ?></textarea>
+            </div>
           </div>
           <br>
 
@@ -172,17 +161,6 @@ $o = explode(', ', $d['fasilitas_kost']);
             </div>
           </div>
           <br>
-          <div class="row">
-            <div class="col"><label for="harga_sewa">Harga Sewa</label></div>
-            <div class="col">
-              <div class="input-group-prepend">
-                <span class="input-group-text">Rp.</span>
-                <input value="<?php echo $d['harga_sewa'] ?>" type="text" name="harga_sewa" id="harga_sewa">
-              </div>
-
-            </div>
-          </div>
-          </div>
           <br>
 
           <div class="col">

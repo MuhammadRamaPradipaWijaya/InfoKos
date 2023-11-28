@@ -30,7 +30,13 @@ if (isset($_POST['ubah'])) {
 
     //fasilitas
     $fasilitas_kost = $_POST['fasilitas'];
-    $fasilitas = implode(', ', $fasilitas_kost);
+    if (is_array($fasilitas_kost)) {
+        $fasilitas = implode(', ', $fasilitas_kost);
+    } else {
+        // Handle the case where $fasilitas_kost is not an array (it might be a string)
+        $fasilitas = $fasilitas_kost;
+    }
+
 
     // foto bangunan
     $foto_bangunan_utama = $_FILES['foto_bangunan_utama']['name'];

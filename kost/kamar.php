@@ -47,7 +47,7 @@ echo $id_kost;
                 <br>
                 <div class="row">
 
-                    <div class="col">Biaya Fasilitas Kamar</div>
+                    <div class="col">Biaya Kost</div>
 
                     <div class="col text-md-left">
 
@@ -67,18 +67,15 @@ echo $id_kost;
                 <hr>
                 <h6>Fasilitas Kamar</h6>
                 <div class="row">
-                    <!-- <div class="col"><input type="checkbox" name="fasilitas_kamar" id="fasilitas_kamar" class="form-check-input">Kamar Mandi Dalam</div> -->
-                    <div class="col"><input type="checkbox" name="fasilitas_kamar[]" class="form-check-inputl" value="AC">AC</div>
-                    <div class="col"><input type="checkbox" name="fasilitas_kamar[]" class="form-check-input" value="Tempat Tidur">Tempat Tidur</div>
-                    <div class="col"><input type="checkbox" name="fasilitas_kamar[]" class="form-check-input" value="Lemari">Lemari</div>
-                    <div class="col"><input type="checkbox" name="fasilitas_kamar[]" class="form-check-input" value="TV">TV</div>
-                    <div class="col"><input type="checkbox" name="fasilitas_kamar[]" class="form-check-input" value="Kulkas">Kulkas</div>
-                    <div class="col"><input type="checkbox" name="fasilitas_kamar[]" class="form-check-input" value="Kipas Angin">Kipas Angin</div>
+                    <div class="col">
+                        <textarea class="form-control" name="fasilitas_kamar" rows="4" placeholder="Masukkan fasilitas kamar"></textarea>
+                        <small class="form-text text-muted">Pisahkan fasilitas dengan koma (,)</small>
+                    </div>
                 </div>
                 <hr>
                 <br>
-
                 <!-- tutup fasilitas kamar  -->
+
                 <div class="row">
                     <div class="col">
                         <button name="submit" type="submit" class="btn-primary">Tambah Kamar</button>

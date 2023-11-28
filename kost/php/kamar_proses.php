@@ -30,15 +30,19 @@ function tambahKamar()
 {
     $id_kost = $_GET['id_kost'];
     global $koneksi;
-    echo "<br>Jumlah Kamar:" . $jumlah_kamar = $_POST['jumlah_kamar'];
-    echo "<br>Panjang Kamar:" . $panjang_kamar = $_POST['panjang_kamar'];
-    echo "<br>Lebar Kamar:" . $lebar_kamar = $_POST['lebar_kamar'];
-    echo "<br>Tipe Kamar:" . $tipe_kamar = $_POST['tipe_kamar'];
-    echo "<br>Biaya Kamar: " . $biaya_fasilitas = $_POST['biaya_fasilitas'];
+
+    $jumlah_kamar = $_POST['jumlah_kamar'];
+    $panjang_kamar = $_POST['panjang_kamar'];
+    $lebar_kamar = $_POST['lebar_kamar'];
+    $tipe_kamar = $_POST['tipe_kamar'];
+    $biaya_fasilitas = $_POST['biaya_fasilitas'];
     $fasilitas_kamar = $_POST['fasilitas_kamar'];
-    echo "<br>Fasilitas: " . $fasilitas = implode(', ', $fasilitas_kamar);
+    
+    // Encode fasilitas sebagai JSON
+    $fasilitas = json_encode($fasilitas_kamar);
 
     $kirim = mysqli_query($koneksi, "INSERT INTO kamar VALUES ('','$id_kost','$jumlah_kamar','$panjang_kamar','$lebar_kamar','$tipe_kamar','$biaya_fasilitas','$fasilitas')");
+    
     if ($kirim) {
         header("location:../daftar-kamar.php?id_kost=$id_kost");
     } else {
@@ -46,6 +50,7 @@ function tambahKamar()
         echo "<script>alert('gagal')</script>";
     }
 }
+
 
 
 function idkost($id_kamar)
