@@ -14,8 +14,6 @@ if (isset($_POST['submit'])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
     $no_hp = $_POST["no_hp"];
-    $pekerjaan = $_POST["pekerjaan"];
-    $jenis_kelamin = $_POST["jenis_kelamin"];
     $roles = $_POST["roles"];
 
     $foto_ktp = $_FILES["foto_ktp"]['name'];
@@ -30,11 +28,11 @@ if (isset($_POST['submit'])) {
         $foto_profil = $foto_lama;
     }
 
-    $query = "UPDATE user SET foto_profil='$foto_profil',nama_lengkap='$nama_lengkap',email='$email',pekerjaan='$pekerjaan',no_hp='$no_hp',jenis_kelamin='$jenis_kelamin' WHERE username='$username' ";
+    $query = "UPDATE user SET foto_profil='$foto_profil',nama_lengkap='$nama_lengkap' ,password='$password' ,email='$email',no_hp='$no_hp' WHERE username='$username' ";
     $masuk = mysqli_query($koneksi, $query);
 
     if ($masuk) {
-        header("location:../index.php");
+        header("location:../profil.php");
     } else {
         header("location:../profil.php");
     }
