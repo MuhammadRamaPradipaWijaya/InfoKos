@@ -72,7 +72,7 @@ $data = mysqli_query($koneksi, $query);
         <span style="color: white; background-color: red; padding: 0.1px;">Belum Bayar</span> = Segera Lunasi Pembayaran Anda <br>
         <span style="color: black; background-color: yellow; padding: 0.1px;">Pending</span> = Pembayaran anda sedang diproses <br>
         <span style="color: white; background-color: green; padding: 0.1px;">Lunas</span> = Transaksi Selesai dan telah terverifikasi
-        </p>s
+        </p>
 
 
     </div>
