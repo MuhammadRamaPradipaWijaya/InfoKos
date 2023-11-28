@@ -152,7 +152,7 @@
               <div class="team">
                   <img src="img/profil/IQBAL AMIN.jpeg" alt="Image" class="img-fluid mb-4" style="width: 113.37px; height: 151.16px;">
                   <div class="px-3">
-                      <h3 class="mb-0">iqbal Amin</h3>
+                      <h3 class="mb-0">Iqbal Amin</h3>
                   </div>
               </div>
 
@@ -172,7 +172,7 @@
               <div class="team">
                 <img src="images/person_3.jpg" alt="Image" class="img-fluid mb-4">
                 <div class="px-3">
-                  <h3 class="mb-0">reynand </h3>
+                  <h3 class="mb-0">Reynand </h3>
                  
                 </div>
               </div>
@@ -182,7 +182,7 @@
               <div class="team">
                 <img src="images/person_3.jpg" alt="Image" class="img-fluid mb-4">
                 <div class="px-3">
-                  <h3 class="mb-0">reynand </h3>
+                  <h3 class="mb-0">Reynand </h3>
                  
                 </div>
               </div>
@@ -192,7 +192,7 @@
               <div class="team">
                 <img src="images/person_3.jpg" alt="Image" class="img-fluid mb-4">
                 <div class="px-3">
-                  <h3 class="mb-0">reynand </h3>
+                  <h3 class="mb-0">Reynand </h3>
                  
                 </div>
               </div>
