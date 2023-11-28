@@ -133,21 +133,17 @@ function minfas($idkost, $tipe_kost)
         </div>
       </div>
 
-
         <p class="display-4">Daftar kost terbaru</p>
+        
       <div class="row">
       <div class="row kartu">
         <?php while ($d = mysqli_fetch_array($data)) {
 
-
         ?>
 
 
-<!-- DAFTAR KOS -->
-
-        
-          
-          <div class="card" style="width: 18rem;">
+        <!-- DAFTAR KOS -->  
+          <div class="card mx-1 ml-3 mb-3" style="width: 18rem;">
             <a href="kost/tampilan-kost.php?id_kost=<?php echo $d['id_kost'] ?>">
               <div class="card-header">
                 <div class="row">
@@ -188,8 +184,8 @@ function minfas($idkost, $tipe_kost)
                 </div>
               </div>
             </a>
-          </div>
-<!-- Daftar kos -->
+         </div>
+      <!-- Daftar kos -->
 
         <?php  
       } ?>
