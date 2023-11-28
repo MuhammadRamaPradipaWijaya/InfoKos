@@ -30,6 +30,7 @@ $data_2 = mysqli_query($koneksi, $query);
     width: 100px;
     height: 100px;
   }
+  
 </style>
 
 <!-- properti -->
@@ -81,11 +82,52 @@ $data_2 = mysqli_query($koneksi, $query);
 
             <td><img class="img-thumbnail" src="../img/foto_kost/kamar/<?php echo $d['foto_kamar'] ?>" alt=""></td>
             <td>
-              <a href="penyewa.php?id_kost=<?php echo $d['id_kost']; ?>"><button class="btn-dark">Penyewa</button></a>
-              <a href="properti_edit.php?id_kost=<?php echo $d['id_kost']; ?>"><button class="btn-primary">Edit</button></a>
-              <!-- <button href="tampilan-kost.php?id_kost=<?php echo $d['id_kost']; ?>"><button class="btn-info">Lihat</button></a> -->
-              <a href="daftar-kamar.php?id_kost=<?php echo $d['id_kost']; ?>"><button class="btn-warning">Kamar</button></a>
-              <a href="php/hapus.php?id_kost=<?php echo $d['id_kost']; ?>"><button class="btn-danger">Hapus</button></a>
+
+                <div class="btn-group d-flex" role="group" aria-label="Button Group">
+                    <div class="my-1">
+                        <a href="penyewa.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-secondary btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fa fa-users"></i>
+                            </span>
+                            <span class="text">Penyewa</span>
+                        </a>
+                    </div>
+
+                    <div class="my-1">
+                        <a href="properti_edit.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-primary btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-edit"></i>
+                            </span>
+                            <span class="text">Ubah</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="btn-group d-flex" role="group" aria-label="Button Group">
+                    <div class="my-1">
+                        <a href="daftar-kamar.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-warning btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fa fa-bed"></i>
+                            </span>
+                            <span class="text">Kamar</span>
+                        </a>
+                    </div>
+
+                    <div class="my-1">
+                        <a href="php/hapus.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-danger btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fa fa-trash"></i>
+                            </span>
+                            <span class="text">Hapus</span>
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+             
+
             </td>
           </tr>
         <?php } ?>
