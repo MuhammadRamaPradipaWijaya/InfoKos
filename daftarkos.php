@@ -2,7 +2,9 @@
 require('koneksi.php');
 
 $jumlah_data_perhalaman = 8;
-$jumlah_halaman = ceil($jumlah_data = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM kost JOIN user ON kost.id_pemilik = user.id")) / $jumlah_data_perhalaman);
+$jumlah_data = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM kost JOIN user ON kost.id_pemilik = user.id"));
+$jumlah_halaman = ceil($jumlah_data / $jumlah_data_perhalaman);
+
 if (isset($_GET['halaman'])) {
   $halaman_aktif = $_GET['halaman'];
 } else {
@@ -11,7 +13,8 @@ if (isset($_GET['halaman'])) {
 
 $awalData = ($jumlah_data_perhalaman * $halaman_aktif) - $jumlah_data_perhalaman;
 
-$query = "SELECT * FROM kost  INNER JOIN user ON kost.id_pemilik = user.id LIMIT $awalData,$jumlah_data_perhalaman";
+$search_query = isset($_GET['query']) ? mysqli_real_escape_string($koneksi, $_GET['query']) : '';
+$query = "SELECT * FROM kost INNER JOIN user ON kost.id_pemilik = user.id WHERE nama_kost LIKE '%$search_query%' OR alamat LIKE '%$search_query%' LIMIT $awalData, $jumlah_data_perhalaman";
 
 $data = mysqli_query($koneksi, $query);
 
@@ -21,7 +24,7 @@ function minfas($idkost, $tipe_kost)
   $cost = mysqli_query($koneksi, "SELECT min(biaya_fasilitas) FROM kamar WHERE id_kost=$idkost");
   $p = mysqli_fetch_array($cost);
   if ($tipe_kost == "Bulan") {
-    return $p['min(biaya_fasilitas)'];  
+    return $p['min(biaya_fasilitas)'];
   } else if ($tipe_kost == "Tahun") {
     return $p['min(biaya_fasilitas)'] * 12;
   }
@@ -142,11 +145,11 @@ function minfas($idkost, $tipe_kost)
         <p class="display-4">Daftar kost terbaru</p>
 
       <div class="row">
-      <div class="row kartu">
-        <?php while ($d = mysqli_fetch_array($data)) {
+      < <div class="row kartu">
+        <?php while ($d = mysqli_fetch_array($data)) : ?>
 
 
-        ?>
+  
 
           <div class="card mx-1 ml-3 mb-3" style="width: 18rem;">
             <a href="kost/tampilan-kost.php?id_kost=<?php echo $d['id_kost'] ?>">
@@ -192,22 +195,20 @@ function minfas($idkost, $tipe_kost)
           </div>
           
           
-        <?php  
-      } ?>
+          <?php endwhile; ?>
       </div>
     </div>
 
     <br>
     <hr>
     <div class="row">
-      <?php for ($i = 1; $i <= $jumlah_halaman; $i++) : ?>
-        <?php if ($i == $halaman_aktif) : ?>
-          <a style="font-weight: bold;background-color:black;padding:10px;color:white;" href="?halaman=<?php echo $i ?>"><?php echo $i ?></a>
-        <?php else : ?>
-          <a style="font-weight: bold;background-color:red;padding:10px;color:white" href="?halaman=<?php echo $i ?>"><?php echo $i ?></a>
-        <?php endif; ?>
-      <?php endfor; ?>
-    </div>
+    <?php for ($i = 1; $i <= $jumlah_halaman; $i++) : ?>
+      <?php if ($i == $halaman_aktif) : ?>
+        <a style="font-weight: bold;background-color:black;padding:10px;color:white;" href="?halaman=<?php echo $i ?>"><?php echo $i ?></a>
+      <?php else : ?>
+        <a style="font-weight: bold;background-color:red;padding:10px;color:white" href="?halaman=<?php echo $i ?>"><?php echo $i ?></a>
+      <?php endif; ?>
+    <?php endfor; ?>
   </div>
 
     
@@ -257,9 +258,7 @@ function minfas($idkost, $tipe_kost)
   <script src="js/aos.js"></script>
   <script src="js/moment.min.js"></script>
   <script src="js/daterangepicker.js"></script>
-
   <script src="js/typed.js"></script>
-  
   <script src="js/custom.js"></script>
 
 </body>
