@@ -46,8 +46,8 @@
         <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
           <li><a href="index2.php">Home</a></li>
           <li><a href="daftarkos.php">Daftar Kost</a></li>
-          <li class="active"><a href="contact.php">contact</a></li>
-          <li><a href="login.php">login</a></li>
+          <li class="active"><a href="contact.php">Contact</a></li>
+          <li><a href="login.php">Login</a></li>
         </ul>
 
         <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
@@ -132,7 +132,6 @@
   </div>
 
   <div class="row justify-content-center mt-5 section">
-
         <div class="col-lg-10">
           <div class="row mb-5">
             <div class="col text-center">
