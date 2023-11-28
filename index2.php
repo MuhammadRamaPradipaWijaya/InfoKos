@@ -389,7 +389,7 @@ function minfas($idkost, $tipe_kost)
       <div class="container">
         <div class="row text-center">
           <div class="col-md-8 mb-3 mb-md-0 mx-auto">
-            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>|KINT2 &mdash; 
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> Sistem Info Kos|KINT2 
             </p>
           </div>
           
