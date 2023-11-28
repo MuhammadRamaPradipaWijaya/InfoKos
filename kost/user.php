@@ -3,6 +3,16 @@ include "includes/header.php";
 
 $data = mysqli_query($koneksi, "SELECT * FROM user JOIN roles_user on user.roles=roles_user.id_roles");
 ?>
+<style>
+  .btn-danger{
+    background-color: #e74a3b;
+    border: none;
+    border-radius: 5px 5px;
+    color: #ffffff; /* Warna teks */
+    padding: 10px ; /* Sesuaikan nilai sesuai keinginan Anda */
+   
+  }
+</style>
 
 <div class="container-fluid">
 <div class="card shadow mb-4">
