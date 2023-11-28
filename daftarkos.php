@@ -34,6 +34,7 @@ function minfas($idkost, $tipe_kost)
 
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -45,7 +46,9 @@ function minfas($idkost, $tipe_kost)
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -59,7 +62,6 @@ function minfas($idkost, $tipe_kost)
 
   <title>InfoKost.</title>
   <style>
-    
     .row {
       display: flex;
       justify-content: center;
@@ -70,9 +72,10 @@ function minfas($idkost, $tipe_kost)
     .row a {
       margin: 5px;
 
-    .search-input {
-    width: 300px; /* Adjust the width as needed */
-}
+      .search-input {
+        width: 300px;
+        /* Adjust the width as needed */
+      }
 
     }
   </style>
@@ -80,11 +83,11 @@ function minfas($idkost, $tipe_kost)
 
 <body>
   <?php
- $search_query = isset($_GET['query']) ? mysqli_real_escape_string($koneksi, $_GET['query']) : '';
- $query_products = mysqli_query($koneksi, "SELECT * FROM kost WHERE nama_kost LIKE '%$search_query%' OR alamat LIKE '%$search_query%'");
- $products = mysqli_fetch_all($query_products, MYSQLI_ASSOC);
- 
-  
+  $search_query = isset($_GET['query']) ? mysqli_real_escape_string($koneksi, $_GET['query']) : '';
+  $query_products = mysqli_query($koneksi, "SELECT * FROM kost WHERE nama_kost LIKE '%$search_query%' OR alamat LIKE '%$search_query%'");
+  $products = mysqli_fetch_all($query_products, MYSQLI_ASSOC);
+
+
   ?>
 
 
@@ -109,7 +112,8 @@ function minfas($idkost, $tipe_kost)
           <li><a href="login.php">Login</a></li>
         </ul>
 
-        <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+        <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
+          data-toggle="collapse" data-target="#main-navbar">
           <span></span>
         </a>
 
@@ -120,124 +124,150 @@ function minfas($idkost, $tipe_kost)
 
   <div class="hero hero-inner">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 mx-auto text-center">
-                <div class="intro-wrap">
-                    <h1 class="mb-0">Info Kost</h1>
-                    <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                    <form class="form-inline mt-3" action="daftarkos.php" method="GET">
-                      <div class="input-group">
-                          <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width: 420px;" name="query">
-                          <div class="input-group-append">
-                              <button class="btn btn-outline-light" type="submit">Search</button>
-                          </div>
-                      </div>
-                  </form>
-
+      <div class="row align-items-center">
+        <div class="col-lg-6 mx-auto text-center">
+          <div class="intro-wrap">
+            <h1 class="mb-0">Info Kost</h1>
+            <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia and
+              Consonantia, there live the blind texts. </p>
+            <form class="form-inline mt-3" action="daftarkos.php" method="GET">
+              <div class="input-group">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width: 420px;"
+                  name="query">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-light" type="submit">Search</button>
                 </div>
-            </div>
+              </div>
+            </form>
+
+          </div>
         </div>
+      </div>
     </div>
   </div>
 
-  
-
-        <p class="display-4">Daftar kost terbaru</p>
-
-      <div class="row">
-      < <div class="row kartu">
-        <?php while ($d = mysqli_fetch_array($data)) : ?>
 
 
-  
+  <div class="text-center">
+    <p class="display-4 font-weight-bold">Daftar kost terbaru</p>
+  </div>
 
-          <div class="card mx-1 ml-3 mb-3" style="width: 18rem;">
-            <a href="kost/tampilan-kost.php?id_kost=<?php echo $d['id_kost'] ?>">
-              <div class="card-header">
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="row">
-                      <img src="img/profil/<?php echo $d['foto_profil'] ?>" class="thumbnail img-responsive rounded-circle mr-3" height="50px" width="50px" alt="avatar">
-                    </div>
+  <div class="row">
+    < <div class="row kartu">
+      <?php while ($d = mysqli_fetch_array($data)): ?>
+
+
+
+
+        <div class="card mx-1 ml-3 mb-3" style="width: 18rem;">
+          <a href="kost/tampilan-kost.php?id_kost=<?php echo $d['id_kost'] ?>">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="row">
+                    <img src="img/profil/<?php echo $d['foto_profil'] ?>"
+                      class="thumbnail img-responsive rounded-circle mr-3" height="50px" width="50px" alt="avatar">
                   </div>
-                  <div class="col">
-                    <div class="card-text">
-                      <h6 class="card-title font-weight-bold mb-1"><?php echo $d['nama_kost'] ?></h6>
+                </div>
+                <div class="col">
+                  <div class="card-text">
+                    <h6 class="card-title font-weight-bold mb-1">
+                      <?php echo $d['nama_kost'] ?>
+                    </h6>
 
-                      <p class="card-text"><?php echo $d['kota'] . ',' . $d['provinsi'] ?></p>
+                    <p class="card-text">
+                      <?php echo $d['kota'] . ',' . $d['provinsi'] ?>
+                    </p>
 
-                    </div>
                   </div>
                 </div>
               </div>
-              <div class="card-body">
-                <img height="" class="card-img-top" src="img/foto_kost/kamar/<?php echo $d['foto_kamar'] ?>" alt="Card image cap">
-              </div>
-              <div class="card-footer">
-                <div class="row">
-                  <div class="col-md-7" style="font-size:12px;font-weight:bold"><?php echo number_format($d['harga_sewa'] + minfas($d['id_kost'], $d['tipe_kost']), 0, ',', '.') . '/' . $d['tipe_kost'] ?></div>
-                  <?php
-                  if ($d['jenis_kost'] == "Putri") {
-                  ?>
-                    <div class="col" style="background-color:pink;font-size:12px;font-weight:bold;color:white"><?php echo $d['jenis_kost'] ?></div>
-                  <?php
-                  } else if ($d['jenis_kost'] == "Putra") {
-                  ?>
-                    <div class="col" style="background-color:black;font-size:12px;font-weight:bold;color:white"><?php echo $d['jenis_kost'] ?></div>
-                  <?php
-                  } else if ($d['jenis_kost'] == "Campuran") {
-                  ?>
-                    <div class="col" style="background-color:purple;font-size:12px;font-weight:bold;color:white"><?php echo $d['jenis_kost'] ?></div>
-                  <?php } ?>
+            </div>
+            <div class="card-body">
+              <img height="" class="card-img-top" src="img/foto_kost/kamar/<?php echo $d['foto_kamar'] ?>"
+                alt="Card image cap">
+            </div>
+            <div class="card-footer">
+              <div class="row">
+                <div class="col-md-7" style="font-size:12px;font-weight:bold">
+                  <?php echo number_format($d['harga_sewa'] + minfas($d['id_kost'], $d['tipe_kost']), 0, ',', '.') . '/' . $d['tipe_kost'] ?>
                 </div>
+                <?php
+                if ($d['jenis_kost'] == "Putri") {
+                  ?>
+                  <div class="col" style="background-color:pink;font-size:12px;font-weight:bold;color:white">
+                    <?php echo $d['jenis_kost'] ?>
+                  </div>
+                  <?php
+                } else if ($d['jenis_kost'] == "Putra") {
+                  ?>
+                    <div class="col" style="background-color:black;font-size:12px;font-weight:bold;color:white">
+                    <?php echo $d['jenis_kost'] ?>
+                    </div>
+                  <?php
+                } else if ($d['jenis_kost'] == "Campuran") {
+                  ?>
+                      <div class="col" style="background-color:purple;font-size:12px;font-weight:bold;color:white">
+                    <?php echo $d['jenis_kost'] ?>
+                      </div>
+                <?php } ?>
               </div>
-            </a>
-          </div>
-          
-          
-          <?php endwhile; ?>
-      </div>
-    </div>
+            </div>
+          </a>
+        </div>
 
-    <br>
-    <hr>
-    <div class="row">
-    <?php for ($i = 1; $i <= $jumlah_halaman; $i++) : ?>
-      <?php if ($i == $halaman_aktif) : ?>
-        <a style="font-weight: bold;background-color:black;padding:10px;color:white;" href="?halaman=<?php echo $i ?>"><?php echo $i ?></a>
-      <?php else : ?>
-        <a style="font-weight: bold;background-color:red;padding:10px;color:white" href="?halaman=<?php echo $i ?>"><?php echo $i ?></a>
+
+      <?php endwhile; ?>
+  </div>
+  </div>
+
+  <br>
+  <hr>
+  <div class="row">
+    <?php for ($i = 1; $i <= $jumlah_halaman; $i++): ?>
+      <?php if ($i == $halaman_aktif): ?>
+        <a style="font-weight: bold;background-color:black;padding:10px;color:white;" href="?halaman=<?php echo $i ?>">
+          <?php echo $i ?>
+        </a>
+      <?php else: ?>
+        <a style="font-weight: bold;background-color:red;padding:10px;color:white" href="?halaman=<?php echo $i ?>">
+          <?php echo $i ?>
+        </a>
       <?php endif; ?>
     <?php endfor; ?>
   </div>
 
-    
 
-            
-          
-            <div class="col-md-6 col-lg-4">
-            <div class="widget">
-              <h3 class="heading">Contact</h3>
-              <ul class="list-unstyled quick-info links">
-                <li class="email"><a href="#">mail@example.com</a></li>
-                <li class="phone"><a href="#">+1 222 212 3819</a></li>
-                <li class="address"><a href="#">43 Raymouth Rd. Baltemoer, London 3910</a></li>
-              </ul>
-            </div>
-          </div>
-        
-    
-    <div class="inner dark">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-md-8 mb-3 mb-md-0 mx-auto">
-            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co" class="link-highlight">Untree.co</a> <!-- License information: https://untree.co/license/ -->Distributed By <a href="https://themewagon.com" target="_blank" >ThemeWagon</a>
-            </p>
-          </div>
-          
+
+
+
+  <div class="col-md-6 col-lg-4">
+    <div class="widget">
+      <h3 class="heading">Contact</h3>
+      <ul class="list-unstyled quick-info links">
+        <li class="email"><a href="#">mail@example.com</a></li>
+        <li class="phone"><a href="#">+1 222 212 3819</a></li>
+        <li class="address"><a href="#">43 Raymouth Rd. Baltemoer, London 3910</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="inner dark">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-8 mb-3 mb-md-0 mx-auto">
+          <p>Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love
+            by <a href="https://untree.co" class="link-highlight">Untree.co</a>
+            <!-- License information: https://untree.co/license/ -->Distributed By <a href="https://themewagon.com"
+              target="_blank">ThemeWagon</a>
+          </p>
         </div>
+
       </div>
     </div>
+  </div>
   </div>
 
   <div id="overlayer"></div>
@@ -247,7 +277,7 @@ function minfas($idkost, $tipe_kost)
     </div>
   </div>
 
-  
+
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
