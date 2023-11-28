@@ -8,6 +8,17 @@ $query = "SELECT * FROM booking JOIN user ON user.id=booking.id_user JOIN tagiha
 $data = mysqli_query($koneksi, $query);
 ?>
 
+<style>
+    .btn-primary{
+    background-color: #164863;
+    border: none;
+    border-radius: 5px 5px;
+    color: #ffffff; /* Warna teks */
+    padding: 10px 20px ; /* Sesuaikan nilai sesuai keinginan Anda */
+   
+    }
+</style>
+
 <div class="container-fluid">
     
 <div class="my-2">

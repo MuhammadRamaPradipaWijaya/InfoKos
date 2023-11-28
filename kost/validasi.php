@@ -67,16 +67,24 @@ $n = mysqli_fetch_array($data2);
             </div>
 
 
-
             <div class="row">
                 <div class="col-md-4">
                     Upload Bukti Pembayaran :
                     <input class="form-control" type="file" name="gambar" id="gambar">
                 </div>
             </div>
+            <br>
+
             <div class="row">
-                <button name="submit" type="submit" class="btn-primary">Kirim</button>
+                <button name="submit" type="submit" class="btn btn-primary btn-icon-split">
+                    <span class="icon text-white-50">
+                        <i class="fa-duotone fa-paper-plane"></i>
+                    </span>
+                    <span class="text">Kirim</span>
+                </a>
             </div>
+
+
             <?php
             if (isset($_POST['submit'])) {
                 $query = "UPDATE tagihan SET stats=2 WHERE no_tagihan='$no_tagihan'";
