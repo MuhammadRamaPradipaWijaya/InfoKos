@@ -84,7 +84,8 @@
                 <?php
                 if ($d['roles'] == 1) {
                 ?>
-                    <!-- Nav Item - Penghuni kost -->
+            
+            <!-- Nav Item - Penghuni kost -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
@@ -102,7 +103,9 @@
                     </div>
                 </div>
             </li>
+            
         <?php } else if ($d['roles'] == 2) { ?>
+
             <!-- Nav Item - OWNER MENU-->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
