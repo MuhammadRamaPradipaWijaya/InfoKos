@@ -21,7 +21,7 @@ function minfas($idkost, $tipe_kost)
   $cost = mysqli_query($koneksi, "SELECT min(biaya_fasilitas) FROM kamar WHERE id_kost=$idkost");
   $p = mysqli_fetch_array($cost);
   if ($tipe_kost == "Bulan") {
-    return $p['min(biaya_fasilitas)'];
+    return $p['min(biaya_fasilitas)'];  
   } else if ($tipe_kost == "Tahun") {
     return $p['min(biaya_fasilitas)'] * 12;
   }
@@ -76,6 +76,12 @@ function minfas($idkost, $tipe_kost)
 </head>
 
 <body>
+  <?php
+  $search_query = isset($_GET['query']) ? mysqli_real_escape_string($koneksi, $_GET['query']) : '';
+  $query_products = mysqli_query($koneksi, "SELECT * FROM kost WHERE nama_kost AND alamat LIKE '%$search_query%'");
+  $products = mysqli_fetch_all($query_products, MYSQLI_ASSOC);
+  
+  ?>
 
 
   <div class="site-mobile-menu site-navbar-target">
@@ -115,23 +121,25 @@ function minfas($idkost, $tipe_kost)
                 <div class="intro-wrap">
                     <h1 class="mb-0">Info Kost</h1>
                     <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                    <form class="form-inline mt-3">
-                        <div class="input-group">
-                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-light" type="submit">Search</button>
-                            </div>
-                        </div>
-                    </form>
+                    <form class="form-inline mt-3" action="daftarkos.php" method="GET">
+                      <div class="input-group">
+                          <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width: 300px;" name="query">
+                          <div class="input-group-append">
+                              <button class="btn btn-outline-light" type="submit">Search</button>
+                          </div>
+                      </div>
+                  </form>
+
                 </div>
             </div>
         </div>
     </div>
-</div>
+  </div>
 
   
 
         <p class="display-4">Daftar kost terbaru</p>
+
       <div class="row">
       <div class="row kartu">
         <?php while ($d = mysqli_fetch_array($data)) {
@@ -182,139 +190,7 @@ function minfas($idkost, $tipe_kost)
             </a>
           </div>
           
-
-          <!-- tes -->
-          <div class="card mx-1 ml-3 mb-3" style="width: 18rem;">
-            <a href="kost/tampilan-kost.php?id_kost=<?php echo $d['id_kost'] ?>">
-              <div class="card-header">
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="row">
-                      <img src="img/profil/<?php echo $d['foto_profil'] ?>" class="thumbnail img-responsive rounded-circle mr-3" height="50px" width="50px" alt="avatar">
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card-text">
-                      <h6 class="card-title font-weight-bold mb-1"><?php echo $d['nama_kost'] ?></h6>
-
-                      <p class="card-text"><?php echo $d['kota'] . ',' . $d['provinsi'] ?></p>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <img height="" class="card-img-top" src="img/foto_kost/kamar/<?php echo $d['foto_kamar'] ?>" alt="Card image cap">
-              </div>
-              <div class="card-footer">
-                <div class="row">
-                  <div class="col-md-7" style="font-size:12px;font-weight:bold"><?php echo number_format($d['harga_sewa'] + minfas($d['id_kost'], $d['tipe_kost']), 0, ',', '.') . '/' . $d['tipe_kost'] ?></div>
-                  <?php
-                  if ($d['jenis_kost'] == "Putri") {
-                  ?>
-                    <div class="col" style="background-color:pink;font-size:12px;font-weight:bold;color:white"><?php echo $d['jenis_kost'] ?></div>
-                  <?php
-                  } else if ($d['jenis_kost'] == "Putra") {
-                  ?>
-                    <div class="col" style="background-color:black;font-size:12px;font-weight:bold;color:white"><?php echo $d['jenis_kost'] ?></div>
-                  <?php
-                  } else if ($d['jenis_kost'] == "Campuran") {
-                  ?>
-                    <div class="col" style="background-color:purple;font-size:12px;font-weight:bold;color:white"><?php echo $d['jenis_kost'] ?></div>
-                  <?php } ?>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="card mx-1 ml-3 mb-3" style="width: 18rem;">
-            <a href="kost/tampilan-kost.php?id_kost=<?php echo $d['id_kost'] ?>">
-              <div class="card-header">
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="row">
-                      <img src="img/profil/<?php echo $d['foto_profil'] ?>" class="thumbnail img-responsive rounded-circle mr-3" height="50px" width="50px" alt="avatar">
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card-text">
-                      <h6 class="card-title font-weight-bold mb-1"><?php echo $d['nama_kost'] ?></h6>
-
-                      <p class="card-text"><?php echo $d['kota'] . ',' . $d['provinsi'] ?></p>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <img height="" class="card-img-top" src="img/foto_kost/kamar/<?php echo $d['foto_kamar'] ?>" alt="Card image cap">
-              </div>
-              <div class="card-footer">
-                <div class="row">
-                  <div class="col-md-7" style="font-size:12px;font-weight:bold"><?php echo number_format($d['harga_sewa'] + minfas($d['id_kost'], $d['tipe_kost']), 0, ',', '.') . '/' . $d['tipe_kost'] ?></div>
-                  <?php
-                  if ($d['jenis_kost'] == "Putri") {
-                  ?>
-                    <div class="col" style="background-color:pink;font-size:12px;font-weight:bold;color:white"><?php echo $d['jenis_kost'] ?></div>
-                  <?php
-                  } else if ($d['jenis_kost'] == "Putra") {
-                  ?>
-                    <div class="col" style="background-color:black;font-size:12px;font-weight:bold;color:white"><?php echo $d['jenis_kost'] ?></div>
-                  <?php
-                  } else if ($d['jenis_kost'] == "Campuran") {
-                  ?>
-                    <div class="col" style="background-color:purple;font-size:12px;font-weight:bold;color:white"><?php echo $d['jenis_kost'] ?></div>
-                  <?php } ?>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="card mx-1 ml-3 mb-3" style="width: 18rem;">
-            <a href="kost/tampilan-kost.php?id_kost=<?php echo $d['id_kost'] ?>">
-              <div class="card-header">
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="row">
-                      <img src="img/profil/<?php echo $d['foto_profil'] ?>" class="thumbnail img-responsive rounded-circle mr-3" height="50px" width="50px" alt="avatar">
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card-text">
-                      <h6 class="card-title font-weight-bold mb-1"><?php echo $d['nama_kost'] ?></h6>
-
-                      <p class="card-text"><?php echo $d['kota'] . ',' . $d['provinsi'] ?></p>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <img height="" class="card-img-top" src="img/foto_kost/kamar/<?php echo $d['foto_kamar'] ?>" alt="Card image cap">
-              </div>
-              <div class="card-footer">
-                <div class="row">
-                  <div class="col-md-7" style="font-size:12px;font-weight:bold"><?php echo number_format($d['harga_sewa'] + minfas($d['id_kost'], $d['tipe_kost']), 0, ',', '.') . '/' . $d['tipe_kost'] ?></div>
-                  <?php
-                  if ($d['jenis_kost'] == "Putri") {
-                  ?>
-                    <div class="col" style="background-color:pink;font-size:12px;font-weight:bold;color:white"><?php echo $d['jenis_kost'] ?></div>
-                  <?php
-                  } else if ($d['jenis_kost'] == "Putra") {
-                  ?>
-                    <div class="col" style="background-color:black;font-size:12px;font-weight:bold;color:white"><?php echo $d['jenis_kost'] ?></div>
-                  <?php
-                  } else if ($d['jenis_kost'] == "Campuran") {
-                  ?>
-                    <div class="col" style="background-color:purple;font-size:12px;font-weight:bold;color:white"><?php echo $d['jenis_kost'] ?></div>
-                  <?php } ?>
-                </div>
-              </div>
-            </a>
-          </div>
-
-
-
+          
         <?php  
       } ?>
       </div>
