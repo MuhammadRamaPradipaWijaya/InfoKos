@@ -60,9 +60,8 @@ echo $id_kost;
                         <p style="font-size: 12px">Note: biaya fasilitas perbulan akan ditambahkan ke harga sewa sebagai biaya tambahan</p>
                     </div>
                 </div>
-
-
                 <!-- tutup info kamar  -->
+
                 <!-- fasilitas kamar  -->
                 <br>
                 <hr>
@@ -89,6 +88,7 @@ echo $id_kost;
         </div>
     </div>
 
+    
 </div>
 <?php
 include "includes/footer.php";

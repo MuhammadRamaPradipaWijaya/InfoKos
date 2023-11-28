@@ -6,6 +6,16 @@ include('includes/header.php');
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-10">
+
+    <div class="my-2"></div>
+      <a href="properti.php" class="btn btn-light btn-icon-split" style="border: 1px solid #ccc;">
+        <span class="icon text-gray-700">
+          <i class="fas fa-arrow-left"></i>
+        </span>
+        <span class="text">Kembali</span>
+      </a>
+
+
       <form class="text-center border border-light p-5" action="php/tambah-kos_proses.php" method="post" enctype="multipart/form-data">
         <h3>Tambah Kost</h3>
         <div class="form-group">
@@ -43,8 +53,8 @@ include('includes/header.php');
           </div>
           <br>
           <div class="row">
-            <div class="col"><label for="deskripsi">Deskripsi Kost(opsional)</label></div>
-            <div class="col"><textarea class="form-control" name="deskripsi" id="deskripsi" cols="30" rows="10" placeholder="Masukan alamat kost anda"></textarea></div>
+            <div class="col"><label for="deskripsi">Deskripsi Kost (opsional)</label></div>
+            <div class="col"><textarea class="form-control" name="deskripsi" id="deskripsi" cols="30" rows="10" placeholder="Masukan deskripsi tambahan tentang kost"></textarea></div>
           </div>
           <br>
           <div class="row">
@@ -163,9 +173,16 @@ include('includes/header.php');
             </div>
           </div>
           <br>
+
           <div class="col">
-            <button type="submit" class="btn-primary" name="tambah">Simpan</button>
-          </div>
+          <button type="submit" class="btn btn-primary btn-icon-split" name="tambah">
+            <span class="icon text-white-50">
+              <i class="fas fa-plus"></i>
+            </span>
+            <span class="text">Tambah</span>
+          </button>
+        </div>
+
         </div>
       </form>
     </div>

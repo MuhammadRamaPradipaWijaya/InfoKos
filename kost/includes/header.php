@@ -112,7 +112,6 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Daftar Menu:</h6>
-                        <a class="collapse-item" href="tambah_kost.php">Tambah Kost</a>
                         <a class="collapse-item" href="properti.php">Kost Saya</a>
                         <!-- <a class="collapse-item" href="#">Keuangan</a>
                         <a class="collapse-item" href="#">Tagihan</a> -->

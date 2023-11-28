@@ -12,9 +12,17 @@ $o = explode(', ', $d['fasilitas_kost']);
 
 <!--Main Content -->
 <div class="container">
-
-  <div class="row">
+  <div class="row"></div>
     <div class="col-md-10">
+
+      <div class="my-2">
+      <a href="properti.php" class="btn btn-light btn-icon-split" style="border: 1px solid #ccc;">
+      <span class="icon text-gray-700">
+          <i class="fas fa-arrow-left"></i>
+      </span>
+      <span class="text">Kembali</span>
+      </a>
+
       <form class="text-center border border-light p-5" action="php/properti-edit_proses.php?id_kost=<?php echo $d['id_kost']; ?>" method="post" enctype="multipart/form-data">
         <h3>Ubah Kost</h3>
         <hr>
