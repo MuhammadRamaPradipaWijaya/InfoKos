@@ -26,20 +26,8 @@ $d = mysqli_fetch_array($data);
                     <div class="col-sm-10"><?php echo $_SESSION['username']; ?></div>
                 </div>
                 <div class="row">
-                    <div class="col">Nama Lengkap:</div>
-                    <div class="col-sm-10"><?php echo $d['nama_lengkap']; ?></div>
-                </div>
-                <div class="row">
                     <div class="col">Email :</div>
                     <div class="col-sm-10"><?php echo $d['email']; ?></div>
-                </div>
-                <div class="row">
-                    <div class="col">Perkerjaan :</div>
-                    <div class="col-sm-10"><?php echo $d['pekerjaan']; ?></div>
-                </div>
-                <div class="row">
-                    <div class="col">Jenis Kelamin :</div>
-                    <div class="col-sm-10"><?php echo $d['jenis_kelamin']; ?></div>
                 </div>
                 <div class="row">
                     <div class="col">Nomer HP :</div>

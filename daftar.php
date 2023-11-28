@@ -5,30 +5,24 @@ require('koneksi.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     // ... (Bagian validasi input, pemrosesan file, dan pilihan peran) ...
-    $nama_lengkap = $_POST["nama_lengkap"] ?? "";
     $email = $_POST["email"] ?? "";
     $username = $_POST["username"] ?? "";
     $password = $_POST["password"] ?? "";
     $no_hp = $_POST["no_hp"] ?? "";
-    $pekerjaan = $_POST["pekerjaan"] ?? "";
-    $jenis_kelamin = $_POST["jenis_kelamin"] ?? "";
     $roles = $_POST["roles"] ?? "";
     $foto_ktp = $_FILES["foto_ktp"]['name'] ?? "";
-    $foto_profil = $_FILES["foto_profil"]['name'] ?? "";
     $sumber1 = $_FILES["foto_ktp"]['tmp_name'] ?? "";
-    $sumber2 = $_FILES["foto_profil"]['tmp_name'] ?? "";
 
     if ($foto_ktp && $foto_profil) {
         move_uploaded_file($sumber1, 'img/ktp/' . $foto_ktp);
-        move_uploaded_file($sumber2, 'img/profil/' . $foto_profil);
     }
 
     // Gunakan prepared statement untuk melakukan insert
-    $query = "INSERT INTO user (nama_lengkap, email, username, password, no_hp, pekerjaan, jenis_kelamin, foto_ktp, foto_profil, roles) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $query = "INSERT INTO user (email, username, password, no_hp, foto_ktp, roles) VALUES (?, ?, ?, ?, ?, ?)";
     $statement = mysqli_prepare($koneksi, $query);
 
     if ($statement) {
-        mysqli_stmt_bind_param($statement, "ssssissssi", $nama_lengkap, $email, $username, $password, $no_hp, $pekerjaan, $jenis_kelamin, $foto_ktp, $foto_profil, $roles);
+        mysqli_stmt_bind_param($statement, "sssssi", $email, $username, $password, $no_hp, $foto_ktp, $roles);
 
         // Eksekusi prepared statement
         $execute = mysqli_stmt_execute($statement);
@@ -80,26 +74,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                     <div class="form-group">
                                         <input required="required" type="email" name="email" id="email" class="form-control" placeholder="Email">
                                     </div>
-                                    <div class="form-group">
-                                        <input required="required" type="number" name="no_hp" id="no_hp" class="form-control" placeholder="Nomer Telepon/HP">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="jenis_kelamin">Jenis Kelamin</label>
-                                        <select name="jenis_kelamin" id="jenis_kelamin" class="custom-select">
-                                            <option value="laki-laki">Laki-laki</option>
-                                            <option value="perempuan">Perempuan</option>
-                                        </select>
-                                    </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input required="required" type="password" name="password" id="password" class="form-control" placeholder="Password">
                                     </div>
                                     <div class="form-group">
-                                        <input required="required" type="text" name="nama_lengkap" id="nama_lengkap" class="form-control" placeholder="Nama Lengkap">
-                                    </div>
-                                    <div class="form-group">
-                                        <input required="required" type="text" name="pekerjaan" id="pekerjaan" class="form-control" placeholder="Pekerjaan">
+                                        <input required="required" type="number" name="no_hp" id="no_hp" class="form-control" placeholder="Nomer Telepon/HP">
                                     </div>
                                 </div>
                             </div>
@@ -108,12 +89,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                     <div class="form-group">
                                         <label for="foto_ktp" class="form-group">Foto KTP</label>
                                         <input type="file" name="foto_ktp" id="foto_ktp" class="form-group">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="foto_profil" class="form-group">Foto Profil</label>
-                                        <input type="file" name="foto_profil" id="foto_profil" class="form-group">
                                     </div>
                                 </div>
                             </div>
