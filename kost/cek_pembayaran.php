@@ -9,6 +9,17 @@ $data = mysqli_query($koneksi, $query);
 $d = mysqli_fetch_array($data);
 ?>
 
+<style>
+    .btn-primary{
+    background-color: #164863;
+    border: none;
+    border-radius: 5px 5px;
+    color: #ffffff; /* Warna teks */
+    padding: 10px 20px ; /* Sesuaikan nilai sesuai keinginan Anda */
+   
+    }
+</style>
+
 <br>
 <div class="container">
     <form action="php/validasi_proses.php" method="post">
