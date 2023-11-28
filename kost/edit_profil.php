@@ -13,7 +13,17 @@ $d = mysqli_fetch_array($data);
   }
 </style>
 
+
 <div class="container ">
+  
+<div class="my-2">
+  <a href="profil.php" class="btn btn-light btn-icon-split" style="border: 1px solid #ccc;">
+  <span class="icon text-gray-700">
+      <i class="fas fa-arrow-left"></i>
+  </span>
+  <span class="text">Kembali</span>
+  </a>
+
   <h4 class="text-center">Ubah Data</h4>
   <hr>
   <div class="row">
@@ -45,11 +55,17 @@ $d = mysqli_fetch_array($data);
           <div class="col"><label for="foto_profil">Ubah Foto Profil :</label></div>
           <div class="col-sm-8"><input type="file" name="foto_profil" id="foto_profil" value="<?php echo $d['foto_profil']; ?>"></div>
         </div>
-        <div class="form-group row">
-          <div class="col">
-            <button type="submit" value="submit" class="btn-primary" name="submit">Ubah Data</button>
-          </div>
-        </div>
+        <br>
+
+        <div class="my-1 col-md-3 text-center mx-auto">
+        <button type="submit" value="submit" class="btn btn-primary btn-icon-split" name="submit">
+          <span class="icon text-white-50">
+            <i class="fas fa-edit"></i>
+          </span>
+          <span class="text">Ubah Data</span>
+        </button>
+      </div>
+
       </form>
       <!-- end form  -->
 

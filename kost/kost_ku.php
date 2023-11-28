@@ -19,7 +19,7 @@ $data = mysqli_query($koneksi, $query);
 <div class="container-fluid  bg-gray">
 <div class="card shadow mb-4">
 <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Kost-Ku</h6>
+    <h5 class="m-0 font-weight-bold text-primary">Kost Ku</h5>
 </div>
 <div class="card-body">
     <div class="table-responsive">

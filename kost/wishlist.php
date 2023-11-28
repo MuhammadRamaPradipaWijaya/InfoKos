@@ -34,7 +34,7 @@ $data = mysqli_query($koneksi, $query);
 
 
 <div class="container">
-  <h3>My Wishlist</h3>
+  <h5 class="m-0 font-weight-bold text-primary">My Wishlist</h5>
   <hr>
   <div class="row">
 

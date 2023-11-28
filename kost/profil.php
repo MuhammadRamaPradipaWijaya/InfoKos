@@ -44,10 +44,14 @@ $d = mysqli_fetch_array($data);
             </div>
         </div>
     </div><br>
-    <div class="row">
-        <div class="col-md-3 text-center mx-auto">
-            <a href="edit_profil.php" class="btn btn-primary">Ubah Data</a>
-        </div>
+
+    <div class="my-1 col-md-3 text-center mx-auto">
+        <a href="edit_profil.php" class="btn btn-primary btn-icon-split">
+        <span class="icon text-white-50">
+            <i class="fas fa-edit"></i>
+        </span>
+        <span class="text">Ubah Data</span>
+        </a>
     </div>
 </div>
 
