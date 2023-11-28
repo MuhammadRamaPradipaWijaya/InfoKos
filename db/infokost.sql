@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2023 at 07:19 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Nov 28, 2023 at 02:30 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,13 +39,6 @@ CREATE TABLE `booking` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `booking`
---
-
-INSERT INTO `booking` (`id_booking`, `id_user`, `id_kamar`, `tanggal_masuk`, `hitungan_sewa`, `durasi_sewa`, `tanggal_keluar`, `jumlah_kamar`) VALUES
-(6, 3, 1, '2023-12-01', 3, 1, '2024-01-01', 1);
-
---
 -- Triggers `booking`
 --
 DELIMITER $$
@@ -72,13 +65,6 @@ CREATE TABLE `kamar` (
   `biaya_fasilitas` int(11) NOT NULL,
   `fasilitas_kamar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `kamar`
---
-
-INSERT INTO `kamar` (`id_kamar`, `id_kost`, `jumlah_kamar`, `panjang_kamar`, `lebar_kamar`, `tipe_kamar`, `biaya_fasilitas`, `fasilitas_kamar`) VALUES
-(1, 11, 4, 30, 30, 'kamar mandi dalam', 0, 'Tempat Tidur, Lemari, Kipas Angin');
 
 --
 -- Triggers `kamar`
@@ -140,7 +126,9 @@ CREATE TABLE `kost` (
 --
 
 INSERT INTO `kost` (`id_kost`, `nama_kost`, `tipe_kost`, `jenis_kost`, `jumlah_kamar`, `tanggal_tagih`, `nama_pemilik`, `nama_bank`, `no_rekening`, `foto_bangunan_utama`, `foto_kamar`, `foto_kamar_mandi`, `foto_interior`, `provinsi`, `kota`, `kecamatan`, `kelurahan`, `alamat`, `harga_sewa`, `kontak`, `deskripsi`, `id_pemilik`, `fasilitas_kost`) VALUES
-(11, 'Kost 1A', 'Bulan', 'Putra', 3, '2023-12-01', 'owner', 'BRI', 2147483647, 'kos.jpeg', 'kos.jpeg', 'kos.jpeg', 'kos.jpeg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Tegalgede', 'Jl. Mastrip', 500000, '082139425332', '', 2, 'WIFI/Internet, Ruang Tamu, Dapur, Musholla');
+(12, 'Nias Cluster A08', 'Bulan', 'Putra', 0, '2023-11-01', 'owner', 'BRI', 2147483647, 'kos nias.jpg', 'Nias Kamar.jpg', 'Nias Kamar Mandi.jpeg', 'Nias Interior.jpeg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Jl. Nias III. Perum Nias Cluster Block A08 Kec. Sumbersari', 350, '+62 852-3185-5492', '', 2, 'Parkir Mobil, WIFI/Internet'),
+(13, 'Kos Putra Jalan Brantas', 'Bulan', 'Putra', 0, '2023-11-01', 'Sena', 'BRI', 2147483647, 'Kos Brantas.jpg', 'Kamar Brantas.jpg', 'kamar mandi Brantas.jpg', 'interior Brantas.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', ' Jl. Brantas 7 no 19', 300, '08763454726463', '', 43, 'Parkir Mobil, WIFI/Internet, Ruang Tamu, Ruang Makan, Dapur'),
+(14, 'Kosan Putra Nias&', 'Bulan', 'Putra', 0, '2023-11-01', 'AditX', 'BRI', 2147483647, 'Ks Nias.jpeg', 'Kamar Nias.jpg', 'Kamar mandi Nias.jpg', 'interor Nias.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Jl. Nias 7 blok J no 18', 400, '0836754264326', '', 44, 'Parkir Mobil, WIFI/Internet, Dapur');
 
 -- --------------------------------------------------------
 
@@ -190,13 +178,6 @@ CREATE TABLE `tagihan` (
   `bukti_bayar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Dumping data for table `tagihan`
---
-
-INSERT INTO `tagihan` (`no_tagihan`, `no_booking`, `total_tagihan`, `stats`, `tanggal_tagihan`, `bukti_bayar`) VALUES
-(1, 6, 500000, 1, '2023-11-27 06:19:15', 'hero-slider-2.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -225,7 +206,10 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `nama_lengkap`, `email`, `username`, `password`, `no_hp`, `pekerjaan`, `jenis_kelamin`, `foto_ktp`, `foto_profil`, `roles`, `id_kost_saya`) VALUES
 (1, 'admin', 'admin@mail.com', 'admin', 'admin', '081234567890', 'administrator', 'Laki-laki', '-', '-', 3, 0),
 (2, 'owner', 'owner@mail.com', 'owner', 'owner', '82139425332', 'Pemilik kos', 'laki-laki', '20522103.jpg', 'images.jpg', 2, 0),
-(3, 'user', 'user@mail.com', 'user', 'user', '082129921222', 'Mahasiswa', ' laki-laki', '20522103.jpg', 'images.jpg', 1, 0);
+(3, 'user', 'user@mail.com', 'user', 'user', '082129921222', 'Mahasiswa', ' laki-laki', '20522103.jpg', 'images.jpg', 1, 0),
+(43, 'SenaX', 'sena@gmail', 'Senax', 'owner1', '83854276345', 'Owner Kos', 'laki-laki', '', '', 2, 0),
+(44, 'AditX', 'adit@gmail.com', 'AditX', 'owner2', '873465724', 'owner Kos', 'laki-laki', '', '', 2, 0),
+(45, 'RamaX', 'rama@gmail.com', 'RamaX', 'owner3', '87236453614', 'owner Kos', 'laki-laki', '', '', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -238,13 +222,6 @@ CREATE TABLE `wishlist` (
   `id_kost` int(11) NOT NULL,
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `wishlist`
---
-
-INSERT INTO `wishlist` (`id_wishlist`, `id_kost`, `id_user`) VALUES
-(2, 11, 3);
 
 --
 -- Indexes for dumped tables
@@ -329,7 +306,7 @@ ALTER TABLE `kamar`
 -- AUTO_INCREMENT for table `kost`
 --
 ALTER TABLE `kost`
-  MODIFY `id_kost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_kost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `rating`
@@ -353,7 +330,7 @@ ALTER TABLE `tagihan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
