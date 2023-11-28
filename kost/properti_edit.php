@@ -16,7 +16,7 @@ $o = explode(', ', $d['fasilitas_kost']);
     <div class="col-md-10">
 
       <div class="my-2">
-      <a href="properti.php" class="btn btn-light btn-icon-split" style="border: 1px solid #ccc;">
+      <a href="kost_manage.php" class="btn btn-light btn-icon-split" style="border: 1px solid #ccc;">
       <span class="icon text-gray-700">
           <i class="fas fa-arrow-left"></i>
       </span>

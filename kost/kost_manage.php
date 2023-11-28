@@ -56,7 +56,7 @@ $data = mysqli_query($koneksi, "SELECT * FROM kost INNER JOIN user WHERE kost.id
                         </a>
                     </div>
                     <div class="my-1">
-                        <a href="lihat_properti.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-success btn-icon-split">
+                        <a href="detail_properti.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-success btn-icon-split">
                         <span class="icon text-white-50">
                             <i class="fas fa-eye"></i>
                         </span>
