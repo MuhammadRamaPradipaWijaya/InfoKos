@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2023 at 02:30 AM
+-- Generation Time: Nov 28, 2023 at 03:48 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -67,6 +67,15 @@ CREATE TABLE `kamar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
+-- Dumping data for table `kamar`
+--
+
+INSERT INTO `kamar` (`id_kamar`, `id_kost`, `jumlah_kamar`, `panjang_kamar`, `lebar_kamar`, `tipe_kamar`, `biaya_fasilitas`, `fasilitas_kamar`) VALUES
+(8, 15, 6, 5, 4, 'kamar mandi dalam', 0, 'Tempat Tidur, Lemari, Kipas Angin'),
+(9, 16, 25, 5, 4, 'kamar mandi luar', 0, 'Tempat Tidur, Lemari, TV, Kulkas, Kipas Angin'),
+(10, 17, 11, 5, 4, 'kamar mandi luar', 0, 'Tempat Tidur, Lemari, Kulkas, Kipas Angin');
+
+--
 -- Triggers `kamar`
 --
 DELIMITER $$
@@ -126,9 +135,9 @@ CREATE TABLE `kost` (
 --
 
 INSERT INTO `kost` (`id_kost`, `nama_kost`, `tipe_kost`, `jenis_kost`, `jumlah_kamar`, `tanggal_tagih`, `nama_pemilik`, `nama_bank`, `no_rekening`, `foto_bangunan_utama`, `foto_kamar`, `foto_kamar_mandi`, `foto_interior`, `provinsi`, `kota`, `kecamatan`, `kelurahan`, `alamat`, `harga_sewa`, `kontak`, `deskripsi`, `id_pemilik`, `fasilitas_kost`) VALUES
-(12, 'Nias Cluster A08', 'Bulan', 'Putra', 0, '2023-11-01', 'owner', 'BRI', 2147483647, 'kos nias.jpg', 'Nias Kamar.jpg', 'Nias Kamar Mandi.jpeg', 'Nias Interior.jpeg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Jl. Nias III. Perum Nias Cluster Block A08 Kec. Sumbersari', 350, '+62 852-3185-5492', '', 2, 'Parkir Mobil, WIFI/Internet'),
-(13, 'Kos Putra Jalan Brantas', 'Bulan', 'Putra', 0, '2023-11-01', 'Sena', 'BRI', 2147483647, 'Kos Brantas.jpg', 'Kamar Brantas.jpg', 'kamar mandi Brantas.jpg', 'interior Brantas.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', ' Jl. Brantas 7 no 19', 300, '08763454726463', '', 43, 'Parkir Mobil, WIFI/Internet, Ruang Tamu, Ruang Makan, Dapur'),
-(14, 'Kosan Putra Nias&', 'Bulan', 'Putra', 0, '2023-11-01', 'AditX', 'BRI', 2147483647, 'Ks Nias.jpeg', 'Kamar Nias.jpg', 'Kamar mandi Nias.jpg', 'interor Nias.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Jl. Nias 7 blok J no 18', 400, '0836754264326', '', 44, 'Parkir Mobil, WIFI/Internet, Dapur');
+(15, 'Kos Semeru', 'Bulan', 'Putra', 5, '2023-11-01', 'Iqbal', 'BNI', 872534765, 'IMG-20231128-WA0010.jpg', 'IMG-20231128-WA0011.jpg', 'IMG-20231128-WA0012.jpg', 'IMG-20231128-WA0009.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Jl. Semeru no. 03', 500000, '082338636603', '', 46, 'Parkir Mobil, WIFI/Internet'),
+(16, 'Kos Putri Calysta ', 'Bulan', 'Putri', 25, '2023-11-01', 'Aisyah', 'BNI', 2147483647, 'o70ibRGM0DSJD4CaEIxGj24rz5bB3RopABJcnp8XiPo=_plaintext_638367343263134160.jpg', 'k04_MT4qwS2HqT--8lSzym0ZEgirJ5-0UY_E51dT1-0=_plaintext_638367343289062873.jpg', 'FZeJczIMbN_z5jHJyfqyObPbXl9qW0yxk9nNxQUtc1o=_plaintext_638367343269639410.jpg', 'SCoflmCxIzK5AUIAvOxt_9rOD5pkkSNrf8oRONS9H3o=_plaintext_638367343293230416.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Jl. Mastrip Gg. 2 no.14', 425000, '085267322720', 'Kost Putri ', 47, 'Parkir Mobil, WIFI/Internet, Ruang Makan, Dapur'),
+(17, 'Kos Istana Tidar', 'Bulan', 'Putra', 11, '2023-11-01', 'Sena', 'BRI', 2147483647, 'IMG-20231128-WA0020.jpg', 'IMG-20231128-WA0022.jpg', 'IMG-20231128-WA0019.jpg', 'IMG-20231128-WA0021.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Perum Istana Tidar B4 no.23', 400000, '081935166922', 'Kos Laki-Laki', 48, 'Parkir Mobil, WIFI/Internet, Ruang Tamu, Ruang Makan, Dapur');
 
 -- --------------------------------------------------------
 
@@ -204,12 +213,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `nama_lengkap`, `email`, `username`, `password`, `no_hp`, `pekerjaan`, `jenis_kelamin`, `foto_ktp`, `foto_profil`, `roles`, `id_kost_saya`) VALUES
-(1, 'admin', 'admin@mail.com', 'admin', 'admin', '081234567890', 'administrator', 'Laki-laki', '-', '-', 3, 0),
-(2, 'owner', 'owner@mail.com', 'owner', 'owner', '82139425332', 'Pemilik kos', 'laki-laki', '20522103.jpg', 'images.jpg', 2, 0),
-(3, 'user', 'user@mail.com', 'user', 'user', '082129921222', 'Mahasiswa', ' laki-laki', '20522103.jpg', 'images.jpg', 1, 0),
-(43, 'SenaX', 'sena@gmail', 'Senax', 'owner1', '83854276345', 'Owner Kos', 'laki-laki', '', '', 2, 0),
-(44, 'AditX', 'adit@gmail.com', 'AditX', 'owner2', '873465724', 'owner Kos', 'laki-laki', '', '', 2, 0),
-(45, 'RamaX', 'rama@gmail.com', 'RamaX', 'owner3', '87236453614', 'owner Kos', 'laki-laki', '', '', 2, 0);
+(46, 'IQBAL AMIN', 'iqbal@gmail.com', 'Iqbal', 'Iqbal', '82338636603', 'Ow', ' laki-laki', '', 'IQBAL AMIN.jpeg', 2, 0),
+(47, 'Aisyah.S', 'aisyah@gmail.com', 'Aisyah', 'Aisyah', '85267322720', 'owner Kos', ' perempuan', '', 'WhatsApp Image 2023-11-28 at 09.30.11_d2e82ac8.jpg', 2, 0),
+(48, 'Arya Advicenna', 'sena@gmail.com', 'Sena', 'Sena', '81935166922', 'owner Kos', ' laki-laki', '', 'WhatsApp Image 2023-11-28 at 09.34.39_480510a3.jpg', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -300,13 +306,13 @@ ALTER TABLE `booking`
 -- AUTO_INCREMENT for table `kamar`
 --
 ALTER TABLE `kamar`
-  MODIFY `id_kamar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_kamar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `kost`
 --
 ALTER TABLE `kost`
-  MODIFY `id_kost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_kost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `rating`
@@ -330,7 +336,7 @@ ALTER TABLE `tagihan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
