@@ -143,7 +143,7 @@ if (isset($_POST['order'])) {
           </div>
           <br>
           <div class="row">
-            <h4><?php echo "Rp." . number_format($d['harga_sewa'], 0, ',', '.') . " / " . $d['tipe_kost'] ?></h4>
+            <h4><?php echo "Rp." . number_format($k['biaya_fasilitas'], 0, ',', '.') . " / " . "Bulan"?></h4>
           </div>
         </div>
       </div>
@@ -162,16 +162,8 @@ if (isset($_POST['order'])) {
             <div class="col"><?php echo $nama_lengkap ?></div>
           </div>
           <div class="row">
-            <div class="col-md-2"><label for="">Jenis kelamin :</label></div>
-            <div class="col"><?php echo $jenis_kelamin ?></div>
-          </div>
-          <div class="row">
             <div class="col-md-2"><label for="">Nomer HP/Telpon :</label></div>
             <div class="col"><?php echo $no_hp ?></div>
-          </div>
-          <div class="row">
-            <div class="col-md-2"><label for="">Pekerjaan :</label></div>
-            <div class="col"><?php echo $pekerjaan ?></div>
           </div>
         </div>
       </div>
@@ -188,15 +180,7 @@ if (isset($_POST['order'])) {
           <div class="row">
             <div class="col-md-2">Biaya Lain:</div>
             <div class="col">-</div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">Biaya kost :</div>
-            <div class="col">
-              <?php
-              echo "Rp." . number_format($d['harga_sewa'], 0, ',', '.') . " / " . $d['tipe_kost'];
-
-              ?>
-            </div>
+          
           </div>
           <div class="row">
             <div class="col-md-2">Biaya Fasilitas :</div>
@@ -240,6 +224,7 @@ if (isset($_POST['order'])) {
           <input required type="checkbox" name="" id=""> Apakah anda yakin menyetujui ketentuan yang berlaku
         </div>
       </div>
+      <br>
       <div class="row">
         <div class="col">
           <button name="submit" type="submit" class="btn-primary">Lanjut Pembayaran</button>
@@ -263,7 +248,7 @@ if ($foto_ktp != "") {
 
 $start_date = date('Y-m-d', strtotime($tanggal_masuk));
 
-$update_data = mysqli_query($koneksi, "UPDATE user SET foto_ktp='$foto_ktp',nama_lengkap='$nama_lengkap',jenis_kelamin='$jenis_kelamin',no_hp='$no_hp',pekerjaan='$pekerjaan' WHERE id='$id_user' ");
+$update_data = mysqli_query($koneksi, "UPDATE user SET foto_ktp='$foto_ktp',nama_lengkap='$nama_lengkap',no_hp='$no_hp' WHERE id='$id_user' ");
 
 // echo "id" . $id_user . "<br>";
 // echo "id kamar" . $id_kamar . "<br>";
