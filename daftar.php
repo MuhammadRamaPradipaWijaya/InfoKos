@@ -18,6 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         move_uploaded_file($sumber1, 'img/ktp/' . $foto_ktp);
     }
 
+    
     // Gunakan prepared statement untuk melakukan insert
     $query = "INSERT INTO user (nama_lengkap, email, username, password, no_hp, foto_ktp, roles) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $statement = mysqli_prepare($koneksi, $query);
