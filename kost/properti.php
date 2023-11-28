@@ -47,7 +47,7 @@ $data_2 = mysqli_query($koneksi, $query);
             <th>Nama Kost</th>
             <th>Kapasitas</th>
             <th>Foto Kost</th>
-            <th>Perintah</th>
+            <th>Aksi</th>
           </tr>
         </thead>
       <tbody>
