@@ -46,9 +46,7 @@ if (isset($_POST['order'])) {
   $hitungan_sewa = $_POST['hitungan_sewa'];
   $durasi_sewa = $_POST['durasi_sewa'];
   $nama_lengkap = $_POST['nama_lengkap'];
-  $jenis_kelamin = $_POST['jenis_kelamin'];
   $no_hp = $_POST['no_hp'];
-  $pekerjaan = $_POST['pekerjaan'];
   $jumlah_kamar = 1;
   $foto_lama = $f['foto_ktp'];
 
