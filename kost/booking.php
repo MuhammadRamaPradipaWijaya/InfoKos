@@ -123,35 +123,8 @@ function fas($fas, $tipe_kost)
         <br>
         <div class="row">
             <div class="col">
-                <label for="jenis_kelamin">Jenis Kelamin</label>
-                <select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
-                    <option selected hidden value="<?php echo $d['jenis_kelamin'] ?>"><?php echo $d['jenis_kelamin'] ?></option>
-                    <option value="laki-laki">Laki-laki</option>
-                    <option value="perempuan">Perempuan</option>
-                </select>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col">
                 <label for="no_hp">Nomer Handphone</label>
                 <input value="<?php echo $d['no_hp'] ?>" type="number" name="no_hp" id="" class="form-control">
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col">
-                <label for="pekerjaan">Pekerjaan</label>
-                <div class="row">
-                    <div class="col">
-                        <select class="form-control" name="pekerjaan" id="pekerjaan">
-                            <option selected hidden value="<?php echo $d['pekerjaan'] ?>"><?php echo $d['pekerjaan'] ?></option>
-                            <option value="">Mahasiswa</option>
-                            <option value="">Pegawai</option>
-                            <option value="">Lain-lain</option>
-                        </select>
-                    </div>
-                </div>
             </div>
         </div>
         <br>
