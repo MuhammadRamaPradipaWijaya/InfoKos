@@ -94,8 +94,13 @@ $n = mysqli_fetch_array($data2);
                 move_uploaded_file($simpan_gambar, "../img/bukti_bayar/" . $gambar);
                 $query = "UPDATE tagihan SET bukti_bayar='$gambar' WHERE no_tagihan='$no_tagihan'";
                 $data = mysqli_query($koneksi, $query);
+
+                // Redirect to tagihan.php
+                header("Location: tagihan.php");
+                exit(); // Ensure that no other code is executed after the header function
             }
             ?>
+
         </form>
     </div>
 </div>
