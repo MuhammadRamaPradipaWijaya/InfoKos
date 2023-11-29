@@ -8,4 +8,6 @@ if (isset($_POST['submit'])) {
     $data = mysqli_query($koneksi, $query);
 
     header("location:../tagihan.php");
+    exit();
 }
+?>
