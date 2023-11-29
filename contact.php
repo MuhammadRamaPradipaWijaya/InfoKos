@@ -141,7 +141,7 @@
           <div class="row">
             <div class="col-lg-3 mb-4">
               <div class="team">
-                <img src="images/person_1.jpg" alt="Image" class="img-fluid mb-4" style="width: 113.37px; height: 151.16px;">
+                 <img src="img/profil/Adit.jpg" alt="Image" class="img-fluid mb-4" style="width: 113.37px; height: 151.16px;">
                 <div class="px-3">
                   <h3 class="mb-0">Ridho Aditya</h3>
             
@@ -160,7 +160,7 @@
 
             <div class="col-lg-3 mb-4">
               <div class="team">
-                <img src="images/person_4.jpg" alt="Image" class="img-fluid mb-4" style="width: 113.37px; height: 151.16px;">
+                <img src="img/profil/Rama.jpg" alt="Image" class="img-fluid mb-4" style="width: 113.37px; height: 151.16px;">
                 <div class="px-3">
                   <h3 class="mb-0">M. Rama Pradipa W.</h3>
                  
