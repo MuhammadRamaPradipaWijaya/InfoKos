@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2023 at 07:14 AM
+-- Generation Time: Nov 29, 2023 at 03:48 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -78,7 +78,11 @@ INSERT INTO `kamar` (`id_kamar`, `id_kost`, `jumlah_kamar`, `panjang_kamar`, `le
 (18, 17, 9, 5, 4, 'kamar mandi luar', 400000, 'Tempat Tidur, Lemari, Kulkas, Kipas Angin'),
 (19, 17, 2, 5, 4, 'kamar mandi dalam', 500000, 'Tempat Tidur, Lemari, Kulkas, Kipas Angin'),
 (20, 18, 2, 5, 4, 'kamar mandi luar', 400000, 'AC, Tempat Tidur, Lemari, Kulkas'),
-(21, 18, 3, 5, 4, 'kamar mandi dalam', 500000, 'AC, Tempat Tidur, Lemari, Kulkas');
+(21, 18, 3, 5, 4, 'kamar mandi dalam', 500000, 'AC, Tempat Tidur, Lemari, Kulkas'),
+(22, 19, 6, 5, 4, 'kamar mandi luar', 350000, '\"kasur, lemari, meja, kursi, wifi, \"'),
+(23, 19, 6, 5, 4, 'kamar mandi luar', 350000, '\"kasur, lemari, meja, kursi, wifi\"'),
+(24, 20, 3, 5, 4, 'kamar mandi luar', 450000, '\"kasur, lemari, meja, kursi\"'),
+(25, 20, 3, 5, 4, 'kamar mandi dalam', 500000, '\"kasur, lemari, meja, kursi\"');
 
 --
 -- Triggers `kamar`
@@ -143,7 +147,9 @@ INSERT INTO `kost` (`id_kost`, `nama_kost`, `tipe_kost`, `jenis_kost`, `jumlah_k
 (15, 'Kos Semeru', 'Bulan', 'Putra', 1, '2023-11-01', 'Iqbal', 'BNI', 872534765, 'IMG-20231128-WA0010.jpg', 'IMG-20231128-WA0011.jpg', 'IMG-20231128-WA0012.jpg', 'IMG-20231128-WA0009.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Jl. Semeru no. 03', 0, '082338636603', 'Kos Laki-Laki', 46, 'Parkir Mobil, WIFI/Internet'),
 (16, 'Kos Putri Calysta ', 'Bulan', 'Putri', 22, '2023-11-01', 'Aisyah', 'BNI', 2147483647, 'o70ibRGM0DSJD4CaEIxGj24rz5bB3RopABJcnp8XiPo=_plaintext_638367343263134160.jpg', 'k04_MT4qwS2HqT--8lSzym0ZEgirJ5-0UY_E51dT1-0=_plaintext_638367343289062873.jpg', 'FZeJczIMbN_z5jHJyfqyObPbXl9qW0yxk9nNxQUtc1o=_plaintext_638367343269639410.jpg', 'SCoflmCxIzK5AUIAvOxt_9rOD5pkkSNrf8oRONS9H3o=_plaintext_638367343293230416.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Jl. Mastrip Gg. 2 no.14', 0, '085267322720', 'Kost Putri \r\n21 kamar perorang.\r\n4 kamar isi 2 orang', 47, 'Parkir Mobil, WIFI/Internet, Ruang Makan, Dapur'),
 (17, 'Kos Istana Tidar', 'Bulan', 'Putra', 10, '2023-11-01', 'Sena', 'BRI', 2147483647, 'IMG-20231128-WA0020.jpg', 'IMG-20231128-WA0022.jpg', 'IMG-20231128-WA0019.jpg', 'IMG-20231128-WA0021.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Perum Istana Tidar B4 no.23', 0, '081935166922', 'Kos Laki-Laki\r\n9 kamar mandi luar\r\n2 kamar mandi dalam\r\nfree wifi', 48, 'Parkir Mobil, WIFI/Internet, Ruang Tamu, Ruang Makan, Dapur'),
-(18, 'Rey Kos', 'Bulan', 'Putra', 4, '2023-11-01', 'Reynand', 'BRI', 23879654, 'IMG-20231128-WA0017.jpg', 'IMG-20231128-WA0015.jpg', 'IMG-20231128-WA0014.jpg', 'IMG-20231128-WA0018.jpg', 'Jawa Timur', 'Jember', 'Mangli', 'Mangli', 'Perum Mangli ', 0, '082332606541', 'Kost Laki-Laki', 50, 'Parkir Mobil, WIFI/Internet, Ruang Tamu, Ruang Makan, Dapur');
+(18, 'Rey Kos', 'Bulan', 'Putra', 4, '2023-11-01', 'Reynand', 'BRI', 23879654, 'IMG-20231128-WA0017.jpg', 'IMG-20231128-WA0015.jpg', 'IMG-20231128-WA0014.jpg', 'IMG-20231128-WA0018.jpg', 'Jawa Timur', 'Jember', 'Mangli', 'Mangli', 'Perum Mangli ', 0, '082332606541', 'Kost Laki-Laki', 50, 'Parkir Mobil, WIFI/Internet, Ruang Tamu, Ruang Makan, Dapur'),
+(19, 'Kost Bambu', 'Bulan', 'Campuran', 11, '2023-11-01', 'Rama', 'BRI', 33786532, 'IMG-20231128-WA0040.jpg', 'IMG-20231128-WA0038.jpg', 'IMG-20231128-WA0039.jpg', 'IMG-20231128-WA0037.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Jl Mastrip 2', 0, '082332606541', 'kos Campuran\r\n6 kamar kos perempuan\r\n6 kamar kos laki-laki', 51, 'Parkir Mobil, WIFI/Internet, Dapur, Musholla'),
+(20, 'Kos Lily', 'Bulan', 'Putri', 6, '2023-11-01', 'Adit', 'BCA', 7623354, 'WhatsApp Image 2023-11-28 at 16.49.29_bd694380.jpg', 'WhatsApp Image 2023-11-28 at 16.48.59_bc7ffdd6.jpg', 'WhatsApp Image 2023-11-29 at 09.44.15_fa442885.jpg', 'WhatsApp Image 2023-11-28 at 16.48.59_bc7ffdd6.jpg', 'Jawa Timur', 'Jember', 'Ajung', 'Ajung', 'Dsn. Krasak Desa Pancakarya', 0, '088226245415', 'Kos Putri\r\n6 kamar', 52, 'Parkir Mobil, WIFI/Internet, Ruang Tamu, Ruang Makan, Dapur');
 
 -- --------------------------------------------------------
 
@@ -221,7 +227,9 @@ INSERT INTO `user` (`id`, `nama_lengkap`, `email`, `username`, `password`, `no_h
 (47, 'Aisyah.S', 'aisyah@gmail.com', 'Aisyah', 'Aisyah', '85267322720', '', 'WhatsApp Image 2023-11-28 at 09.30.11_d2e82ac8.jpg', 2, 0),
 (48, 'Arya Advicenna', 'sena@gmail.com', 'Sena', 'Sena', '81935166922', '', 'WhatsApp Image 2023-11-28 at 09.34.39_480510a3.jpg', 2, 0),
 (49, 'user', 'user@gmail.com', 'user', 'user', '98765432', 'bg1.jpg', 'bg1.jpg', 1, 0),
-(50, 'Reynand', 'reynand@gmail.com', 'Reynand', 'Reynand', '082332606541', '', 'WhatsApp Image 2023-11-28 at 10.19.27_acd4f172.jpg', 2, 0);
+(50, 'Reynand', 'reynand@gmail.com', 'Reynand', 'Reynand', '082332606541', '', 'WhatsApp Image 2023-11-28 at 10.19.27_acd4f172.jpg', 2, 0),
+(51, 'Muh Rama Pradipa Wijya', 'rama@gmail.com', 'Rama', 'Rama', '082139425332', '', 'WhatsApp Image 2023-11-29 at 01.38.42_139f0ac5.jpg', 2, 0),
+(52, 'Aditya Ridho', 'adit@gmail.com', 'Adit', 'Adit', '088226245415', '', 'WhatsApp Image 2023-11-28 at 21.35.45_e415a406.jpg', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -312,13 +320,13 @@ ALTER TABLE `booking`
 -- AUTO_INCREMENT for table `kamar`
 --
 ALTER TABLE `kamar`
-  MODIFY `id_kamar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_kamar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `kost`
 --
 ALTER TABLE `kost`
-  MODIFY `id_kost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_kost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `rating`
@@ -342,7 +350,7 @@ ALTER TABLE `tagihan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
