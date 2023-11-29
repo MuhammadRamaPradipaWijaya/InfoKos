@@ -68,20 +68,9 @@ include('includes/header.php');
           <h5>Fasilitas Kost</h5>
           <br>
           <div class="row">
-            <!-- <div class="col"><input type="checkbox" name="fasilitas" id="fasilitas">Kamar Mandi Dalam</div> -->
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="Parkir Mobil">Parkir Mobil</div>
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="WIFI/Internet">WIFI/Internet</div>
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="Security">Security</div>
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="Ruang Tamu">Ruang Tamu</div>
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="Ruang Fitness">Ruang Fitness</div>
-
-          </div>
-          <div class="row">
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="Ruang Makan">Ruang Makan</div>
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="Dapur">Dapur</div>
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="Laundry">Laundry</div>
-            <div class="col"><input type="checkbox" name="fasilitas[]" value="Musholla">Musholla</div>
-            <div class="col"></div>
+            <div class="col">
+              <textarea class="form-control" name="fasilitas" id="fasilitas" rows="5" placeholder="Masukkan fasilitas kost"></textarea>
+            </div>
           </div>
 
           <hr>
@@ -162,16 +151,6 @@ include('includes/header.php');
             </div>
           </div>
           <br>
-          <div class="row">
-            <div class="col"><label for="harga_sewa">Harga Sewa</label></div>
-            <div class="col">
-              <div class="input-group-prepend">
-                <span class="input-group-text">Rp.</span>
-                <input type="text" name="harga_sewa" id="harga_sewa">
-              </div>
-
-            </div>
-          </div>
           <br>
 
           <div class="col">
