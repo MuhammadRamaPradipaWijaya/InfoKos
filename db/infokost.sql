@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2023 at 05:51 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Nov 29, 2023 at 05:39 AM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,7 +36,7 @@ CREATE TABLE `booking` (
   `durasi_sewa` int(11) NOT NULL,
   `tanggal_keluar` date NOT NULL,
   `jumlah_kamar` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `booking`
@@ -91,7 +91,7 @@ CREATE TABLE `kamar` (
   `tipe_kamar` varchar(255) NOT NULL,
   `biaya_fasilitas` int(11) NOT NULL,
   `fasilitas_kamar` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `kamar`
@@ -159,23 +159,24 @@ CREATE TABLE `kost` (
   `kecamatan` varchar(25) NOT NULL,
   `kelurahan` varchar(25) NOT NULL,
   `alamat` varchar(255) NOT NULL,
+  `harga_sewa` int(11) NOT NULL,
   `kontak` varchar(255) NOT NULL,
   `deskripsi` text NOT NULL,
   `id_pemilik` int(11) NOT NULL,
   `fasilitas_kost` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `kost`
 --
 
-INSERT INTO `kost` (`id_kost`, `nama_kost`, `tipe_kost`, `jenis_kost`, `jumlah_kamar`, `tanggal_tagih`, `nama_pemilik`, `nama_bank`, `no_rekening`, `foto_bangunan_utama`, `foto_kamar`, `foto_kamar_mandi`, `foto_interior`, `provinsi`, `kota`, `kecamatan`, `kelurahan`, `alamat`, `kontak`, `deskripsi`, `id_pemilik`, `fasilitas_kost`) VALUES
-(15, 'Kos Semeru', 'Bulan', 'Putra', 0, '2023-11-01', 'Iqbal', 'BNI', 872534765, 'IMG-20231128-WA0010.jpg', 'IMG-20231128-WA0011.jpg', 'IMG-20231128-WA0012.jpg', 'IMG-20231128-WA0009.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Jl. Semeru no. 03', '082338636603', 'Kos Laki-Laki', 46, 'Parkir Mobil, WIFI/Internet'),
-(16, 'Kos Putri Calysta ', 'Bulan', 'Putri', 19, '2023-11-01', 'Aisyah', 'BNI', 2147483647, 'o70ibRGM0DSJD4CaEIxGj24rz5bB3RopABJcnp8XiPo=_plaintext_638367343263134160.jpg', 'k04_MT4qwS2HqT--8lSzym0ZEgirJ5-0UY_E51dT1-0=_plaintext_638367343289062873.jpg', 'FZeJczIMbN_z5jHJyfqyObPbXl9qW0yxk9nNxQUtc1o=_plaintext_638367343269639410.jpg', 'SCoflmCxIzK5AUIAvOxt_9rOD5pkkSNrf8oRONS9H3o=_plaintext_638367343293230416.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Jl. Mastrip Gg. 2 no.14', '085267322720', 'Kost Putri \r\n21 kamar perorang.\r\n4 kamar isi 2 orang', 47, 'Parkir Mobil, WIFI/Internet, Ruang Makan, Dapur'),
-(17, 'Kos Istana Tidar', 'Bulan', 'Putra', 5, '2023-11-01', 'Sena', 'BRI', 2147483647, 'IMG-20231128-WA0020.jpg', 'IMG-20231128-WA0022.jpg', 'IMG-20231128-WA0019.jpg', 'IMG-20231128-WA0021.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Perum Istana Tidar B4 no.23', '081935166922', 'Kos Laki-Laki\r\n9 kamar mandi luar\r\n2 kamar mandi dalam\r\nfree wifi', 48, 'Parkir Mobil, WIFI/Internet, Ruang Tamu, Ruang Makan, Dapur'),
-(18, 'Rey Kos', 'Bulan', 'Putra', 0, '2023-11-01', 'Reynand', 'BRI', 23879654, 'IMG-20231128-WA0017.jpg', 'IMG-20231128-WA0015.jpg', 'IMG-20231128-WA0014.jpg', 'IMG-20231128-WA0018.jpg', 'Jawa Timur', 'Jember', 'Mangli', 'Mangli', 'Perum Mangli ', '082332606541', 'Kost Laki-Laki', 50, 'Parkir Mobil, WIFI/Internet, Ruang Tamu, Ruang Makan, Dapur'),
-(19, 'Kost Bambu', 'Bulan', 'Campuran', 6, '2023-11-01', 'Rama', 'BRI', 33786532, 'IMG-20231128-WA0040.jpg', 'IMG-20231128-WA0038.jpg', 'IMG-20231128-WA0039.jpg', 'IMG-20231128-WA0037.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Jl Mastrip 2', '082332606541', 'kos Campuran\r\n6 kamar kos perempuan\r\n6 kamar kos laki-laki', 51, 'Parkir Mobil, WIFI/Internet, Dapur, Musholla'),
-(20, 'Kos Lily', 'Bulan', 'Putri', 3, '2023-11-01', 'Adit', 'BCA', 7623354, 'WhatsApp Image 2023-11-28 at 16.49.29_bd694380.jpg', 'WhatsApp Image 2023-11-28 at 16.48.59_bc7ffdd6.jpg', 'WhatsApp Image 2023-11-29 at 09.44.15_fa442885.jpg', 'WhatsApp Image 2023-11-28 at 16.48.59_bc7ffdd6.jpg', 'Jawa Timur', 'Jember', 'Ajung', 'Ajung', 'Dsn. Krasak Desa Pancakarya', '088226245415', 'Kos Putri\r\n6 kamar', 52, 'Parkir Mobil, WIFI/Internet, Ruang Tamu, Ruang Makan, Dapur');
+INSERT INTO `kost` (`id_kost`, `nama_kost`, `tipe_kost`, `jenis_kost`, `jumlah_kamar`, `tanggal_tagih`, `nama_pemilik`, `nama_bank`, `no_rekening`, `foto_bangunan_utama`, `foto_kamar`, `foto_kamar_mandi`, `foto_interior`, `provinsi`, `kota`, `kecamatan`, `kelurahan`, `alamat`, `harga_sewa`, `kontak`, `deskripsi`, `id_pemilik`, `fasilitas_kost`) VALUES
+(15, 'Kos Semeru', 'Bulan', 'Putra', 0, '2023-11-01', 'Iqbal', 'BNI', 872534765, 'IMG-20231128-WA0010.jpg', 'IMG-20231128-WA0011.jpg', 'IMG-20231128-WA0012.jpg', 'IMG-20231128-WA0009.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Jl. Semeru no. 03', 0, '082338636603', 'Kos Laki-Laki', 46, 'Parkir Mobil, WIFI/Internet'),
+(16, 'Kos Putri Calysta ', 'Bulan', 'Putri', 19, '2023-11-01', 'Aisyah', 'BNI', 2147483647, 'o70ibRGM0DSJD4CaEIxGj24rz5bB3RopABJcnp8XiPo=_plaintext_638367343263134160.jpg', 'k04_MT4qwS2HqT--8lSzym0ZEgirJ5-0UY_E51dT1-0=_plaintext_638367343289062873.jpg', 'FZeJczIMbN_z5jHJyfqyObPbXl9qW0yxk9nNxQUtc1o=_plaintext_638367343269639410.jpg', 'SCoflmCxIzK5AUIAvOxt_9rOD5pkkSNrf8oRONS9H3o=_plaintext_638367343293230416.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Jl. Mastrip Gg. 2 no.14', 0, '085267322720', 'Kost Putri \r\n21 kamar perorang.\r\n4 kamar isi 2 orang', 47, 'Parkir Mobil, WIFI/Internet, Ruang Makan, Dapur'),
+(17, 'Kos Istana Tidar', 'Bulan', 'Putra', 5, '2023-11-01', 'Sena', 'BRI', 2147483647, 'IMG-20231128-WA0020.jpg', 'IMG-20231128-WA0022.jpg', 'IMG-20231128-WA0019.jpg', 'IMG-20231128-WA0021.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Perum Istana Tidar B4 no.23', 0, '081935166922', 'Kos Laki-Laki\r\n9 kamar mandi luar\r\n2 kamar mandi dalam\r\nfree wifi', 48, 'Parkir Mobil, WIFI/Internet, Ruang Tamu, Ruang Makan, Dapur'),
+(18, 'Rey Kos', 'Bulan', 'Putra', 0, '2023-11-01', 'Reynand', 'BRI', 23879654, 'IMG-20231128-WA0017.jpg', 'IMG-20231128-WA0015.jpg', 'IMG-20231128-WA0014.jpg', 'IMG-20231128-WA0018.jpg', 'Jawa Timur', 'Jember', 'Mangli', 'Mangli', 'Perum Mangli ', 0, '082332606541', 'Kost Laki-Laki', 50, 'Parkir Mobil, WIFI/Internet, Ruang Tamu, Ruang Makan, Dapur'),
+(19, 'Kost Bambu', 'Bulan', 'Campuran', 6, '2023-11-01', 'Rama', 'BRI', 33786532, 'IMG-20231128-WA0040.jpg', 'IMG-20231128-WA0038.jpg', 'IMG-20231128-WA0039.jpg', 'IMG-20231128-WA0037.jpg', 'Jawa Timur', 'Jember', 'Sumbersari', 'Sumbersari', 'Jl Mastrip 2', 0, '082332606541', 'kos Campuran\r\n6 kamar kos perempuan\r\n6 kamar kos laki-laki', 51, 'Parkir Mobil, WIFI/Internet, Dapur, Musholla'),
+(20, 'Kos Lily', 'Bulan', 'Putri', 3, '2023-11-01', 'Adit', 'BCA', 7623354, 'WhatsApp Image 2023-11-28 at 16.49.29_bd694380.jpg', 'WhatsApp Image 2023-11-28 at 16.48.59_bc7ffdd6.jpg', 'WhatsApp Image 2023-11-29 at 09.44.15_fa442885.jpg', 'WhatsApp Image 2023-11-28 at 16.48.59_bc7ffdd6.jpg', 'Jawa Timur', 'Jember', 'Ajung', 'Ajung', 'Dsn. Krasak Desa Pancakarya', 0, '088226245415', 'Kos Putri\r\n6 kamar', 52, 'Parkir Mobil, WIFI/Internet, Ruang Tamu, Ruang Makan, Dapur');
 
 -- --------------------------------------------------------
 
@@ -188,7 +189,7 @@ CREATE TABLE `rating` (
   `Id_kost` int(11) NOT NULL,
   `Id_user` int(11) NOT NULL,
   `score` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -199,7 +200,7 @@ CREATE TABLE `rating` (
 CREATE TABLE `roles_user` (
   `id_roles` int(11) NOT NULL,
   `nama` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `roles_user`
@@ -223,7 +224,7 @@ CREATE TABLE `tagihan` (
   `stats` int(11) NOT NULL,
   `tanggal_tagihan` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `bukti_bayar` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tagihan`
@@ -269,7 +270,7 @@ CREATE TABLE `user` (
   `foto_profil` text NOT NULL,
   `roles` int(11) NOT NULL,
   `id_kost_saya` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
@@ -304,7 +305,7 @@ CREATE TABLE `wishlist` (
   `id_wishlist` int(11) NOT NULL,
   `id_kost` int(11) NOT NULL,
   `id_user` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `wishlist`
