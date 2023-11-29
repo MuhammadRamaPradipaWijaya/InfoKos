@@ -33,8 +33,7 @@ $d = mysqli_fetch_array($data);
             </div>
             <div class=" col">
                 <h5> Nama : <?php echo $d['nama_lengkap'] ?></h5>
-                <h5> Jenis Kelamin : <?php echo $d['jenis_kelamin'] ?></h5>
-                <h5> Pekerjaan : <?php echo $d['pekerjaan'] ?></h5>
+                
                 <h5> No Handphone/Telepon :<?php echo $d['no_hp'] ?></h5>
                 <h5> Email : <?php echo $d['email'] ?></h5>
             </div>
@@ -69,9 +68,10 @@ $d = mysqli_fetch_array($data);
             </div>
         </div>
         <br>
-        <div class="row">
-
-            <input required class=" form-check-input" type="checkbox" name="" id="">Apakah anda yakin transaksi benar dan telah mengecek transaksi anda
+        <div class="col">
+            <label class="form-check-label">
+                <input required class="form-check-input" type="checkbox" name="" id=""> Apakah anda yakin transaksi benar dan telah mengecek transaksi anda
+            </label>
         </div>
         <br>
         <div class="row">
