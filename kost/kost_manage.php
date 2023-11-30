@@ -23,7 +23,7 @@ $data = mysqli_query($koneksi, "SELECT * FROM kost INNER JOIN user WHERE kost.id
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Daftar Seluruh Kost</h6>
+        <h5 class="m-0 font-weight-bold text-primary">Daftar Seluruh Kost</h5>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -52,7 +52,7 @@ $data = mysqli_query($koneksi, "SELECT * FROM kost INNER JOIN user WHERE kost.id
                     <td><?php echo $d['provinsi'] . ", " . $d['kota'] ?></td>
                     <td>
                     <div class="my-1">
-                        <a href="properti_edit.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-primary btn-icon-split">
+                        <a href="properti_edit_admin.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-primary btn-icon-split">
                         <span class="icon text-white-50">
                             <i class="fas fa-edit"></i>
                         </span>

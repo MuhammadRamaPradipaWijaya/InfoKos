@@ -53,6 +53,12 @@ $d = mysqli_fetch_array($data);
         <span class="text">Ubah Data</span>
         </a>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
 
 <?php

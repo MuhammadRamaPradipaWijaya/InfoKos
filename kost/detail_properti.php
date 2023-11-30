@@ -23,7 +23,7 @@ $o = explode(', ', $d['fasilitas_kost']);
         <div class="card-header py-3 d-flex justify-content-between align-items-center">
             <h5 class="m-0 font-weight-bold text-primary">Detail Kost</h5>
             <div class="my-2">
-                <a href="properti_edit.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-primary btn-icon-split">
+                <a href="properti_edit_admin.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-primary btn-icon-split">
                     <span class="icon text-white-50">
                         <i class="fas fa-edit"></i>
                     </span>
