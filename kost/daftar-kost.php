@@ -53,7 +53,7 @@ function minfas($idkost, $tipe_kost)
       <div class="row kartu">
         <?php while ($d = mysqli_fetch_array($data)) {
         ?>
-          <div class="card" style="width: 18rem;">
+          <div class="card mx-1 ml-3 mb-3" style="width: 18rem;">
             <a href="tampilan-kost.php?id_kost=<?php echo $d['id_kost'] ?>">
               <div class="card-header">
                 <div class="row">
