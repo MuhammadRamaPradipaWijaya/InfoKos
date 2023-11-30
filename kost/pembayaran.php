@@ -4,7 +4,8 @@ include "includes/header.php";
 $tanggal_masuk = $_POST['now'];
 $biaya = $_POST['biaya'];
 $id_kost = $_GET['id_kost'];
-$query = "SELECT * FROM user JOIN kost on kost.id_pemilik=user.id";
+
+$query = "SELECT * FROM user JOIN kost ON kost.id_pemilik = user.id WHERE kost.id_kost = $id_kost";
 $data = mysqli_query($koneksi, $query);
 $d = mysqli_fetch_array($data);
 ?>

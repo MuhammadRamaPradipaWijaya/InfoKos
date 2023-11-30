@@ -181,7 +181,7 @@ if (isset($_POST['order'])) {
           
           </div>
           <div class="row">
-            <div class="col-md-2">Biaya Fasilitas :</div>
+            <div class="col-md-2">Biaya Sewa :</div>
             <div class="col">
               <?php
               echo "Rp." . number_format($k['biaya_fasilitas'], 0, ',', '.') . " / " . "Bulan"

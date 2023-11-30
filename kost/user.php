@@ -17,7 +17,7 @@ $data = mysqli_query($koneksi, "SELECT * FROM user JOIN roles_user on user.roles
 <div class="container-fluid">
 <div class="card shadow mb-4">
   <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Pengguna</h6>
+    <h5 class="m-0 font-weight-bold text-primary">Pengguna</h5>
   </div>
   <div class="card-body">
     <div class="table-responsive">
@@ -38,7 +38,7 @@ $data = mysqli_query($koneksi, "SELECT * FROM user JOIN roles_user on user.roles
             $n = 0;
             while ($d = mysqli_fetch_array($data)) {
                 $n++;
-                echo $d['id'];
+                //echo $d['id'];
             ?>
             
                 <tr>
