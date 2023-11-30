@@ -4,20 +4,20 @@ include "includes/header.php";
 
 $kamar = $_GET['id_kamar'];
 
-echo $kamar;
+//echo $kamar;
 $query = mysqli_query($koneksi, "SELECT * FROM kamar WHERE id_kamar=$kamar");
 $d = mysqli_fetch_array($query);
 $o = explode(', ', $d['fasilitas_kamar']);
 ?>
 
-<!--<div class="my-2 ml-5">
-    <a href="daftar-kamar.php" class="btn btn-light btn-icon-split" style="border: 1px solid #ccc;">
+<div class="my-2 ml-5">
+    <a href="properti.php" class="btn btn-light btn-icon-split" style="border: 1px solid #ccc;">
     <span class="icon text-gray-700">
         <i class="fas fa-arrow-left"></i>
     </span>
     <span class="text">Kembali</span>
     </a>
-</div>-->
+</div>
 
 <div class="container text-center">
     <div class="row">
