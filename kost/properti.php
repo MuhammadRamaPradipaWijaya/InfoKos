@@ -62,7 +62,7 @@ $data_2 = mysqli_query($koneksi, $query);
           <span class="icon text-white-50">
             <i class="fas fa-plus"></i>
           </span>
-          <span class="text">Tambah</span>
+          <span class="text">Tambah kost</span>
         </a>
       </div>
     </div>

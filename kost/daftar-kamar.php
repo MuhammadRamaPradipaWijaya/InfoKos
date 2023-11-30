@@ -23,9 +23,16 @@ $query = mysqli_query($koneksi, "SELECT * from kamar WHERE id_kost=$id_kost");
             <h6 class="m-0 font-weight-bold text-primary">Daftar Kamar</h6>
         </div>
         <br>
-        <div class="col-md-2">
-            <a href="kamar.php?id_kost=<?php echo $id_kost ?>"><button class="btn-primary">Tambah Kamar</button></a>
+
+        <div class="col">
+            <a href="kamar.php?id_kost=<?php echo $id_kost ?>" class="btn btn-primary btn-icon-split">
+                <span class="icon text-white-50">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Tambah Kamar</span>
+            </a>
         </div>
+
         <div class="card-body">
             <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
