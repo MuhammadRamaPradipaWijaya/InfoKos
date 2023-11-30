@@ -1,10 +1,14 @@
 <?php
 require('../koneksi.php');
-include('includes/header.php'); 
-
+include('includes/header.php');
 
 $jumlah_data_perhalaman = 8;
-$jumlah_halaman = ceil($jumlah_data = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM kost JOIN user ON kost.id_pemilik = user.id")) / $jumlah_data_perhalaman);
+
+// Search handling
+$search_query = isset($_GET['query']) ? mysqli_real_escape_string($koneksi, $_GET['query']) : '';
+$query_condition = empty($search_query) ? "" : "WHERE nama_kost LIKE '%$search_query%' OR alamat LIKE '%$search_query%'";
+
+$jumlah_halaman = ceil($jumlah_data = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM kost JOIN user ON kost.id_pemilik = user.id $query_condition")) / $jumlah_data_perhalaman);
 if (isset($_GET['halaman'])) {
   $halaman_aktif = $_GET['halaman'];
 } else {
@@ -13,7 +17,7 @@ if (isset($_GET['halaman'])) {
 
 $awalData = ($jumlah_data_perhalaman * $halaman_aktif) - $jumlah_data_perhalaman;
 
-$query = "SELECT * FROM kost  INNER JOIN user ON kost.id_pemilik = user.id LIMIT $awalData,$jumlah_data_perhalaman";
+$query = "SELECT * FROM kost INNER JOIN user ON kost.id_pemilik = user.id $query_condition LIMIT $awalData,$jumlah_data_perhalaman";
 
 $data = mysqli_query($koneksi, $query);
 
@@ -32,22 +36,43 @@ function minfas($idkost, $tipe_kost)
 ?>
 
 <style>
-  .card {
-    margin: 2px;
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
-  a {
-    text-decoration: none;
-    color: black
+  .row a {
+    margin: 5px;
+
+    .search-input {
+      width: 300px;
+      /* Adjust the width as needed */
+    }
   }
 </style>
 
 <body>
   <div class="container">
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Daftar Kost</h1>
+    <div class="row align-items-center">
+      <h1 class="h3 mb-0 text-gray-800">Daftar Kost</h1>
     </div>
-    
+    <br>
+    <br>
+
+  <!-- Center-aligned Search form -->
+  <div class="row justify-content-center">
+    <form class="form-inline" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
+      <div class="input-group">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width: 300px;" name="query" value="<?php echo $search_query; ?>">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="submit">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <br>
 
     <div class="row">
       <div class="row kartu">
@@ -106,9 +131,9 @@ function minfas($idkost, $tipe_kost)
     <div class="row">
       <?php for ($i = 1; $i <= $jumlah_halaman; $i++) : ?>
         <?php if ($i == $halaman_aktif) : ?>
-          <a style="font-weight: bold;background-color:black;padding:10px;color:white;" href="?halaman=<?php echo $i ?>"><?php echo $i ?></a>
+          <a style="font-weight: bold;background-color:black;padding:10px;color:white;" href="?halaman=<?php echo $i ?>&query=<?php echo $search_query; ?>"><?php echo $i ?></a>
         <?php else : ?>
-          <a style="font-weight: bold;background-color:red;padding:10px;color:white" href="?halaman=<?php echo $i ?>"><?php echo $i ?></a>
+          <a style="font-weight: bold;background-color:red;padding:10px;color:white" href="?halaman=<?php echo $i ?>&query=<?php echo $search_query; ?>"><?php echo $i ?></a>
         <?php endif; ?>
       <?php endfor; ?>
     </div>
