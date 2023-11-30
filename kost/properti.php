@@ -123,7 +123,6 @@ $data_2 = mysqli_query($koneksi, $query);
                     </div>
                 </div>
 
-                
             </td>
           </tr>
         <?php } ?>
