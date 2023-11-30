@@ -10,10 +10,20 @@ $d = mysqli_fetch_array($query);
 $o = explode(', ', $d['fasilitas_kamar']);
 ?>
 
+<!--<div class="my-2 ml-5">
+    <a href="daftar-kamar.php" class="btn btn-light btn-icon-split" style="border: 1px solid #ccc;">
+    <span class="icon text-gray-700">
+        <i class="fas fa-arrow-left"></i>
+    </span>
+    <span class="text">Kembali</span>
+    </a>
+</div>-->
+
 <div class="container text-center">
     <div class="row">
 
         <div class="col-md-10">
+            <form action="php/kamar_proses.php?id_kamar=<?php echo $kamar ?>" method="post">
             <form action="php/kamar_proses.php?id_kamar=<?php echo $kamar ?>" method="post">
 
                 <h4 class="text-center">Ubah Data Kamar</h4>

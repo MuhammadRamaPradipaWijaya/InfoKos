@@ -53,25 +53,26 @@ $query = mysqli_query($koneksi, "SELECT * from kamar WHERE id_kost=$id_kost");
                             <td><?php echo $d['fasilitas_kamar'] ?></td>
                             <td><?php echo "Rp. " . number_format($d['biaya_fasilitas'], 0, ',', '.')  ?></td>
                             <td>
-                                <div class="row">
-
-                                    <div class="my-1">
-                                        <a href="edit-kamar.php?id_kamart=<?php echo $d['id_kamar'] ?>" class="btn btn-primary btn-icon-split">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="edit-kamar.php?id_kamar=<?php echo $d['id_kamar'] ?>" class="btn btn-primary btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-edit"></i>
+                                        </span>
+                                        <span class="text">Ubah</span>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <form action="php/kamar_proses.php?id_kamar=<?php echo $d['id_kamar'] ?>" method="post">
+                                        <button class="btn btn-danger btn-icon-split" name="hapus_kamar">
                                             <span class="icon text-white-50">
-                                                <i class="fa fa-edit"></i>
-                                            </span>
-                                            <span class="text">Ubah</span>
-                                        </a>
-                                    </div>
-
-                                    <div class="my-1">
-                                        <a href="php/kamar_proses.php?id_kamar=<?php echo $d['id_kamar'] ?>" class="btn btn-danger btn-icon-split">
-                                            <span class="icon text-white-50">
-                                                <i class="fa fa-trash"></i>
+                                                <i class="fas fa-trash"></i>
                                             </span>
                                             <span class="text">Hapus</span>
-                                        </a>
-                                    </div>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
 
                                 </div>
                             </td>

@@ -6,6 +6,15 @@ $id_kost = $_GET['id_kost'];
 echo $id_kost;
 ?>
 
+<div class="my-2 ml-5">
+    <a href="properti.php" class="btn btn-light btn-icon-split" style="border: 1px solid #ccc;">
+    <span class="icon text-gray-700">
+        <i class="fas fa-arrow-left"></i>
+    </span>
+    <span class="text">Kembali</span>
+    </a>
+</div>
+
 <div class="container text-center">
     <div class="row">
 
