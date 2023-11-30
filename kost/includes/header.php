@@ -57,8 +57,7 @@
                 <div class="sidebar-brand-text mx-3">Info Kost</div>
             </a>
             <br>
-
-
+            
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
