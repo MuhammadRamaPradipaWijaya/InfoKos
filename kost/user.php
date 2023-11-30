@@ -6,11 +6,17 @@ $data = mysqli_query($koneksi, "SELECT * FROM user JOIN roles_user on user.roles
 <style>
   .btn-danger{
     background-color: #e74a3b;
-    border: none;
-    border-radius: 5px 5px;
     color: #ffffff; /* Warna teks */
-    padding: 10px ; /* Sesuaikan nilai sesuai keinginan Anda */
-   
+  }
+
+  .row {
+    display: flex;
+    justify-content: flex-end; /* Mengatur agar konten berada di sebelah kanan */
+    margin-bottom: 10px; /* Jarak antar baris */
+  }
+
+  .btn {
+    width: 100%; /* Mengatur agar lebar button 100% dari lebar kolom */
   }
 </style>
 

@@ -21,7 +21,7 @@ $o = explode(', ', $d['fasilitas_kost']);
     <div class="card shadow mb-4">
       
         <div class="card-header py-3 d-flex justify-content-between align-items-center">
-            <h6 class="m-0 font-weight-bold text-primary">Detail Kost</h6>
+            <h5 class="m-0 font-weight-bold text-primary">Detail Kost</h5>
             <div class="my-2">
                 <a href="properti_edit.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-primary btn-icon-split">
                     <span class="icon text-white-50">
@@ -49,6 +49,26 @@ $o = explode(', ', $d['fasilitas_kost']);
               <tr>
                 <th scope="row">Provinsi</th>
                 <td><?php echo $d['provinsi'] ?></td>
+              </tr>
+              <tr>
+                <th scope="row">Kabupaten/Kota</th>
+                <td><?php echo $d['kota'] ?></td>
+              </tr>
+              <tr>
+                <th scope="row">Kecamatan</th>
+                <td><?php echo $d['kecamatan'] ?></td>
+              </tr>
+              <tr>
+                <th scope="row">Kelurahan</th>
+                <td><?php echo $d['kelurahan'] ?></td>
+              </tr>
+              <tr>
+                <th scope="row">Deskripsi Kost</th>
+                <td><?php echo $d['deskripsi'] ?></td>
+              </tr>
+              <tr>
+                <th scope="row">Nomer Telepon/HP</th>
+                <td><?php echo $d['kontak'] ?></td>
               </tr>
               <!-- Tambahkan baris informasi lainnya -->
             </tbody>
@@ -92,6 +112,14 @@ $o = explode(', ', $d['fasilitas_kost']);
                 <th scope="row">Nama Pemilik Kost</th>
                 <td><?php echo $d['nama_pemilik'] ?></td>
               </tr>
+              <tr>
+                <th scope="row">Nama Bank</th>
+                <td><?php echo $d['nama_bank'] ?></td>
+              </tr>
+              <tr>
+                <th scope="row">Nomor Rekening</th>
+                <td><?php echo $d['no_rekening'] ?></td>
+              </tr>
               <!-- Tambahkan baris informasi pembayaran lainnya -->
             </tbody>
           </table>
@@ -102,13 +130,26 @@ $o = explode(', ', $d['fasilitas_kost']);
         <div class="card-body">
         <h5>Foto Bangunan</h5>
           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-            <tbody>
-              <tr>
-                <th scope="row">Foto bangunan Utama</th>
-                <td><?php echo $d['foto_bangunan_utama'] ?></td>
-              </tr>
-              <!-- Tambahkan baris foto bangunan lainnya -->
-            </tbody>
+          <tbody>
+            <tr>
+              <th scope="row">Foto bangunan Utama</th>
+              <td><img width="150px" src="../img/foto_kost/bangunan_utama/<?php echo $d['foto_bangunan_utama'] ?>" alt=""></td>
+            </tr>
+            <tr>
+              <th scope="row">Foto Interior Kamar</th>
+              <td><img width="150px" src="../img/foto_kost/interior/<?php echo $d['foto_interior'] ?>" alt=""></td>
+            </tr>
+            <tr>
+              <th scope="row">Foto Kamar</th>
+              <td><img width="150px" src="../img/foto_kost/kamar/<?php echo $d['foto_kamar'] ?>" alt=""></td>
+            </tr>
+            <tr>
+              <th scope="row">Foto Kamar Mandi</th>
+              <td><img width="150px" src="../img/foto_kost/kamar_mandi/<?php echo $d['foto_kamar_mandi'] ?>" alt=""></td>
+            </tr>
+            <!-- Add additional rows for other building photos -->
+          </tbody>
+
           </table>
         </div>
 
@@ -121,6 +162,10 @@ $o = explode(', ', $d['fasilitas_kost']);
               <tr>
                 <th scope="row">Jenis Kost</th>
                 <td><?php echo $d['jenis_kost'] ?></td>
+              </tr>
+              <tr>
+                <th scope="row">Tipe Kost</th>
+                <td><?php echo $d['tipe_kost'] ?></td>
               </tr>
               <!-- Tambahkan baris detail kost lainnya -->
             </tbody>

@@ -7,6 +7,18 @@ $data = mysqli_query($koneksi, "SELECT * FROM kost INNER JOIN user WHERE kost.id
 
 ?>
 
+<style>  
+  .row {
+    display: flex;
+    justify-content: flex-end; /* Mengatur agar konten berada di sebelah kanan */
+    margin-bottom: 10px; /* Jarak antar baris */
+  }
+
+  .btn {
+    width: 100%; /* Mengatur agar lebar button 100% dari lebar kolom */
+  }
+</style>
+
 <div class="container-fluid">
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
