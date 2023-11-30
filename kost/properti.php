@@ -82,9 +82,8 @@ $data_2 = mysqli_query($koneksi, $query);
 
             <td><img class="img-thumbnail" src="../img/foto_kost/kamar/<?php echo $d['foto_kamar'] ?>" alt=""></td>
             <td>
-
-                <div class="btn-group d-flex" role="group" aria-label="Button Group">
-                    <div class="my-1">
+                <div class="row">
+                    <div class="col">
                         <a href="penyewa.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-secondary btn-icon-split">
                             <span class="icon text-white-50">
                                 <i class="fa fa-users"></i>
@@ -93,7 +92,7 @@ $data_2 = mysqli_query($koneksi, $query);
                         </a>
                     </div>
 
-                    <div class="my-1">
+                    <div class="col">
                         <a href="properti_edit.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-primary btn-icon-split">
                             <span class="icon text-white-50">
                                 <i class="fas fa-edit"></i>
@@ -102,9 +101,10 @@ $data_2 = mysqli_query($koneksi, $query);
                         </a>
                     </div>
                 </div>
+                <br>
 
-                <div class="btn-group d-flex" role="group" aria-label="Button Group">
-                    <div class="my-1">
+                <div class="row">
+                    <div class="col">
                         <a href="daftar-kamar.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-warning btn-icon-split">
                             <span class="icon text-white-50">
                                 <i class="fa fa-bed"></i>
@@ -113,7 +113,7 @@ $data_2 = mysqli_query($koneksi, $query);
                         </a>
                     </div>
 
-                    <div class="my-1">
+                    <div class="col">
                         <a href="php/hapus.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-danger btn-icon-split">
                             <span class="icon text-white-50">
                                 <i class="fa fa-trash"></i>
@@ -123,11 +123,7 @@ $data_2 = mysqli_query($koneksi, $query);
                     </div>
                 </div>
 
-
-
-
-             
-
+                
             </td>
           </tr>
         <?php } ?>
