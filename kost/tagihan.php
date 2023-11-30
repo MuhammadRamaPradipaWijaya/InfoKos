@@ -8,6 +8,51 @@ $data = mysqli_query($koneksi, $query);
     table {
         border: 2px solid black;
     }
+    
+   .status-label {
+    position: relative;
+    padding: 5px; /* Sesuaikan dengan kebutuhan Anda */
+    border-radius: 6px; /* Sesuaikan dengan kebutuhan Anda */
+    font-weight: bold; /* Memberikan tebal pada teks */
+    display: inline-block; /* Agar padding berfungsi sebagaimana mestinya */
+    margin-bottom: 10px; /* Jarak antar baris */
+  }
+
+  .status-label::before {
+    content: '';
+    display: inline-block;
+    width: 8px; /* Sesuaikan dengan kebutuhan Anda */
+    height: 8px; /* Sesuaikan dengan kebutuhan Anda */
+    border-radius: 50%;
+    margin-right: 5px; /* Sesuaikan dengan kebutuhan Anda */
+  }
+
+  .belum-bayar::before {
+    background-color: red;
+  }
+
+  .pending::before {
+    background-color: yellow;
+  }
+
+  .lunas::before {
+    background-color: green;
+  }
+
+  .belum-bayar {
+    background: linear-gradient(to right, #ff8080, #ff3333); /* Warna merah yang lebih lembut */
+    color: white;
+  }
+
+  .pending {
+    background: linear-gradient(to right, #ffe066, #ffcc00); /* Warna kuning yang lebih lembut */
+    color: black;
+  }
+
+  .lunas {
+    background: linear-gradient(to right, #99ff99, #33cc33); /* Warna hijau yang lebih lembut */
+    color: white;
+  }
 </style>
 
 
@@ -69,9 +114,9 @@ $data = mysqli_query($koneksi, $query);
 
         <p><b>Status</b></p>
         <p>
-        <span style="color: white; background-color: red; padding: 0.1px;">Belum Bayar</span> = Segera Lunasi Pembayaran Anda <br>
-        <span style="color: black; background-color: yellow; padding: 0.1px;">Pending</span> = Pembayaran anda sedang diproses <br>
-        <span style="color: white; background-color: green; padding: 0.1px;">Lunas</span> = Transaksi Selesai dan telah terverifikasi
+       <span class="status-label belum-bayar">Belum Bayar</span> = Segera Lunasi Pembayaran Anda <br>
+        <span class="status-label pending">Pending</span> = Pembayaran Anda Sedang Diproses <br>
+<span class="status-label lunas">Lunas</span> = Transaksi Selesai dan Telah Terverifikasi
         </p>
 
 

@@ -46,6 +46,21 @@ function fas($fas, $tipe_kost)
     .container {
         width: 60%;
     }
+
+      .btn-danger {
+    background: linear-gradient(to right, #ff6666, #ff3333); /* Warna gradasi merah yang lebih lembut */
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 300px;
+    border-radius: 6px;
+    transition: background 0.3s ease; /* Efek transisi untuk smoothness */
+  }
+
+  .btn-danger:hover {
+    background: linear-gradient(to right, #ff3333, #ff0000); /* Warna gradasi merah yang lebih intensif saat hover */
+  }
+
 </style>
 <script>
     function tampilkan() {
@@ -273,11 +288,9 @@ function fas($fas, $tipe_kost)
         <!-- end bagian validasi  -->
 
         <div class="row">
-            <div class="col text-center">
-                <button type="submit" class="btn-danger" style="padding: 10px;width:300px;" name="order">Lanjutkan</button>
-            </div>
+        <div class="col text-center">
+            <button type="submit" class="btn-danger" name="order">Lanjutkan</button>
         </div>
-
         <br>
     </form>
 

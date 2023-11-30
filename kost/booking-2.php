@@ -83,6 +83,24 @@ if (isset($_POST['order'])) {
 }
 
 ?>
+
+<style>
+    .btn-primary {
+    background: linear-gradient(to right, #4e73df, #224abe); /* Warna gradasi biru yang lebih lembut */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background 0.3s ease; /* Efek transisi untuk smoothness */
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(to right, #224abe, #001e84); /* Warna gradasi biru yang lebih intensif saat hover */
+  }
+
+</style>
+
+
 <form action="pembayaran.php?id_kost=<?php echo $id_kost ?>" method="post">
   <div class="container">
     <div class="container-fluid">
