@@ -95,7 +95,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Daftar Menu:</h6>
                         <a class="collapse-item" href="tagihan.php">Tagihan</a>
-                        <a class="collapse-item" href="kost_ku.php">Kostku</a>
+                        <a class="collapse-item" href="kost_ku.php">Kost Saya</a>
                         <a class="collapse-item" href="profil.php">Profil</a>
                         <a class="collapse-item" href="wishlist.php">My Wishlist</a>
                         <!-- <a class="collapse-item" href="#">Bantuan</a>  -->
@@ -132,7 +132,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Daftar Menu:</h6>
                         <a class="collapse-item" href="user.php">User</a>
-                        <a class="collapse-item" href="kost_manage.php">Kost</a>
+                        <a class="collapse-item" href="kost_manage.php">Semua Kost</a>
                         <a class="collapse-item" href="semua_transaksi.php">Management Transaksi</a>
                         <a class="collapse-item" href="profil.php">Profil</a>
                     </div>
