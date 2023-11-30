@@ -52,10 +52,12 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-door-open"></i>
+                    <i class="fas fa-bed"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">Info Kost</div>
             </a>
+            <br>
+
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -63,14 +65,17 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="dashboard.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <i class="fas fa-fw fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
             </li>
+
             <li class="nav-item active">
                 <a class="nav-link" href="daftar-kost.php">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Daftar Kost</span>
                 </a>
+            </li>
 
 
                 <!-- Divider -->
