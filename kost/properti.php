@@ -33,6 +33,15 @@ $data_2 = mysqli_query($koneksi, $query);
     height: 100px;
   }
   
+  .row {
+    display: flex;
+    justify-content: flex-end; /* Mengatur agar konten berada di sebelah kanan */
+    margin-bottom: 10px; /* Jarak antar baris */
+  }
+
+  .btn {
+    width: 100%; /* Mengatur agar lebar button 100% dari lebar kolom */
+  }
 </style>
 
 <!-- properti -->
