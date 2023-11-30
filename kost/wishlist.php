@@ -72,7 +72,7 @@ $data = mysqli_query($koneksi, $query);
                             </div>
                             <br>
                             <div class="row">
-                                <div class="col"><a href="php/hapus-wishlist.php?id_kost=<?php echo $d['id_kost'] ?>">hapus</a></div>
+                                <div class="col"><a href="php/hapus-wishlist.php?id_kost=<?php echo $d['id_kost'] ?>">Hapus</a></div>
                             </div>
                         </div>
                     </div>

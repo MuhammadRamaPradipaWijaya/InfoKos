@@ -153,7 +153,7 @@ function minfas($idkost, $tipe_kost)
   </div>
 
   <div class="row">
-    < <div class="row kartu">
+      <div class="row kartu">
       <?php while ($d = mysqli_fetch_array($data)): ?>
 
 
