@@ -11,7 +11,7 @@ $o = explode(', ', $d['fasilitas_kost']);
 ?>
 
 <!--Main Content -->
-<div class="container">
+<div class="container-fluid">
   <div class="row"></div>
     <div class="col-md-10">
 
