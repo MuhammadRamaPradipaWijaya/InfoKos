@@ -1,1 +1,0 @@
-bangunan utama img

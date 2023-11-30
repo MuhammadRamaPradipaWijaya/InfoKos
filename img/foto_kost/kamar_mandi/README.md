@@ -1,1 +1,0 @@
-foto kamar mandi img
