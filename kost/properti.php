@@ -2,25 +2,27 @@
 include 'includes/header.php';
 
 $jumlah_data_perhalaman = 10;
-$jumlah_halaman = ceil($jumlah_data = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM kost JOIN user ON kost.id_pemilik = user.id")) / $jumlah_data_perhalaman);
+$jumlah_halaman = ceil(mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM kost JOIN user ON kost.id_pemilik = user.id")) / $jumlah_data_perhalaman);
 if (isset($_GET['halaman'])) {
-  $halaman_aktif = $_GET['halaman'];
+    $halaman_aktif = $_GET['halaman'];
 } else {
-  $halaman_aktif = 1;
+    $halaman_aktif = 1;
 }
 $awalData = ($jumlah_data_perhalaman * $halaman_aktif) - $jumlah_data_perhalaman;
-
-
 
 $username = $_SESSION['username'];
 $data = mysqli_query($koneksi, "SELECT * FROM user WHERE username='$username' LIMIT $awalData,$jumlah_data_perhalaman");
 $f = mysqli_fetch_array($data);
 
-//ambil id user
+// ambil id user
 $id = $f['id'];
 
-//menampilkan semua data kost milik user 
-$query = "SELECT * FROM kost WHERE id_pemilik='$id'";
+// menampilkan semua data kost milik user
+$query = "SELECT kost.*, COALESCE(SUM(kamar.jumlah_kamar), 0) AS total_kamar
+          FROM kost
+          LEFT JOIN kamar ON kost.id_kost = kamar.id_kost
+          WHERE kost.id_pemilik='$id'
+          GROUP BY kost.id_kost";
 $data_2 = mysqli_query($koneksi, $query);
 
 ?>

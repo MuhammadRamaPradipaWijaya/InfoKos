@@ -13,12 +13,6 @@ function ubahKamar()
 
     // Fetch the associated property (kost) data
     $id_kost = $roomData['id_kost'];
-    $propertyQuery = mysqli_query($koneksi, "SELECT * FROM kost WHERE id_kost = $id_kost");
-    $propertyData = mysqli_fetch_array($propertyQuery);
-
-    // Extract the current room count and calculate the new room count
-    $currentRoomCount = $propertyData['jumlah_kamar'];
-    $newRoomCount = $currentRoomCount; // Initialize with the current room count
 
     // Update the room data
     $jumlah_kamar = $_POST['jumlah_kamar'];
@@ -29,16 +23,12 @@ function ubahKamar()
     $fasilitas_kamar = $_POST['fasilitas_kamar'];
     $fasilitas = implode(', ', $fasilitas_kamar);
 
-    // Check if the room count is changed
-    if ($currentRoomCount != $jumlah_kamar) {
-        $newRoomCount = $jumlah_kamar; // Update with the new room count
-    }
-
+    // Update the room record
     $updateRoomQuery = mysqli_query($koneksi, "UPDATE kamar SET jumlah_kamar='$jumlah_kamar', panjang_kamar='$panjang_kamar', lebar_kamar='$lebar_kamar', tipe_kamar='$tipe_kamar', biaya_fasilitas='$biaya_fasilitas', fasilitas_kamar='$fasilitas' WHERE id_kamar='$id_kamar'");
 
     if ($updateRoomQuery) {
-        // Update the room count only if the room update is successful
-        $updatePropertyQuery = mysqli_query($koneksi, "UPDATE kost SET jumlah_kamar = $newRoomCount WHERE id_kost = $id_kost");
+        // Update the total room count for the property
+        $updatePropertyQuery = mysqli_query($koneksi, "UPDATE kost SET jumlah_kamar = (SELECT SUM(jumlah_kamar) FROM kamar WHERE id_kost = $id_kost) WHERE id_kost = $id_kost");
 
         if ($updatePropertyQuery) {
             echo "Berhasil";
@@ -52,6 +42,7 @@ function ubahKamar()
         header("location:../daftar-kamar.php?id_kost=$id_kost");
     }
 }
+
 
 
 function tambahKamar()
