@@ -114,9 +114,9 @@ $data = mysqli_query($koneksi, $query);
 
         <p><b>Status</b></p>
         <p>
-       <span class="status-label belum-bayar">Belum Bayar</span> = Segera Lunasi Pembayaran Anda <br>
-        <span class="status-label pending">Pending</span> = Pembayaran Anda Sedang Diproses <br>
-<span class="status-label lunas">Lunas</span> = Transaksi Selesai dan Telah Terverifikasi
+         <span class="status-label belum-bayar">Belum Bayar</span> = Segera Lunasi Pembayaran Anda <br>
+         <span class="status-label pending">Pending</span> = Pembayaran Anda Sedang Diproses <br>
+         <span class="status-label lunas">Lunas</span> = Transaksi Selesai dan Telah Terverifikasi
         </p>
 
 
