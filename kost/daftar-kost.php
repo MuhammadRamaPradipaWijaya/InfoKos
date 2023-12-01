@@ -91,7 +91,7 @@ function minfas($idkost, $tipe_kost)
                     <div class="card-text">
                       <h6 class="card-title font-weight-bold mb-1"><?php echo $d['nama_kost'] ?></h6>
 
-                      <p class="card-text"><?php echo $d['kota'] . ',' . $d['provinsi'] ?></p>
+                      <p class="card-text"><?php echo $d['kota'] . ', ' . $d['provinsi'] ?></p>
 
                     </div>
                   </div>
