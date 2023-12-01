@@ -128,8 +128,6 @@ function minfas($idkost, $tipe_kost)
         <div class="col-lg-6 mx-auto text-center">
           <div class="intro-wrap">
             <h1 class="mb-0">Info Kost</h1>
-            <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia and
-              Consonantia, there live the blind texts. </p>
             <form class="form-inline mt-3" action="daftarkos.php" method="GET">
               <div class="input-group">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width: 420px;"
@@ -149,7 +147,7 @@ function minfas($idkost, $tipe_kost)
 
 
   <div class="text-center">
-    <p class="display-4 font-weight-bold">Daftar kost terbaru</p>
+    <p class="display-4 font-weight-bold">Daftar Kost Terbaru</p>
   </div>
 
   <div class="row">
@@ -237,43 +235,53 @@ function minfas($idkost, $tipe_kost)
     <?php endfor; ?>
   </div>
 
-
-
-
-
-  <div class="col-md-6 col-lg-4">
-    <div class="widget">
-      <h3 class="heading">Contact</h3>
-      <ul class="list-unstyled quick-info links">
-        <li class="email"><a href="#">mail@example.com</a></li>
-        <li class="phone"><a href="#">+1 222 212 3819</a></li>
-        <li class="address"><a href="#">43 Raymouth Rd. Baltemoer, London 3910</a></li>
-      </ul>
-    </div>
-  </div>
-
-
-  <div class="inner dark">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-md-8 mb-3 mb-md-0 mx-auto">
-          <p>Copyright &copy;
-            <script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love
-            by <a href="https://untree.co" class="link-highlight">Untree.co</a>
-            <!-- License information: https://untree.co/license/ -->Distributed By <a href="https://themewagon.com"
-              target="_blank">ThemeWagon</a>
-          </p>
+  <div class="site-footer">
+    <div class="inner first">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="widget">
+              <h3 class="heading">Tentang Kami</h3>
+              <p>Solusi cepat mencari kebutuhan tempat tinggal anda</p>
+            </div>
+            <div class="widget">
+              <ul class="list-unstyled social">
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-instagram"></span></a></li>
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                
+               
+              </ul>
+            </div>
+          </div>
+          
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="widget">
+              <h3 class="heading">Contact</h3>
+              <ul class="list-unstyled quick-info links">
+                <li class="email"><a href="#">InfoKost@gamil.com</a></li>
+                <li class="phone"><a href="#">081216197107</a></li>
+                
+              </ul>
+            </div>
+          </div>
         </div>
-
       </div>
     </div>
-  </div>
-  </div>
 
-  <div id="overlayer"></div>
-  <div class="loader">
-    <div class="spinner-border" role="status">
-      <span class="sr-only">Loading...</span>
+
+
+    <div class="inner dark">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-8 mb-3 mb-md-0 mx-auto">
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> Sistem Info Kos|KINT2 
+            </p>
+          </div>
+          
+        </div>
+      </div>
     </div>
   </div>
 
