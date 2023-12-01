@@ -138,6 +138,7 @@ function minfas($idkost, $tipe_kost)
       <?php endfor; ?>
     </div>
   </div>
+  <br>
 </body>
 
 <?php
