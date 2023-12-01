@@ -24,6 +24,29 @@
   <link rel="stylesheet" href="css/style.css">
 
   <title>Info kost.</title>
+
+  <style>
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .row a {
+      margin: 5px;
+
+      .search-input {
+        width: 300px;
+        /* Adjust the width as needed */
+      }
+
+      .inner.dark {
+      background-color: #007bff; /* Warna biru yang diinginkan */
+    }
+
+    }
+  </style>
 </head>
 
 <body>
