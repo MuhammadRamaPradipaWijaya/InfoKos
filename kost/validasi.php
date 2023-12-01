@@ -78,11 +78,12 @@ $n = mysqli_fetch_array($data2);
             <div class="row">
                 <button name="submit" type="submit" class="btn btn-primary btn-icon-split">
                     <span class="icon text-white-50">
-                        <i class="fa-duotone fa-paper-plane"></i>
+                        <i class="fas fa-paper-plane"></i> <!-- Mengganti ikon menjadi ikon kirim -->
                     </span>
                     <span class="text">Kirim</span>
-                </a>
+                </button> <!-- Mengganti tag penutup </a> menjadi </button> -->
             </div>
+
 
 
             <?php
@@ -98,6 +99,10 @@ $n = mysqli_fetch_array($data2);
             ?>
         </form>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
 
 
