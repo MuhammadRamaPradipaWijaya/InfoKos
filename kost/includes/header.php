@@ -62,13 +62,20 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
-                    <i class="fas fa-fw fa-chart-pie"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
 
+            <?php
+            if ($d['roles'] != 1) {
+            ?>
+                <li class="nav-item active">
+                    <a class="nav-link" href="dashboard.php">
+                        <i class="fas fa-fw fa-chart-pie"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+            <?php
+            }
+            ?>
+            
             <li class="nav-item active">
                 <a class="nav-link" href="daftar-kost.php">
                     <i class="fas fa-fw fa-home"></i>
@@ -77,17 +84,18 @@
             </li>
 
 
-                <!-- Divider -->
-                <hr class="sidebar-divider">
 
-                <!-- Heading -->
-                <div class="sidebar-heading">
-                    Interface
-                </div>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
 
-                <?php
-                if ($d['roles'] == 1) {
-                ?>
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <?php
+            if ($d['roles'] == 1) {
+            ?>
             
             <!-- Nav Item - Penghuni kost -->
             <li class="nav-item">
