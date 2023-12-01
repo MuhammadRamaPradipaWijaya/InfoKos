@@ -63,7 +63,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="dashboard2.php">
                     <i class="fas fa-fw fa-chart-pie"></i>
                     <span>Dashboard</span>
                 </a>
