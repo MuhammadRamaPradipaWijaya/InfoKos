@@ -54,6 +54,16 @@ function minfas($idkost, $tipe_kost)
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- Vendor CSS Files -->
+  <!--<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+  <!--<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">-->
+  <!--<link href="assets/vendor/aos/aos.css" rel="stylesheet">-->
+  <!--<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">-->
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
   <title>InfoKost.</title>
   <STYLE>
     .hero {
@@ -82,6 +92,7 @@ function minfas($idkost, $tipe_kost)
 
     .row a {
       margin: 5px;
+    }
 
       .search-input {
         width: 300px;
@@ -92,7 +103,6 @@ function minfas($idkost, $tipe_kost)
       background-color: #007bff; /* Warna biru yang diinginkan */
     }
 
-    }
   </STYLE>
 
 </head>
@@ -152,6 +162,45 @@ function minfas($idkost, $tipe_kost)
           <img src="img/kos2.jpg" alt="Free HTML Template by Untree.co" class="img-fluid">
         </div>
       </div>
+
+    <!-- ======= Events Section ======= -->
+    <section id="events" class="events">
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(img/kos1.jpg)">
+              <h3>Custom Parties</h3>
+              <div class="price align-self-start">$99</div>
+              <p class="description">
+                Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis facere. Enim facilis veritatis id est rem repudiandae nulla expedita quas.
+              </p>
+            </div><!-- End Event item -->
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(img/kos2.jpg)">
+              <h3>Private Parties</h3>
+              <div class="price align-self-start">$289</div>
+              <p class="description">
+                In delectus sint qui et enim. Et ab repudiandae inventore quaerat doloribus. Facere nemo vero est ut dolores ea assumenda et. Delectus saepe accusamus aspernatur.
+              </p>
+            </div><!-- End Event item -->
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(img/kos1.jpg)">
+              <h3>Birthday Parties</h3>
+              <div class="price align-self-start">$499</div>
+              <p class="description">
+                Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis.
+              </p>
+            </div><!-- End Event item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Events Section -->
 
         <p class="display-4">Daftar Kost Terbaru</p>
         
@@ -214,7 +263,7 @@ function minfas($idkost, $tipe_kost)
 
     <br>
     <hr>
-    <div class="row">
+    <!--<div class="row">
       <?php for ($i = 1; $i <= $jumlah_halaman; $i++) : ?>
         <?php if ($i == $halaman_aktif) : ?>
           <a style="font-weight: bold;background-color:black;padding:10px;color:white;" href="?halaman=<?php echo $i ?>"><?php echo $i ?></a>
@@ -222,7 +271,7 @@ function minfas($idkost, $tipe_kost)
           <a style="font-weight: bold;background-color:red;padding:10px;color:white" href="?halaman=<?php echo $i ?>"><?php echo $i ?></a>
         <?php endif; ?>
       <?php endfor; ?>
-    </div>
+    </div>-->
   </div>
 
   <div class="py-5 cta-section">
@@ -309,6 +358,17 @@ function minfas($idkost, $tipe_kost)
   <script src="js/typed.js"></script>
   
   <script src="js/custom.js"></script>
+
+  
+  <!-- Vendor JS Files -->
+  <!--<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+  <!--<script src="assets/vendor/aos/aos.js"></script>-->
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
 
