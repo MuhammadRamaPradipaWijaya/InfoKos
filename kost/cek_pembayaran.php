@@ -20,9 +20,19 @@ $d = mysqli_fetch_array($data);
     }
 </style>
 
-<br>
 <div class="container">
-    <form action="php/validasi_proses.php" method="post">
+
+    <div class="my-2">
+        <a href="properti.php" class="btn btn-light btn-icon-split" style="border: 1px solid #ccc;">
+        <span class="icon text-gray-700">
+            <i class="fas fa-arrow-left"></i>
+        </span>
+        <span class="text">Kembali</span>
+        </a>
+    </div>
+    <br>
+
+    <form action="php/cek_pembayaran_proses.php" method="post">
         <input type="text" name="id_tagihan" id="id_tagihan" hidden value="<?php echo $id_tagihan ?>">
         <h3>Data Penyewa</h3>
         <hr>
@@ -34,7 +44,7 @@ $d = mysqli_fetch_array($data);
             <div class=" col">
                 <h5> Nama : <?php echo $d['nama_lengkap'] ?></h5>
                 
-                <h5> No Handphone/Telepon :<?php echo $d['no_hp'] ?></h5>
+                <h5> No Telepon :<?php echo $d['no_hp'] ?></h5>
                 <h5> Email : <?php echo $d['email'] ?></h5>
             </div>
             <div class="col">

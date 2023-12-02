@@ -155,7 +155,7 @@ if (isset($_POST['order'])) {
           <br>
           <br>
           <div class="row">
-            <h4><b><?php echo $d['nama_kost'] . ", " . $d['kecamatan'] . " " . $d['kota'] . " " . $d['provinsi'] ?></b></h4>
+            <h4><b><?php echo $d['nama_kost'] . ", " . $d['kecamatan'] . ", " . $d['kota'] . ", " . $d['provinsi'] ?></b></h4>
           </div>
           <br>
           <div class="row">

@@ -87,14 +87,22 @@ $n = mysqli_fetch_array($data2);
 
 
             <?php
-            if (isset($_POST['submit'])) {
-                $query = "UPDATE tagihan SET stats=2 WHERE no_tagihan='$no_tagihan'";
-                $data = mysqli_query($koneksi, $query);
-                $gambar = $_FILES['gambar']['name'];
-                $simpan_gambar = $_FILES['gambar']['tmp_name'];
-                move_uploaded_file($simpan_gambar, "../img/bukti_bayar/" . $gambar);
-                $query = "UPDATE tagihan SET bukti_bayar='$gambar' WHERE no_tagihan='$no_tagihan'";
-                $data = mysqli_query($koneksi, $query);
+           if (isset($_POST['submit'])) {
+            // Check if the "Upload Bukti Pembayaran" field is not empty
+                if (!empty($_FILES['gambar']['name'])) {
+                    $query = "UPDATE tagihan SET stats=2 WHERE no_tagihan='$no_tagihan'";
+                    $data = mysqli_query($koneksi, $query);
+                    
+                    $gambar = $_FILES['gambar']['name'];
+                    $simpan_gambar = $_FILES['gambar']['tmp_name'];
+                    move_uploaded_file($simpan_gambar, "../img/bukti_bayar/" . $gambar);
+                    
+                    $query = "UPDATE tagihan SET bukti_bayar='$gambar' WHERE no_tagihan='$no_tagihan'";
+                    $data = mysqli_query($koneksi, $query);
+                } else {
+                    // Handle the case when the "Upload Bukti Pembayaran" field is empty
+                    echo '<div class="alert alert-danger" role="alert">Silahkan Upload Bukti Pembayaran Dahulu!</div>';
+                }
             }
             ?>
         </form>

@@ -280,7 +280,7 @@ function fas($fas, $tipe_kost)
                     // echo "Rp." . number_format($f['harga_sewa'] + minfas($f['id_kost'], $f['tipe_kost']), 0, ',', '.') . " / " . $f['tipe_kost']
                     ?>
                 </p> -->
-                <?php echo $f['provinsi'] ?>,<?php echo $f['kota'] ?>,<?php echo $f['kecamatan'] ?>,<?php echo $f['kelurahan'] ?>
+                <?php echo $f['provinsi'] ?>, <?php echo $f['kota'] ?>, <?php echo $f['kecamatan'] ?>, <?php echo $f['kelurahan'] ?>
             </div>
         </div>
         <br>
