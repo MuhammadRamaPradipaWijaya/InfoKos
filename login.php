@@ -44,6 +44,18 @@ include("includes/header.php")
                     <img src="img/bg-login.jpg" class="img-fluid" style="min-height:100%;" />
                 </div>
                 <div class="col-md-6 bg-white p-5">
+
+                <div class="my-2">
+                    <a href="index2.php" class="btn btn-light btn-icon-split" style="border: 1px solid #ccc;">
+                    <span class="icon text-gray-700">
+                        <i class="fas fa-arrow-left"></i>
+                    </span>
+                    <span class="text">Kembali</span>
+                    </a>
+                </div>
+                
+                <br>
+                <hr>
                     <h3 class="pb-3">Login Form</h3>
                     <div class="login-style">
                         <form method="POST" action="php/login_proses.php" method="post">
