@@ -12,9 +12,8 @@ if ($d['roles'] == 3) {
     <div class="container-fluid">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Daftar Semua Transaksi</h6>
+              <h5 class="m-0 font-weight-bold text-primary">Daftar Semua Transaksi</h5>
             </div>
-            <br>
             <!--<div class="row">
                 Cari ID<div class="col-md-3"><input class="form-control" type="text" name="cari" id="cari" class="cari"></div>
             </div>-->
