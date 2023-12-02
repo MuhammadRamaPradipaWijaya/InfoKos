@@ -64,7 +64,7 @@
   <nav class="site-nav">
     <div class="container">
       <div class="site-navigation">
-        <a href="index.html" class="logo m-0">Info Kost <span class="text-primary">.</span></a>
+        <a href="contact.php" class="logo m-0">Info Kost <span class="text-primary">.</span></a>
 
         <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
           <li><a href="index2.php">Home</a></li>

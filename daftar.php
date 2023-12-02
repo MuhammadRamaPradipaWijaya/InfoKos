@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="CodePel">
-    <title>Register</title>
+    <title>Register Info Kost</title>
     <!-- Style CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Demo CSS (No need to include it into your project) -->
@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                     <img src="img/bg-login.jpg" class="img-fluid" style="min-height:100%;" />
                 </div>
                 <div class="col-md-6 bg-white p-5">
-                    <h3 class="pb-3">Register Form</h3>
+                    <h3 class="pb-3">Register Info Kost</h3>
                     <div class="form-style">
                         <form action="daftar.php" method="post" enctype="multipart/form-data">
                             <div class="row mb-3">
