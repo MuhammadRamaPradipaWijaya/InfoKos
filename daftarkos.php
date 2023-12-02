@@ -60,7 +60,7 @@ function minfas($idkost, $tipe_kost)
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <title>InfoKost.</title>
+  <title>Info Kost.</title>
   <style>
     .row {
       display: flex;
@@ -107,7 +107,7 @@ function minfas($idkost, $tipe_kost)
   <nav class="site-nav">
     <div class="container">
       <div class="site-navigation">
-        <a href="index.html" class="logo m-0"> InfoKost <span class="text-primary">.</span></a>
+        <a href="index.html" class="logo m-0"> Info Kost <span class="text-primary">.</span></a>
 
         <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
           <li><a href="index2.php">Home</a></li>
