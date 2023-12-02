@@ -156,11 +156,7 @@ function minfas($idkost, $tipe_kost)
   <div class="untree_co-section">
     <div class="container my-5">
       <div class="mb-5">
-        <div class="owl-single dots-absolute owl-carousel">
-          <img src="img/kos1.jpg" alt="Free HTML Template by Untree.co" class="img-fluid">
-          <img src="img/kos2.jpg" alt="Free HTML Template by Untree.co" class="img-fluid">
-          <img src="img/kos2.jpg" alt="Free HTML Template by Untree.co" class="img-fluid">
-        </div>
+
       </div>
 
     <!-- ======= Events Section ======= -->
