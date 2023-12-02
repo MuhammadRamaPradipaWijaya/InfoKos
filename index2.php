@@ -318,7 +318,7 @@ function minfas($idkost, $tipe_kost)
 
 
 
-    <div class="inner dark">
+    <div class="inner">
       <div class="container">
         <div class="row text-center">
           <div class="col-md-8 mb-3 mb-md-0 mx-auto">
