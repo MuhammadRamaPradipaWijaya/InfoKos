@@ -267,7 +267,7 @@ function minfas($idkost, $tipe_kost)
               <h3 class="heading">Contact</h3>
               <ul class="list-unstyled quick-info links">
                 <li class="email"><a href="#">InfoKost@gamil.com</a></li>
-                <li class="phone"><a href="#">081216197107</a></li>
+                <li class="phone"><a href="#">+62 823 3863 6603</a></li>
                 
               </ul>
             </div>
