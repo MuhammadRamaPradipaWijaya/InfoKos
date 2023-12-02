@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                             </div>
                         </form>
                         <div class="pt-4 text-center">
-                            Sudah punya akun ? <a href="login.php">Sign In</a>
+                            Sudah punya akun ? <a href="login.php">Login</a>
                         </div>
                     </div>
                 </div>

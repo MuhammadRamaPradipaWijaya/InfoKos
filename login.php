@@ -74,7 +74,7 @@ include("includes/header.php")
                             </div>
                         </form>
                         <div class="pt-4 text-center">
-                            Belum punya akun ? <a href="daftar.php">Sign Up</a>
+                            Belum punya akun ? <a href="daftar.php">Register</a>
                         </div>
                     </div>
                 </div>
