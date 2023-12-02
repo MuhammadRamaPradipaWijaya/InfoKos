@@ -134,19 +134,19 @@
           <div class="quick-contact-item d-flex align-items-center mb-4">
             <span class="flaticon-house"></span>
             <address class="text">
-              155 Market St #101, Paterson, NJ 07505, United States
+              Politeknik Negeri Jember. Teknologi Informasi. Manajemen Informatika
             </address>
           </div>
           <div class="quick-contact-item d-flex align-items-center mb-4">
             <span class="flaticon-phone-call"></span>
             <address class="text">
-              +1 202 2020 200
+            +62 823 3863 6603
             </address>
           </div>
           <div class="quick-contact-item d-flex align-items-center mb-4">
             <span class="flaticon-mail"></span>
             <address class="text">
-              @info@mydomain.com
+            InfoKost@gamil.com
             </address>
           </div>
         </div>
@@ -253,7 +253,7 @@
               <h3 class="heading">Contact</h3>
               <ul class="list-unstyled quick-info links">
                 <li class="email"><a href="#">InfoKost@gamil.com</a></li>
-                <li class="phone"><a href="#">081216197107</a></li>
+                <li class="phone"><a href="#">+62 823 3863 6603</a></li>
                 
               </ul>
             </div>
