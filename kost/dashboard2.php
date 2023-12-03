@@ -63,7 +63,7 @@ $tagihannum = count($tagihan);
                                             </div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                            <i class="fas fa-solid fa-door-open fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@ $tagihannum = count($tagihan);
                                             </div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                            <i class="fas fa-solid fa-user fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
