@@ -1,6 +1,20 @@
 <?php 
-include('includes/header.php'); 
-?>
+
+include('includes/header.php');
+require "php/dashboard_proces.php";
+
+$kost = getData("SELECT * FROM kost");
+$kostnum = count($kost);
+
+$kamar = getData("SELECT * FROM kamar");
+$kamarnum = count($kamar);
+
+$penyewa = getData("SELECT * FROM user Where roles=1");
+$penyewanum = count($penyewa);
+
+$tagihan = getData("SELECT * FROM tagihan ");
+$tagihannum = count($tagihan);
+ ?>
 
 
                 <!-- Begin Page Content -->
@@ -23,8 +37,7 @@ include('includes/header.php');
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Kost</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
 
-                                                <?php
-                                                ?>
+                                                <h3><?=$kostnum?></h3>
 
                                             </div>
                                         </div>
@@ -42,11 +55,10 @@ include('includes/header.php');
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total User</div>
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total kamar</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
 
-                                                <?php
-                                                ?>
+                                                <h3><?=$kamarnum?></h3>
                                                 
                                             </div>
                                         </div>
@@ -64,11 +76,10 @@ include('includes/header.php');
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total User</div>
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Penyewa</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
 
-                                                <?php
-                                                ?>
+                                                <h3><?=$penyewanum?></h3>
                                                 
                                             </div>
                                         </div>
@@ -86,11 +97,10 @@ include('includes/header.php');
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total User</div>
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Tagihan</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
 
-                                                <?php
-                                                ?>
+                                                <h3><?=$tagihannum?></h3>
                                                 
                                             </div>
                                         </div>
