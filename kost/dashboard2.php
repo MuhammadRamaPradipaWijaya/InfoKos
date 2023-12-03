@@ -20,16 +20,30 @@ if ($loggedUser['roles'] == 2) {
     $kostnum = mysqli_num_rows($kost);
 
     // Informasi tentang semua kamar dalam sistem
-    $kamar = getData("SELECT * FROM kamar");
-    $kamarnum = mysqli_num_rows($kamar);
+    $kamar = getData("SELECT kamar.* FROM kamar JOIN kost ON kamar.id_kost = kost.id_kost WHERE kost.id_pemilik = $loggedUser[id]");
+    $kamarnum = 0;
+    // Iterate through each row to calculate total capacity
+    while ($row = mysqli_fetch_assoc($kamar)) {
+        $kamarnum += $row['jumlah_kamar'];
+    }
 
     // Informasi tentang semua penyewa dalam sistem
-    $penyewa = getData("SELECT * FROM user WHERE roles=1");
+    $penyewa = getData("SELECT user.* FROM user 
+                        JOIN booking ON user.id = booking.id_user 
+                        JOIN kamar ON booking.id_kamar = kamar.id_kamar
+                        JOIN kost ON kamar.id_kost = kost.id_kost
+                        WHERE kost.id_pemilik = $loggedUser[id]");
     $penyewanum = mysqli_num_rows($penyewa);
 
     // Informasi tentang semua tagihan dalam sistem
-    $tagihan = getData("SELECT * FROM tagihan");
-    $tagihannum = mysqli_num_rows($tagihan);
+    $tagihan = getData("SELECT SUM(tagihan.total_tagihan) AS total_tagihan 
+                        FROM tagihan
+                        JOIN booking ON tagihan.no_booking = booking.id_booking
+                        JOIN kamar ON booking.id_kamar = kamar.id_kamar
+                        JOIN kost ON kamar.id_kost = kost.id_kost
+                        WHERE kost.id_pemilik = $loggedUser[id]");
+    $tagihan_row = mysqli_fetch_assoc($tagihan);
+    $tagihannum = $tagihan_row['total_tagihan'];
 
     // ... (tambahkan query dan pengolahan data lain untuk pemilik)
 } elseif ($loggedUser['roles'] == 3) {
@@ -47,8 +61,9 @@ if ($loggedUser['roles'] == 2) {
     $penyewanum = mysqli_num_rows($penyewa);
 
     // Informasi tentang semua tagihan dalam sistem
-    $tagihan = getData("SELECT * FROM tagihan");
-    $tagihannum = mysqli_num_rows($tagihan);
+    $tagihan = getData("SELECT SUM(total_tagihan) AS total_tagihan FROM tagihan");
+    $tagihan_row = mysqli_fetch_assoc($tagihan);
+    $tagihannum = $tagihan_row['total_tagihan'];
 }
 
 ?>
