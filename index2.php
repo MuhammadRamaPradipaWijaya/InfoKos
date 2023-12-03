@@ -1,7 +1,7 @@
 <?php
 require('koneksi.php');
 
-$jumlah_data_perhalaman = 8;
+$jumlah_data_perhalaman = 4;
 $jumlah_halaman = ceil($jumlah_data = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM kost JOIN user ON kost.id_pemilik = user.id")) / $jumlah_data_perhalaman);
 if (isset($_GET['halaman'])) {
   $halaman_aktif = $_GET['halaman'];
@@ -236,7 +236,7 @@ function minfas($idkost, $tipe_kost)
 <br><br><br>
 
 
-        <p class="display-4">Daftar Kost Terbaru</p>
+        <p class="display-4 text-center">Daftar Kost Terbaru</p>
         
       <div class="row">
       <div class="row kartu">
@@ -295,9 +295,8 @@ function minfas($idkost, $tipe_kost)
       </div>
     </div>
 
-    <br>
     <hr>
-    <!--<div class="row">
+    <div class="row text-center">
       <?php for ($i = 1; $i <= $jumlah_halaman; $i++) : ?>
         <?php if ($i == $halaman_aktif) : ?>
           <a style="font-weight: bold;background-color:black;padding:10px;color:white;" href="?halaman=<?php echo $i ?>"><?php echo $i ?></a>
@@ -305,8 +304,9 @@ function minfas($idkost, $tipe_kost)
           <a style="font-weight: bold;background-color:red;padding:10px;color:white" href="?halaman=<?php echo $i ?>"><?php echo $i ?></a>
         <?php endif; ?>
       <?php endfor; ?>
-    </div>-->
+    </div>
   </div>
+  <br>
 
   <div class="py-5 cta-section">
     <div class="container">
