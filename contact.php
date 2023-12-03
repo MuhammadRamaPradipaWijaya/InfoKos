@@ -23,6 +23,9 @@
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- Icon  -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
   <title>Info kost.</title>
 
   <style>
@@ -227,7 +230,7 @@
 
 
  
-      <div class="site-footer">
+  <div class="site-footer">
     <div class="inner first">
       <div class="container">
         <div class="row">
@@ -238,9 +241,9 @@
             </div>
             <div class="widget">
               <ul class="list-unstyled social">
-                <li><a href="#"><span class="icon-twitter"></span></a></li>
-                <li><a href="#"><span class="icon-instagram"></span></a></li>
-                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-twitter"><i data-feather="twitter"></i></span></a></li> 
+                <li><a href="#"><span class="icon-instagram"><i data-feather="instagram"></i></span></a></li>
+                <li><a href="#"><span class="icon-facebook"><i data-feather="facebook"></i></span></a></li>
                 
                
               </ul>
@@ -252,8 +255,8 @@
             <div class="widget">
               <h3 class="heading">Contact</h3>
               <ul class="list-unstyled quick-info links">
-                <li class="email"><a href="#">InfoKost@gamil.com</a></li>
-                <li class="phone"><a href="#">+62 823 3863 6603</a></li>
+                <li class="email"><i data-feather="mail"></i><a href="#">InfoKost@gamil.com</a></li>
+                <li class="phone"><i data-feather="phone"></i><a href="#">+62 823 3863 6603</a></li>
                 
               </ul>
             </div>
@@ -291,6 +294,10 @@
   <script src="js/typed.js"></script>
   
   <script src="js/custom.js"></script>
+
+    <script>
+      feather.replace();
+    </script>
 
 </body>
 

@@ -55,6 +55,9 @@ function minfas($idkost, $tipe_kost)
   <link rel="stylesheet" href="css/style.css">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- Icon  -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
@@ -201,7 +204,7 @@ function minfas($idkost, $tipe_kost)
         <div class="card-body">
           <h5 class="card-title">Diskon Kost Natal</h5>
           <p class="card-text">Nikmati diskon khusus untuk pemesanan kost selama bulan Natal. Segera pesan sebelum habis!</p>
-          <a href="#" class="btn btn-primary">Lihat Detail</a>
+          <!-- <a href="#" class="btn btn-primary">Lihat Detail</a> -->
         </div>
       </div>
     </div>
@@ -209,11 +212,11 @@ function minfas($idkost, $tipe_kost)
     <!-- Event Card 2 -->
     <div class="col-md-4">
       <div class="card" style="width: 18rem;">
-        <img src="img/natal.jpg" class="card-img-top" alt="Event Diskon Kost 2">
+        <img src="img/thun bru.jpg" class="card-img-top" alt="Event Diskon Kost 2">
         <div class="card-body">
           <h5 class="card-title">Diskon Spesial Tahun Baru</h5>
           <p class="card-text">Selamat tahun baru! Dapatkan harga spesial untuk kost pilihanmu. Booking sekarang!</p>
-          <a href="#" class="btn btn-primary">Lihat Detail</a>
+          <!-- <a href="#" class="btn btn-primary">Lihat Detail</a> -->
         </div>
       </div>
     </div>
@@ -221,11 +224,11 @@ function minfas($idkost, $tipe_kost)
     <!-- Event Card 3 -->
     <div class="col-md-4">
       <div class="card" style="width: 18rem;">
-        <img src="img/natal.jpg" class="card-img-top" alt="Event Diskon Kost 3">
+        <img src="img/pnguna bru.jpg" class="card-img-top" alt="Event Diskon Kost 3">
         <div class="card-body">
-          <h5 class="card-title">Promo Awal Tahun</h5>
-          <p class="card-text">Sambut tahun baru dengan promo eksklusif. Pesan kostmu sekarang dan hemat lebih!</p>
-          <a href="#" class="btn btn-primary">Lihat Detail</a>
+          <h5 class="card-title">Promo Pengguna Baru</h5>
+          <p class="card-text">Sambutan pengguna baru dengan promo eksklusif. Pesan kostmu sekarang dan hemat lebih!</p>
+          <!-- <a href="#" class="btn btn-primary">Lihat Detail</a> -->
         </div>
       </div>
     </div>
@@ -336,9 +339,9 @@ function minfas($idkost, $tipe_kost)
             </div>
             <div class="widget">
               <ul class="list-unstyled social">
-                <li><a href="#"><span class="icon-twitter"></span></a></li>
-                <li><a href="#"><span class="icon-instagram"></span></a></li>
-                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-twitter"><i data-feather="twitter"></i></span></a></li> 
+                <li><a href="#"><span class="icon-instagram"><i data-feather="instagram"></i></span></a></li>
+                <li><a href="#"><span class="icon-facebook"><i data-feather="facebook"></i></span></a></li>
                 
                
               </ul>
@@ -350,8 +353,8 @@ function minfas($idkost, $tipe_kost)
             <div class="widget">
               <h3 class="heading">Contact</h3>
               <ul class="list-unstyled quick-info links">
-                <li class="email"><a href="#">InfoKost@gamil.com</a></li>
-                <li class="phone"><a href="#">+62 823 3863 6603</a></li>
+                <li class="email"><i data-feather="mail"></i><a href="#">InfoKost@gamil.com</a></li>
+                <li class="phone"><i data-feather="phone"></i><a href="#">+62 823 3863 6603</a></li>
                 
               </ul>
             </div>
@@ -405,6 +408,10 @@ function minfas($idkost, $tipe_kost)
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+      feather.replace();
+  </script>
 
 </body>
 
