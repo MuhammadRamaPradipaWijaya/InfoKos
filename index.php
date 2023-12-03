@@ -118,10 +118,10 @@ function minfas($idkost, $tipe_kost)
   <nav class="site-nav">
     <div class="container">
       <div class="site-navigation">
-        <a href="index2.php" class="logo m-0">Info Kost<span class="text-primary">.</span></a>
+        <a href="index.php" class="logo m-0">Info Kost<span class="text-primary">.</span></a>
 
         <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
-          <li class="active"><a href="index2.php">Home</a></li>
+          <li class="active"><a href="index.php">Home</a></li>
           <li><a href="daftarkos.php">Daftar Kost</a></li>
           <li><a href="contact.php">Contact</a></li>
           <li><a href="login.php">Login</a></li>
