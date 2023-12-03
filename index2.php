@@ -236,7 +236,7 @@ function minfas($idkost, $tipe_kost)
 <br><br><br>
 
 
-        <p class="display-4">Daftar Kost Terbaru</p>
+        <p class="display-4 text-center">Daftar Kost Terbaru</p>
         
       <div class="row">
       <div class="row kartu">
