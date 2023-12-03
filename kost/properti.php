@@ -32,17 +32,26 @@ $data_2 = mysqli_query($koneksi, $query);
     width: 100px;
     height: 100px;
   }
-  
+
   .row {
     display: flex;
-    justify-content: flex-end; /* Mengatur agar konten berada di sebelah kanan */
-    margin-bottom: 10px; /* Jarak antar baris */
+    justify-content: flex-end;
+    margin-bottom: 10px;
   }
 
   .btn {
-    width: 100%; /* Mengatur agar lebar button 100% dari lebar kolom */
+    width: 100%;
   }
 </style>
+
+<script>
+  function konfirmasiHapus(id_kost) {
+    var konfirmasi = confirm("Apakah Anda yakin ingin menghapus kost ini?");
+    if (konfirmasi) {
+      window.location.href = "php/hapus.php?id_kost=" + id_kost;
+    }
+  }
+</script>
 
 <!-- properti -->
 <div class="container-fluid">
@@ -125,12 +134,12 @@ $data_2 = mysqli_query($koneksi, $query);
                     </div>
 
                     <div class="col">
-                        <a href="php/hapus.php?id_kost=<?php echo $d['id_kost'] ?>" class="btn btn-danger btn-icon-split">
+                        <button onclick="konfirmasiHapus(<?php echo $d['id_kost'] ?>)" class="btn btn-danger btn-icon-split">
                             <span class="icon text-white-50">
                                 <i class="fa fa-trash"></i>
                             </span>
                             <span class="text">Hapus</span>
-                        </a>
+                        </button>
                     </div>
                 </div>
 

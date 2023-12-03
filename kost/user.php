@@ -14,11 +14,16 @@ $data = mysqli_query($koneksi, "SELECT * FROM user JOIN roles_user on user.roles
     justify-content: flex-end; /* Mengatur agar konten berada di sebelah kanan */
     margin-bottom: 10px; /* Jarak antar baris */
   }
-
-  .btn {
-    width: 100%; /* Mengatur agar lebar button 100% dari lebar kolom */
-  }
 </style>
+
+<script>
+  function konfirmasiBanned(id) {
+    var konfirmasi = confirm("Apakah Anda yakin ingin hapus user ini?");
+    if (konfirmasi) {
+      window.location.href = "php/hapus-user.php?id=" + id;
+    }
+  }
+</script>
 
 <div class="container-fluid">
 <div class="card shadow mb-4">
@@ -55,12 +60,12 @@ $data = mysqli_query($koneksi, "SELECT * FROM user JOIN roles_user on user.roles
                     <td><?php echo $d['nama'] ?></td>
                     <td>
                       <div class="">
-                        <a href="php/hapus-user.php?id=<?php echo $d['id']; ?>" class="btn btn-danger btn-icon-split">
+                        <button onclick="konfirmasiBanned(<?php echo $d['id']; ?>)" class="btn btn-danger btn-icon-split">
                           <span class="icon text-white-50">
                             <i class="fas fa-ban"></i>
                           </span>
-                          <span class="text">Banned</span>
-                        </a>
+                          <span class="text">Hapus</span>
+                        </button>
                       </div>
                     </td>
                 </tr>
