@@ -183,29 +183,55 @@ function minfas($idkost, $tipe_kost)
             <div class="swiper-pagination"></div>
           </div>
         </div>
-        </div>
+        
       </section>
       <!-- End Events Section -->
+      </div>
+    </div>
+  </div>
 
-      <!-- Card Diskon Natal -->
-<div class="swiper-container" id="swiper-diskon">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <div class="card" style="width: 18rem;">
-        <img src="img/natal.jpg" class="card-img-top" alt="Diskon Natal">
+<!-- Event Diskon Kost -->
+<div class="container my-5">
+  <div class="row">
+
+    <!-- Event Card 1 -->
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;"   >
+        <img src="img/natal.jpg" class="card-img-top" alt="Event Diskon Kost 1">
         <div class="card-body">
-          <h5 class="card-title">Diskon Natal</h5>
-          <p class="card-text">Nikmati harga spesial dan diskon menarik untuk pemesanan kost selama bulan Natal. Segera pesan sebelum kehabisan!</p>
-          <!-- <a href="#" class="btn btn-primary">Lihat Detail</a> -->
+          <h5 class="card-title">Diskon Kost Natal</h5>
+          <p class="card-text">Nikmati diskon khusus untuk pemesanan kost selama bulan Natal. Segera pesan sebelum habis!</p>
+          <a href="#" class="btn btn-primary">Lihat Detail</a>
         </div>
       </div>
     </div>
 
-    <!-- Tambahkan card kecil lainnya di sini jika diperlukan -->
+    <!-- Event Card 2 -->
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="img/natal.jpg" class="card-img-top" alt="Event Diskon Kost 2">
+        <div class="card-body">
+          <h5 class="card-title">Diskon Spesial Tahun Baru</h5>
+          <p class="card-text">Selamat tahun baru! Dapatkan harga spesial untuk kost pilihanmu. Booking sekarang!</p>
+          <a href="#" class="btn btn-primary">Lihat Detail</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Event Card 3 -->
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="img/natal.jpg" class="card-img-top" alt="Event Diskon Kost 3">
+        <div class="card-body">
+          <h5 class="card-title">Promo Awal Tahun</h5>
+          <p class="card-text">Sambut tahun baru dengan promo eksklusif. Pesan kostmu sekarang dan hemat lebih!</p>
+          <a href="#" class="btn btn-primary">Lihat Detail</a>
+        </div>
+      </div>
+    </div>
 
   </div>
-</div> 
-
+</div>
 
 <br><br><br>
 
