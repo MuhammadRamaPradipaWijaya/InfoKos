@@ -159,26 +159,26 @@ function minfas($idkost, $tipe_kost)
             <div class="swiper-wrapper">
 
               <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(img/kos1.jpg)">
-                <h3>Custom Parties</h3>
-                <div class="price align-self-start">$99</div>
+                <h3>aman</h3>
+                <div class="price align-self-start">Rp.400.000 </div>
                 <p class="description">
-                  Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis facere. Enim facilis veritatis id est rem repudiandae nulla expedita quas.
+                Temukan kenyamanan sejati di hunian kami! Kos nyaman dengan desain modern, fasilitas lengkap, dan harga terjangkau. Segera miliki tempat tinggal idaman Anda!
                 </p>
               </div><!-- End Event item -->
 
               <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(img/kos2.jpg)">
-                <h3>Private Parties</h3>
-                <div class="price align-self-start">$289</div>
+                <h3>kenyamanan</h3>
+                <div class="price align-self-start">Rp.450.000</div>
                 <p class="description">
-                  In delectus sint qui et enim. Et ab repudiandae inventore quaerat doloribus. Facere nemo vero est ut dolores ea assumenda et. Delectus saepe accusamus aspernatur.
+                Huni kos eksklusif kami, dijamin suasana tenang dan aman. Fasilitas lengkap, akses mudah ke transportasi umum, serta lokasi premium. Hubungi kami sekarang dan rasakan kesejukan tinggal di sini!
                 </p>
               </div><!-- End Event item -->
 
               <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(img/kos1.jpg)">
-                <h3>Birthday Parties</h3>
-                <div class="price align-self-start">$499</div>
+                <h3>Fasilitas Terbaik</h3>
+                <div class="price align-self-start">Rp.500.000</div>
                 <p class="description">
-                  Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis.
+                Kos ramah mahasiswa dengan konsep baru! Suasana belajar yang nyaman dengan fasilitas full furnished. Harga terbaik untuk mahasiswa pintar. Jangan lewatkan, booking sekarang!
                 </p>
               </div><!-- End Event item -->
 
@@ -189,6 +189,29 @@ function minfas($idkost, $tipe_kost)
         </div>
       </section>
       <!-- End Events Section -->
+
+      <!-- Card Diskon Natal -->
+<div class="swiper-container" id="swiper-diskon">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="card" style="width: 18rem;">
+        <img src="img/natal.jpg" class="card-img-top" alt="Diskon Natal">
+        <div class="card-body">
+          <h5 class="card-title">Diskon Natal</h5>
+          <p class="card-text">Nikmati harga spesial dan diskon menarik untuk pemesanan kost selama bulan Natal. Segera pesan sebelum kehabisan!</p>
+          <!-- <a href="#" class="btn btn-primary">Lihat Detail</a> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Tambahkan card kecil lainnya di sini jika diperlukan -->
+
+  </div>
+</div> 
+
+
+<br><br><br>
+
 
         <p class="display-4">Daftar Kost Terbaru</p>
         
