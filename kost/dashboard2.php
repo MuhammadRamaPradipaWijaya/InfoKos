@@ -16,7 +16,7 @@ $tagihannum = 0;
 // Memproses data berdasarkan peran pengguna
 if ($loggedUser['roles'] == 2) {
     // Jika pengguna memiliki peran 'pemilik kost', ambil data sesuai dengan rolenya
-    $kost = getData("SELECT * FROM kost");
+    $kost = getData("SELECT * FROM kost WHERE id_pemilik = $loggedUser[id]");
     $kostnum = mysqli_num_rows($kost);
 
     // Informasi tentang semua kamar dalam sistem
