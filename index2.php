@@ -159,16 +159,14 @@ function minfas($idkost, $tipe_kost)
             <div class="swiper-wrapper">
 
               <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(img/kos1.jpg)">
-                <h3>aman</h3>
-                <div class="price align-self-start">Rp.400.000 </div>
+                <h3>Aman</h3>
                 <p class="description">
                 Temukan kenyamanan sejati di hunian kami! Kos nyaman dengan desain modern, fasilitas lengkap, dan harga terjangkau. Segera miliki tempat tinggal idaman Anda!
                 </p>
               </div><!-- End Event item -->
 
               <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(img/kos2.jpg)">
-                <h3>kenyamanan</h3>
-                <div class="price align-self-start">Rp.450.000</div>
+                <h3>Kenyamanan</h3>
                 <p class="description">
                 Huni kos eksklusif kami, dijamin suasana tenang dan aman. Fasilitas lengkap, akses mudah ke transportasi umum, serta lokasi premium. Hubungi kami sekarang dan rasakan kesejukan tinggal di sini!
                 </p>
@@ -176,7 +174,6 @@ function minfas($idkost, $tipe_kost)
 
               <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(img/kos1.jpg)">
                 <h3>Fasilitas Terbaik</h3>
-                <div class="price align-self-start">Rp.500.000</div>
                 <p class="description">
                 Kos ramah mahasiswa dengan konsep baru! Suasana belajar yang nyaman dengan fasilitas full furnished. Harga terbaik untuk mahasiswa pintar. Jangan lewatkan, booking sekarang!
                 </p>
