@@ -45,9 +45,9 @@ if ($loggedUser['roles'] == 2) {
     $tagihan_row = mysqli_fetch_assoc($tagihan);
     $tagihannum = $tagihan_row['total_tagihan'];
 
-    // ... (tambahkan query dan pengolahan data lain untuk pemilik)
+    
 } elseif ($loggedUser['roles'] == 3) {
-    // Jika pengguna memiliki peran 'admin', ambil data sesuai dengan rolenya
+
     // Informasi tentang semua kost dalam sistem
     $kost = getData("SELECT * FROM kost");
     $kostnum = mysqli_num_rows($kost);
