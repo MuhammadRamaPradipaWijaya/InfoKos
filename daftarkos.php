@@ -80,7 +80,6 @@ function minfas($idkost, $tipe_kost)
       .inner.dark {
       background-color: #007bff; /* Warna biru yang diinginkan */
     }
-
     }
   </style>
 </head>
@@ -152,7 +151,7 @@ function minfas($idkost, $tipe_kost)
     <br><br><br>
 
   <div class="text-center">
-    <p class="display-4 font-weight-bold">Daftar Kost Terbaru</p>
+    <p class="display-4 font-weight-bold" > <span class="text-primary"> Daftar Kost </span></p>
   </div>
 
   <br><br>
