@@ -1,4 +1,4 @@
-<?php
+ <?php
 include("../koneksi.php");
 
 $username = mysqli_escape_string($koneksi, $_POST['username']);
