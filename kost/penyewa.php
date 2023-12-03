@@ -42,7 +42,7 @@ $data = mysqli_query($koneksi, $query);
             <th>No</th>
             <th>Nama Penyewa</th>
             <th>Tipe Kamar</th>
-            <th>Durasi Sewa</th>
+            <th>Durasi Sewa/Bulan</th>
             <th>Tanggal Masuk</th>
             <th>Tanggal Keluar</th>
             <th>Status</th>
