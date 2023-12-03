@@ -22,7 +22,7 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == "login") {
             header("location: daftar-kost.php");
             break;
         default:
-            header("location: dashboard.php");
+            header("location: dashboard2.php");
             break;
     }
 } else {

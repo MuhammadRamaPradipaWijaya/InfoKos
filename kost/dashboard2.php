@@ -1,20 +1,57 @@
 <?php 
-
 include('includes/header.php');
 require "php/dashboard_proces.php";
 
-$kost = getData("SELECT * FROM kost");
-$kostnum = count($kost);
+// Mendapatkan informasi pengguna yang sedang login
+$username = $_SESSION['username'];
+$user = getData("SELECT * FROM user WHERE username='$username'");
+$loggedUser = mysqli_fetch_array($user);
 
-$kamar = getData("SELECT * FROM kamar");
-$kamarnum = count($kamar);
+// Inisialisasi variabel untuk data dashboard
+$kostnum = 0;
+$kamarnum = 0;
+$penyewanum = 0;
+$tagihannum = 0;
 
-$penyewa = getData("SELECT * FROM user Where roles=1");
-$penyewanum = count($penyewa);
+// Memproses data berdasarkan peran pengguna
+if ($loggedUser['roles'] == 2) {
+    // Jika pengguna memiliki peran 'pemilik kost', ambil data sesuai dengan rolenya
+    $kost = getData("SELECT * FROM kost");
+    $kostnum = mysqli_num_rows($kost);
 
-$tagihan = getData("SELECT * FROM tagihan ");
-$tagihannum = count($tagihan);
- ?>
+    // Informasi tentang semua kamar dalam sistem
+    $kamar = getData("SELECT * FROM kamar");
+    $kamarnum = mysqli_num_rows($kamar);
+
+    // Informasi tentang semua penyewa dalam sistem
+    $penyewa = getData("SELECT * FROM user WHERE roles=1");
+    $penyewanum = mysqli_num_rows($penyewa);
+
+    // Informasi tentang semua tagihan dalam sistem
+    $tagihan = getData("SELECT * FROM tagihan");
+    $tagihannum = mysqli_num_rows($tagihan);
+
+    // ... (tambahkan query dan pengolahan data lain untuk pemilik)
+} elseif ($loggedUser['roles'] == 3) {
+    // Jika pengguna memiliki peran 'admin', ambil data sesuai dengan rolenya
+    // Informasi tentang semua kost dalam sistem
+    $kost = getData("SELECT * FROM kost");
+    $kostnum = mysqli_num_rows($kost);
+
+    // Informasi tentang semua kamar dalam sistem
+    $kamar = getData("SELECT * FROM kamar");
+    $kamarnum = mysqli_num_rows($kamar);
+
+    // Informasi tentang semua penyewa dalam sistem
+    $penyewa = getData("SELECT * FROM user WHERE roles=1");
+    $penyewanum = mysqli_num_rows($penyewa);
+
+    // Informasi tentang semua tagihan dalam sistem
+    $tagihan = getData("SELECT * FROM tagihan");
+    $tagihannum = mysqli_num_rows($tagihan);
+}
+
+?>
 
 
                 <!-- Begin Page Content -->
