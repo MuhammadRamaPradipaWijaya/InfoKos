@@ -2,8 +2,11 @@
 
 include('includes/header.php');
 require "php/dashboard_proces.php";
+require "php/login_proses.php";
 
-$kost = getData("SELECT * FROM kost");
+$username = $_SESSION['username'];
+
+$kost = getData("SELECT * FROM kost where username=$username");
 $kostnum = count($kost);
 
 $kamar = getData("SELECT * FROM kamar");
