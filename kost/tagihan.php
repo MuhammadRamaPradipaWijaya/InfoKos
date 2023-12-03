@@ -41,7 +41,7 @@ $data = mysqli_query($koneksi, $query);
 
   .belum-bayar {
     background: linear-gradient(to right, #ff8080, #ff3333); /* Warna merah yang lebih lembut */
-    color: white;
+    color: black;
   }
 
   .pending {
@@ -51,7 +51,7 @@ $data = mysqli_query($koneksi, $query);
 
   .lunas {
     background: linear-gradient(to right, #99ff99, #33cc33); /* Warna hijau yang lebih lembut */
-    color: white;
+    color: black;
   }
 </style>
 
@@ -92,13 +92,19 @@ $data = mysqli_query($koneksi, $query);
                         <td><?php echo $d['jatuh_tempo'] ?></td>
                         <td><?php $stats = $d['stats'];
 
-                            if ($stats == 1) {
-                                echo '<p style="background-color:green;color:white;padding:5px;">Lunas</p>';
-                            } else if ($stats == 2) {
-                                echo '<p style="background-color:yellow">Pending</p>';
-                            } else {
-                                echo '<p style="background-color:red;color:white">Belum Lunas</p>';
-                            }
+                        if ($stats == 1) {
+                            echo '<p>
+                                    <span class="status-label lunas" style="background-color:green;color:white;padding:5px;">Lunas</span>
+                                </p>';
+                        } else if ($stats == 2) {
+                            echo '<p>
+                                    <span class="status-label pending" style="background-color:yellow;">Pending</span>
+                                </p>';
+                        } else {
+                            echo '<p>
+                                    <span class="status-label belum-bayar" style="background-color:red;color:white;">Belum Bayar</span>
+                                </p>';
+                        }
                             ?></td>
                         <td>
                             <?php if ($stats == 3) {?>

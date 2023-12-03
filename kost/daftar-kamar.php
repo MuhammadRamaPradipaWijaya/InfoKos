@@ -43,7 +43,8 @@ $query = mysqli_query($koneksi, "SELECT * from kamar WHERE id_kost=$id_kost");
                     <th>Jumlah Kamar</th>
                     <th>Fasilitas</th>
                     <th>Biaya Fasilitas</th>
-                    <th>Aksi</th>
+                    <th>Ubah</th>
+                    <th>Hapus</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -69,26 +70,26 @@ $query = mysqli_query($koneksi, "SELECT * from kamar WHERE id_kost=$id_kost");
                                         <span class="text">Ubah</span>
                                     </a>
                                 </div>
-                                <div class="col">
-                                    <form action="php/kamar_proses.php?id_kamar=<?php echo $d['id_kamar'] ?>" method="post">
-                                        <button class="btn btn-danger btn-icon-split" name="hapus_kamar">
-                                            <span class="icon text-white-50">
-                                                <i class="fas fa-trash"></i>
-                                            </span>
-                                            <span class="text">Hapus</span>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
+                            <td>
 
+                            <div class="col">
+                                <a href="php/kamar_proses.php?id_kamar=<?php echo $d['id_kamar'] ?>" class="btn btn-danger btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-trash"></i>
+                                    </span>
+                                    <span class="text">Hapus</span>
+                                    </a>
                                 </div>
                             </td>
+                            </div>
+
                         </tr>
                     <?php
                     }
                     ?>
                 </tbody>
             </table>
+            
         </div>
     </div>
 </div>

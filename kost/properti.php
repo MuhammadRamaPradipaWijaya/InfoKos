@@ -65,16 +65,16 @@ $data_2 = mysqli_query($koneksi, $query);
       <tbody>
 
       <div class="row">
-      <div class="col-md-10"></div>
-      <div class="col-md-2 d-flex align-items-center">
-        <a href="tambah_kost.php" class="btn btn-primary btn-icon-split">
-          <span class="icon text-white-50">
-            <i class="fas fa-plus"></i>
-          </span>
-          <span class="text">Tambah kost</span>
-        </a>
+        <div class="col-md-10"></div>
+        <div class="col-md-2 d-flex align-items-center">
+          <a href="tambah_kost.php" class="btn btn-primary btn-icon-split">
+            <span class="icon text-white-50">
+              <i class="fas fa-plus"></i>
+            </span>
+            <span class="text">Tambah kost</span>
+          </a>
+        </div>
       </div>
-    </div>
 
         <br>
         <?php

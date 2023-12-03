@@ -77,6 +77,7 @@ $o = explode(', ', $d['fasilitas_kost']);
 
         <!-- Fasilitas Kost -->
         <hr>
+        <hr>
         <div class="card-body">
         <h5>Fasilitas Kost</h5>
           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -99,6 +100,7 @@ $o = explode(', ', $d['fasilitas_kost']);
         </div>
 
         <!-- Informasi Pembayaran -->
+        <hr>
         <hr>
         <div class="card-body">
         <h5>Info Pembayaran</h5>
@@ -127,6 +129,7 @@ $o = explode(', ', $d['fasilitas_kost']);
 
         <!-- Foto Bangunan -->
         <hr>
+        <hr>
         <div class="card-body">
         <h5>Foto Bangunan</h5>
           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -154,6 +157,7 @@ $o = explode(', ', $d['fasilitas_kost']);
         </div>
 
         <!-- Detail Kost -->
+        <hr>
         <hr>
         <div class="card-body">
         <h5>Detail Kost</h5>
