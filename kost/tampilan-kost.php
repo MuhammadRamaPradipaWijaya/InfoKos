@@ -156,6 +156,7 @@ function fas($fas, $tipe_kost)
 
         </div>
         <br>
+        
         <div class="row">
           <div class="card-text">
             <div class="col">
@@ -165,21 +166,11 @@ function fas($fas, $tipe_kost)
 
         </div>
         <br>
-
         <div class="row">
           <div class="col-md-8">
             <div class="card-title">
               <h3><?php echo $d['nama_kost'] ?></h3>
             </div>
-          </div>
-          <div class="col">
-            <span class="stars-active" style="width:50%">
-              <i class="fa fa-star checked" aria-hidden="true"></i>
-              <i class="fa fa-star checked" aria-hidden="true"></i>
-              <i class="fa fa-star checked" aria-hidden="true"></i>
-              <i class="fa fa-star checked" aria-hidden="true"></i>
-              <i class="fa fa-star-half-alt checked" aria-hidden="true"></i>
-            </span>
           </div>
 
           <div class="col">
