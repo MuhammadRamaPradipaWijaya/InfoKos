@@ -40,7 +40,7 @@ $query = mysqli_query($koneksi, "SELECT * from kamar WHERE id_kost=$id_kost");
                             <th>Tipe Kamar</th>
                             <th>Jumlah Kamar</th>
                             <th>Fasilitas</th>
-                            <th>Biaya Fasilitas</th>
+                            <th>Biaya Kost</th>
                             <th>Ubah</th>
                             <th>Hapus</th>
                         </tr>
