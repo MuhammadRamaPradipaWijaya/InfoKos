@@ -289,9 +289,10 @@ if (isset($_GET['success']) && $_GET['success'] == 1) {
             <div class="media g-mb-30 media-comment">
                 <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
                     <div class="g-mb-15">
-                        <h5 class="h5 g-color-gray-dark-v1 mb-0"><?php echo htmlspecialchars($row['nama']); ?></h5>
-                        <span class="g-color-gray-dark-v1 mb-0"><?php echo htmlspecialchars($row['email']); ?></span>
+                        <h5 class="h5 g-color-gray-dark-v1 mb-0">Nama: <?php echo htmlspecialchars($row['nama']); ?></h5>
+                        <span class="g-color-gray-dark-v1 mb-0">Email: <?php echo htmlspecialchars($row['email']); ?></span>
                     </div>
+                    <p>Koment: </p>
                     <p><?php echo htmlspecialchars($row['komentar']); ?></p>
                 </div>
             </div>
