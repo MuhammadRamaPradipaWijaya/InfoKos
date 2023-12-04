@@ -17,6 +17,8 @@
         header("location:../login.php");
     }?>
 
+    <!-- Website Icon -->
+    <link rel="icon" type="image/png" href="../img/home.png">
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -38,8 +40,6 @@
     </style>
 
 </head>
-
-
 
 
 <body id="page-top">
