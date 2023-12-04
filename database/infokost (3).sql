@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2023 at 04:08 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Dec 04, 2023 at 01:06 PM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,7 +36,7 @@ CREATE TABLE `booking` (
   `durasi_sewa` int(11) NOT NULL,
   `tanggal_keluar` date NOT NULL,
   `jumlah_kamar` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `booking`
@@ -91,7 +91,7 @@ CREATE TABLE `kamar` (
   `tipe_kamar` varchar(255) NOT NULL,
   `biaya_fasilitas` int(11) NOT NULL,
   `fasilitas_kamar` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `kamar`
@@ -137,6 +137,29 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `komen`
+--
+
+CREATE TABLE `komen` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `komentar` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `komen`
+--
+
+INSERT INTO `komen` (`id`, `nama`, `email`, `komentar`) VALUES
+(5, 'ARYA ADVICENNA', 'senaarya216@gmail.com', 'websitenya keren banget\r\n'),
+(6, 'ARYA ADVICENNA', 'senaarya85@gmail.com', 'jkk'),
+(7, 'sena ANJGgg', 'das@gmail.com', 'jdhjfhdfjdhjf'),
+(8, 'ARYA ADVICENNA', 'sena@gmail.com', 'sena');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `kost`
 --
 
@@ -164,7 +187,7 @@ CREATE TABLE `kost` (
   `deskripsi` text NOT NULL,
   `id_pemilik` int(11) NOT NULL,
   `fasilitas_kost` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `kost`
@@ -187,7 +210,7 @@ INSERT INTO `kost` (`id_kost`, `nama_kost`, `tipe_kost`, `jenis_kost`, `jumlah_k
 CREATE TABLE `roles_user` (
   `id_roles` int(11) NOT NULL,
   `nama` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `roles_user`
@@ -211,7 +234,7 @@ CREATE TABLE `tagihan` (
   `stats` int(11) NOT NULL,
   `tanggal_tagihan` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `bukti_bayar` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tagihan`
@@ -257,7 +280,7 @@ CREATE TABLE `user` (
   `foto_profil` text NOT NULL,
   `roles` int(11) NOT NULL,
   `id_kost_saya` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
@@ -292,7 +315,7 @@ CREATE TABLE `wishlist` (
   `id_wishlist` int(11) NOT NULL,
   `id_kost` int(11) NOT NULL,
   `id_user` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `wishlist`
@@ -319,6 +342,12 @@ ALTER TABLE `booking`
 ALTER TABLE `kamar`
   ADD PRIMARY KEY (`id_kamar`),
   ADD KEY `id_kost` (`id_kost`);
+
+--
+-- Indexes for table `komen`
+--
+ALTER TABLE `komen`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `kost`
@@ -371,6 +400,12 @@ ALTER TABLE `booking`
 --
 ALTER TABLE `kamar`
   MODIFY `id_kamar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- AUTO_INCREMENT for table `komen`
+--
+ALTER TABLE `komen`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `kost`
