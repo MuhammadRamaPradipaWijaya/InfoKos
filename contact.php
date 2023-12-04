@@ -14,7 +14,9 @@ if (isset($_GET['success']) && $_GET['success'] == 1) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Untree.co">
-  <link rel="shortcut icon" href="favicon.png">
+  
+  <!-- Website Icon -->
+  <link rel="icon" type="image/png" href="img/home.png">
 
   <meta name="description" content="" />
   <meta name="keywords" content="bootstrap, bootstrap4" />
@@ -128,7 +130,7 @@ if (isset($_GET['success']) && $_GET['success'] == 1) {
         <a href="contact.php" class="logo m-0">Info Kost <span class="text-primary">.</span></a>
 
         <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
-          <li><a href="index2.php">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li><a href="daftarkos.php">Daftar Kost</a></li>
           <li class="active"><a href="contact.php">Contact</a></li>
           <li><a href="login.php">Login</a></li>
@@ -198,7 +200,7 @@ if (isset($_GET['success']) && $_GET['success'] == 1) {
           <div class="quick-contact-item d-flex align-items-center mb-4">
             <span class="flaticon-mail"></span>
             <address class="text">
-            InfoKost@gamil.com
+            InfoKost@gmail.com
             </address>
           </div>
         </div>

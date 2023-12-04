@@ -156,6 +156,7 @@ function fas($fas, $tipe_kost)
 
         </div>
         <br>
+        
         <div class="row">
           <div class="card-text">
             <div class="col">
@@ -165,21 +166,11 @@ function fas($fas, $tipe_kost)
 
         </div>
         <br>
-
         <div class="row">
           <div class="col-md-8">
             <div class="card-title">
               <h3><?php echo $d['nama_kost'] ?></h3>
             </div>
-          </div>
-          <div class="col">
-            <span class="stars-active" style="width:50%">
-              <i class="fa fa-star checked" aria-hidden="true"></i>
-              <i class="fa fa-star checked" aria-hidden="true"></i>
-              <i class="fa fa-star checked" aria-hidden="true"></i>
-              <i class="fa fa-star checked" aria-hidden="true"></i>
-              <i class="fa fa-star-half-alt checked" aria-hidden="true"></i>
-            </span>
           </div>
 
           <div class="col">
@@ -310,7 +301,7 @@ function fas($fas, $tipe_kost)
               <div class="row">
                 <div style="position:fixed;right:20px;bottom:20px;">
 
-                  <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $d['kontak'] ?>&text=Halo, apakah ini bapak/ibu yang mengiklan kost <?php echo $d['nama_kost'] ?> di website simkos ">
+                  <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $d['kontak'] ?>&text=Halo, apakah ini bapak/ibu yang mengiklan kost <?php echo $d['nama_kost'] ?> di website infokost ">
                     <button style="background:#00BFFF;vertical-align:center;height:40px;border-radius:5px">
 
                       <img src="../img/favicon_wa.png"> Whatsapp Pemilik Kost</button></a>

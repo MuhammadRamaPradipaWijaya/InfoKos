@@ -49,6 +49,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="CodePel">
     <title>Register Info Kost</title>
+
+    <!-- Website Icon -->
+    <link rel="icon" type="image/png" href="img/home.png">
     <!-- Style CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Demo CSS (No need to include it into your project) -->

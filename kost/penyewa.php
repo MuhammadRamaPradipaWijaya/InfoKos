@@ -41,8 +41,9 @@ $data = mysqli_query($koneksi, $query);
         <tr>
             <th>No</th>
             <th>Nama Penyewa</th>
+            <th>Nomor Telepon</th>
             <th>Tipe Kamar</th>
-            <th>Durasi Sewa/Bulan</th>
+            <th>Durasi Sewa</th>
             <th>Tanggal Masuk</th>
             <th>Tanggal Keluar</th>
             <th>Status</th>
@@ -59,6 +60,7 @@ $data = mysqli_query($koneksi, $query);
                 <tr>
                     <td><?php echo $i ?></td>
                     <td><?php echo $d['nama_lengkap'] ?></td>
+                    <td><?php echo $d['no_hp'] ?></td>
                     <td><?php echo $d['tipe_kamar'] ?></td>
                     <td><?php echo $d['durasi_sewa'] ?></td>
                     <td><?php echo $d['tanggal_masuk'] ?></td>

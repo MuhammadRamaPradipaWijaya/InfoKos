@@ -20,7 +20,7 @@ $o = explode(', ', $d['fasilitas_kost']);
 <main class="cd__main">
     <script src="https://use.fontawesome.com/f59bcd8580.js"></script>
     <div class="container">
-        <div class="row justify-content-center align-items-center vh-100">
+        <div class="row justify-content-center align-items-center vh-50">
             <div class="col-md-8 bg-white p-1">
                 <form class="text border border-light p-5" action="php/properti-edit_proses.php?id_kost=<?php echo $d['id_kost']; ?>" method="post" enctype="multipart/form-data">
                     <h3 class="pb-3 text-center">Ubah Kost</h3>
@@ -204,96 +204,6 @@ $o = explode(', ', $d['fasilitas_kost']);
         </div>
     </div>
 </main>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br> 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 <br>

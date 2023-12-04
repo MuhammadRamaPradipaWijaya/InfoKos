@@ -32,7 +32,7 @@ $data = mysqli_query($koneksi, $query);
 </style>
 
 <div class="container">
-    <h5 class="m-0 font-weight-bold text-primary">My Wishlist</h5>
+    <h5 class="m-0 font-weight-bold text-primary">Wishlist</h5>
     <hr>
     <div class="row">
         <?php

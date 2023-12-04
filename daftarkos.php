@@ -1,7 +1,7 @@
 <?php
 require('koneksi.php');
 
-$jumlah_data_perhalaman = 8;
+$jumlah_data_perhalaman = 9;
 $jumlah_data = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM kost JOIN user ON kost.id_pemilik = user.id"));
 $jumlah_halaman = ceil($jumlah_data / $jumlah_data_perhalaman);
 
@@ -39,7 +39,9 @@ function minfas($idkost, $tipe_kost)
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Untree.co">
-  <link rel="shortcut icon" href="favicon.png">
+  
+  <!-- Website Icon -->
+  <link rel="icon" type="image/png" href="img/home.png">
 
   <meta name="description" content="" />
   <meta name="keywords" content="bootstrap, bootstrap4" />
@@ -113,7 +115,7 @@ function minfas($idkost, $tipe_kost)
         <a href="daftarkos.php" class="logo m-0"> Info Kost <span class="text-primary">.</span></a>
 
         <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
-          <li><a href="index2.php">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li class="active"><a href="daftarkos.php">Daftar Kost</a></li>
           <li><a href="contact.php">Contact</a></li>
           <li><a href="login.php">Login</a></li>
