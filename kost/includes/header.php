@@ -93,12 +93,39 @@
                 Interface
             </div>
 
-            <?php
-            if ($d['roles'] == 1) {
-            ?>
+        <?php if ($d['roles'] == 1) {?>
             
-            <!-- Nav Item - Penghuni kost -->
+            <!-- Nav Item - MENU (Moved outside of the collapsed navigation) -->
             <li class="nav-item">
+                <a class="nav-link" href="tagihan.php">
+                    <i class="fas fa-fw fa-address-book"></i>
+                    <span>Tagihan</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="kost_ku.php">
+                    <i class="fas fa-fw fa-bed"></i>
+                    <span>Kost Saya</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="profil.php">
+                    <i class="fas fa-fw fa-user-circle"></i>
+                    <span>Profil</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="wishlist.php">
+                    <i class="fas fa-fw fa-bookmark"></i>
+                    <span>Wishlist</span>
+                </a>
+            </li>
+
+            <!-- Original Menu -->
+            <!--<li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Menu</span>
@@ -106,20 +133,40 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Daftar Menu:</h6>
-                        <a class="collapse-item" href="tagihan.php">Tagihan</a>
-                        <a class="collapse-item" href="kost_ku.php">Kost Saya</a>
-                        <a class="collapse-item" href="profil.php">Profil</a>
-                        <a class="collapse-item" href="wishlist.php">My Wishlist</a>
-                        <!-- <a class="collapse-item" href="#">Bantuan</a>  -->
-
+                        
                     </div>
                 </div>
-            </li>
+            </li>-->
+
             
         <?php } else if ($d['roles'] == 2) { ?>
 
-            <!-- Nav Item - OWNER MENU-->
+            <!-- Nav Item - OWNER MENU (Moved outside of the collapsed navigation) -->
             <li class="nav-item">
+                <a class="nav-link" href="tambah_kost.php">
+                    <i class="fas fa-fw fa-plus-square"></i>
+                    <span>Tambah Kost</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="properti.php">
+                    <i class="fas fa-fw fa-bed"></i>
+                    <span>Semua Kost</span>
+                </a>
+            </li>
+
+            <!-- You can add more menu items here if needed -->
+
+            <li class="nav-item">
+                <a class="nav-link" href="profil.php">
+                    <i class="fas fa-fw fa-user-circle"></i>
+                    <span>Profil</span>
+                </a>
+            </li>
+
+            <!-- Original Owner Menu -->
+            <!--<li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Owner Menu</span>
@@ -127,16 +174,44 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Daftar Menu:</h6>
-                        <a class="collapse-item" href="tambah_kost.php">Tambah Kost</a>
-                        <a class="collapse-item" href="properti.php">Kost Saya</a>
-                        <!-- <a class="collapse-item" href="#">Keuangan</a>
-                        <a class="collapse-item" href="#">Tagihan</a> -->
-                        <a class="collapse-item" href="profil.php">Profil</a>
+                        <a class="collapse-item" href="#">Keuangan</a>
+                        <a class="collapse-item" href="#">Tagihan</a>
                     </div>
                 </div>
-            </li>
+            </li>-->
+
         <?php } else if ($d['roles'] == 3) { ?>
+            <!-- Nav Item - ADMIN MENU (Moved outside of the collapsed navigation) -->
             <li class="nav-item">
+                <a class="nav-link" href="user.php">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Semua Pengguna</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="kost_manage.php">
+                    <i class="fas fa-fw fa-bed"></i>
+                    <span>Semua Kost</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="semua_transaksi.php">
+                    <i class="fas fa-fw fa-address-book"></i>
+                    <span>Semua Transaksi</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="profil.php">
+                    <i class="fas fa-fw fa-user-circle"></i>
+                    <span>Profil</span>
+                </a>
+            </li>
+
+            <!-- Original Admin Menu -->
+            <!--<li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Admin Menu</span>
@@ -144,13 +219,11 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Daftar Menu:</h6>
-                        <a class="collapse-item" href="user.php">User</a>
-                        <a class="collapse-item" href="kost_manage.php">Semua Kost</a>
-                        <a class="collapse-item" href="semua_transaksi.php">Management Transaksi</a>
-                        <a class="collapse-item" href="profil.php">Profil</a>
+                        
                     </div>
                 </div>
-            </li>
+            </li>-->
+
         <?php } 
         ?>
 
