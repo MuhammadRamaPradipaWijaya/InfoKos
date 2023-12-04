@@ -1,3 +1,13 @@
+<?php
+include("koneksi.php");
+if (mysqli_connect_error()) {
+    echo "Koneksi gagal: " . mysqli_connect_error();
+}
+if (isset($_GET['success']) && $_GET['success'] == 1) {
+  echo '<script>alert("Berhasil!");</script>';
+}
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,6 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -29,6 +40,53 @@
   <title>Info kost.</title>
 
   <style>
+
+
+@media (min-width: 0) {
+    .g-mr-15 {
+        margin-right: 1.07143rem !important;
+    }
+}
+@media (min-width: 0){
+    .g-mt-3 {
+        margin-top: 0.21429rem !important;
+    }
+}
+
+.g-height-50 {
+    height: 50px;
+}
+
+.g-width-50 {
+    width: 50px !important;
+}
+
+@media (min-width: 0){
+    .g-pa-30 {
+        padding: 2.14286rem !important;
+    }
+}
+
+.g-bg-secondary {
+    background-color: #fafafa !important;
+}
+
+.u-shadow-v18 {
+    box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.15);
+}
+
+.g-color-gray-dark-v4 {
+    color: #777 !important;
+}
+
+.g-font-size-12 {
+    font-size: 0.85714rem !important;
+}
+
+.media-comment {
+    margin-top:20px
+}
+
     .row {
       display: flex;
       justify-content: center;
@@ -105,33 +163,24 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 mb-5 mb-lg-0">
-          <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
-            <div class="row">
-              <div class="col-6">
-                <div class="form-group">
-                  <label class="text-black" for="fname">Nama Depan</label>
-                  <input type="text" class="form-control" id="fname">
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="form-group">
-                  <label class="text-black" for="lname">Nama Belakang</label>
-                  <input type="text" class="form-control" id="lname">
-                </div>
-              </div>
-            </div>
+          <form action="php/komen.php" method="post" class="contact-form" data-aos="fade-up" data-aos-delay="200">
             <div class="form-group">
-              <label class="text-black" for="email">Email</label>
-              <input type="email" class="form-control" id="email">
+                <label class="text-black" for="email">Nama</label>
+                <input name="nama" type="text" class="form-control" id="nama">
             </div>
 
             <div class="form-group">
-              <label class="text-black" for="message">Pesan</label>
-              <textarea name="" class="form-control" id="message" cols="30" rows="5"></textarea>
+                <label class="text-black" for="email">Email</label>
+                <input name="email" type="email" class="form-control" id="email">
+            </div>
+
+            <div class="form-group">
+                <label class="text-black" for="message">Pesan</label>
+                <textarea name="komentar" class="form-control" id="message" cols="30" rows="5"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary">Kirim Pesan</button>
-          </form>
+        </form>
         </div>
         <div class="col-lg-5 ml-auto">
           <div class="quick-contact-item d-flex align-items-center mb-4">
@@ -228,6 +277,33 @@
         </div>
       </div> 
 
+      <div class="row">
+    <div class="col-md-8">
+        <?php
+        $result = mysqli_query($koneksi, "SELECT * FROM komen");
+
+        while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+            <div class="media g-mb-30 media-comment">
+                <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
+                    <div class="g-mb-15">
+                        <h5 class="h5 g-color-gray-dark-v1 mb-0"><?php echo htmlspecialchars($row['nama']); ?></h5>
+                        <span class="g-color-gray-dark-v1 mb-0"><?php echo htmlspecialchars($row['email']); ?></span>
+                    </div>
+                    <p><?php echo htmlspecialchars($row['komentar']); ?></p>
+                </div>
+            </div>
+            <?php
+        }
+
+        // Free result set
+        mysqli_free_result($result);
+
+        // Close connection
+        mysqli_close($koneksi);
+        ?>
+    </div>
+</div>
 
  
   <div class="site-footer">
