@@ -1,7 +1,7 @@
 <?php
 require('koneksi.php');
 
-$jumlah_data_perhalaman = 8;
+$jumlah_data_perhalaman = 9;
 $jumlah_data = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM kost JOIN user ON kost.id_pemilik = user.id"));
 $jumlah_halaman = ceil($jumlah_data / $jumlah_data_perhalaman);
 

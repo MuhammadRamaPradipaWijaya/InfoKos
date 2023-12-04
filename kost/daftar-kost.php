@@ -2,7 +2,7 @@
 require('../koneksi.php');
 include('includes/header.php');
 
-$jumlah_data_perhalaman = 8;
+$jumlah_data_perhalaman = 9;
 
 // Search handling
 $search_query = isset($_GET['query']) ? mysqli_real_escape_string($koneksi, $_GET['query']) : '';
