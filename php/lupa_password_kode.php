@@ -104,5 +104,4 @@ if(isset($_POST['password_reset_link']))
         exit(0);
     }
 }
-
 ?>
