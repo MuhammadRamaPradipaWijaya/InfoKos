@@ -65,14 +65,14 @@
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center"><input name="" type="checkbox" value="" /> <span class="pl-2 font-weight-bold">Ingat Saya</span></div>
-                                <div><a href="#">Lupa Password?</a></div>
+                                <div><a href="forgot_password.php">Lupa Password?</a></div>
                             </div>
                             <div class="pb-2">
                                 <button type="submit" class="btn btn-dark w-100 font-weight-bold mt-2" name="submit">Submit</button>
                             </div>
                         </form>
-                        <div class="pt-4 text-center">
-                            Belum punya akun ? <a href="daftar.php">Register</a>
+                        <div class="text-center">
+                            <a class="small" href="daftar.php">Belum mempunyai akun? Register</a>
                         </div>
                     </div>
                 </div>
