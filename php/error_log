@@ -1,0 +1,32 @@
+[05-Dec-2023 13:35:22 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'id21624598_infokost'@'localhost' (using password: YES) in /home/mifintm1/carikost.mifint.myhost.id/carikost/koneksi.php:6
+Stack trace:
+#0 /home/mifintm1/carikost.mifint.myhost.id/carikost/koneksi.php(6): mysqli_connect('localhost', 'id21624598_info...', 'WSImif_2023', 'id21624598_info...')
+#1 /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php(2): include('/home/mifintm1/...')
+#2 {main}
+  thrown in /home/mifintm1/carikost.mifint.myhost.id/carikost/koneksi.php on line 6
+[05-Dec-2023 13:36:17 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'mifintm1_carikost'@'localhost' (using password: YES) in /home/mifintm1/carikost.mifint.myhost.id/carikost/koneksi.php:11
+Stack trace:
+#0 /home/mifintm1/carikost.mifint.myhost.id/carikost/koneksi.php(11): mysqli_connect('localhost', 'mifintm1_cariko...', 'WSImif_2023', 'mifintm1_cariko...')
+#1 /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php(2): include('/home/mifintm1/...')
+#2 {main}
+  thrown in /home/mifintm1/carikost.mifint.myhost.id/carikost/koneksi.php on line 11
+[05-Dec-2023 13:36:32 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 5
+[05-Dec-2023 13:36:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/mifintm1/carikost.mifint.myhost.id/carikost/koneksi.php:32) in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 19
+[05-Dec-2023 13:39:53 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 6
+[05-Dec-2023 13:39:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/mifintm1/carikost.mifint.myhost.id/carikost/koneksi.php:32) in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 20
+[05-Dec-2023 13:40:43 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 6
+[05-Dec-2023 13:40:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/mifintm1/carikost.mifint.myhost.id/carikost/koneksi.php:32) in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 20
+[05-Dec-2023 13:40:47 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 6
+[05-Dec-2023 13:40:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/mifintm1/carikost.mifint.myhost.id/carikost/koneksi.php:32) in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 20
+[05-Dec-2023 13:44:24 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 9
+[05-Dec-2023 13:44:24 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/mifintm1/carikost.mifint.myhost.id/carikost/koneksi.php:32) in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 37
+[05-Dec-2023 13:46:07 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 6
+[05-Dec-2023 13:46:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/mifintm1/carikost.mifint.myhost.id/carikost/koneksi.php:32) in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 20
+[05-Dec-2023 13:47:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/mifintm1/carikost.mifint.myhost.id/carikost/koneksi.php:32) in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 23
+[05-Dec-2023 13:48:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/mifintm1/carikost.mifint.myhost.id/carikost/koneksi.php:32) in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 23
+[05-Dec-2023 13:48:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/mifintm1/carikost.mifint.myhost.id/carikost/koneksi.php:32) in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 23
+[06-Dec-2023 03:04:39 UTC] PHP Warning:  Undefined array key "username" in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 8
+[06-Dec-2023 03:04:39 UTC] PHP Deprecated:  mysqli_real_escape_string(): Passing null to parameter #2 ($string) of type string is deprecated in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 8
+[06-Dec-2023 03:04:39 UTC] PHP Warning:  Undefined array key "password" in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 9
+[06-Dec-2023 03:04:39 UTC] PHP Deprecated:  mysqli_real_escape_string(): Passing null to parameter #2 ($string) of type string is deprecated in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 9
+[06-Dec-2023 03:04:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php:8) in /home/mifintm1/carikost.mifint.myhost.id/carikost/php/login_proses.php on line 20

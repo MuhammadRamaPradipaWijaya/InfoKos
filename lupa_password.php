@@ -1,8 +1,49 @@
-<?php 
-  require('koneksi.php');
+<?php
+require('koneksi.php');
+include('includes/header.php');
 
-  include('includes/header.php'); 
+if (isset($_POST['submit'])) {
+    $email = $_POST['email'];
+    $newPassword = $_POST['password'];
+    $confirmPassword = $_POST['confirm_password'];
+
+    // Check if the passwords match
+    if ($newPassword !== $confirmPassword) {
+        echo '<script type="text/javascript">';
+        echo 'alert("Konfirmasi password tidak cocok. Silakan coba lagi.");';
+        echo '</script>';
+    } else {
+        // Check if the email exists in the database
+        $checkEmailQuery = "SELECT * FROM `user` WHERE `email` = '$email'";
+        $result = mysqli_query($koneksi, $checkEmailQuery);
+
+        if (mysqli_num_rows($result) > 0) {
+            // Email exists, update the password
+            $updatePasswordQuery = "UPDATE `user` SET `password` = '$newPassword' WHERE `email` = '$email'";
+            $updateResult = mysqli_query($koneksi, $updatePasswordQuery);
+
+            if ($updateResult) {
+                // Display alert using JavaScript
+                echo '<script type="text/javascript">';
+                echo 'alert("Update Password Berhasil");';
+                echo '</script>';
+            } else {
+                // Error updating password
+                echo '<script type="text/javascript">';
+                echo 'alert("Terjadi kesalahan saat memperbarui kata sandi. Silakan coba lagi nanti.");';
+                echo '</script>';
+            }
+        } else {
+            // Email not found
+            echo '<script type="text/javascript">';
+            echo 'alert("Email tidak ditemukan. Tolong masukkan email yang benar.");';
+            echo '</script>';
+        }
+    }
+}
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +55,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Infokost | Lupa Password</title>
+  <title>Infokost</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -22,6 +63,33 @@
 
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin-2.css" rel="stylesheet">
+
+  <style>
+
+.form-group label, .form-group input, .form-group select {
+
+    flex: 1;
+
+}
+
+.input-style {
+
+    border: 2px solid #428bca; /* Warna border sesuai kebutuhan */
+
+    border-radius: 5px; /* Rounded border */
+
+    padding: 8px; /* Padding internal */
+
+    transition: border-color 0.3s; /* Efek perubahan warna saat di-focus */
+
+}
+
+.input-style:focus {
+
+    border-color: #ff5733; /* Warna border saat di-focus */
+
+}
+</style>
 
 </head>
 
@@ -44,16 +112,30 @@
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-2">Lupa Password Akun?</h1>
-                    <p class="mb-4">Kami memahaminya, terkadang manusia bisa saja lupa. Tenang, masukkan email anda, dan kami akan mengirim link untuk mereset password anda.</p>
+                    <h1 class="h4 text-gray-900 mb-2">Lupa Password</h1>
                   </div>
+                  <br>
+                  <br>
+                  <br>
 
-                  <form class="user" action="php/lupa_password_kode.php" method="POST">
-                    <div class="form-group">
-                      <input type="email" name="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." >
-                    </div>
-                    <input type="submit" name="password_reset_link" class="btn btn-primary btn-user btn-block" value="Reset Password">
+                  <!-- ... (previous code) ... -->
+                  <form class="validate-form" method="POST">
+                      <div class="form-group pb-3">
+                          <input type="email" placeholder="Masukan email" class="form-control input-style" name="email" id="email">
+                      </div>
+
+                      <div class="form-group pb-3">
+                          <input type="password" placeholder="Masukan password baru" class="form-control input-style" name="password" id="password">
+                      </div>
+
+                      <div class="form-group pb-3">
+                          <input type="password" placeholder="Konfirmasi password baru" class="form-control input-style" name="confirm_password" id="confirm_password">
+                      </div>
+
+                      <br>
+                      <input type="submit" name="submit" class="btn btn-dark w-100 font-weight-bold mt-2" value="Perbarui Password">
                   </form>
+                  <!-- ... (remaining code) ... -->
 
                   <hr>
                   <div class="text-center">
@@ -85,5 +167,4 @@
   <script src="../js/sb-admin-2.min.js"></script>
 
 </body>
-
 </html>
